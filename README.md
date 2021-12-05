@@ -213,7 +213,11 @@ Hyper-V Requirements:      A hypervisor has been detected. Features required for
 
 
 - incluindo os links para fazer download
+
 - Explicação de alguns dos processos
+
+No começo deste trabalho, foi montado um carrinho simples que possui duas rodas motorizadas e uma roda na frente ao centro, tendo as placa RasperryPi 3 montada com o chapeu en-cima. A montagem que feita no RPI3 é feita para que tenhamos o numero de portas necessarias para fazer não só a ligação dos nossos motores para a placa mas tambem para efetuar a ligação da camera utilizada para a placa, uma coisa que se tem de ter em conta enquanto a esta montagem é o numero das portas utilizadas para transmitir a informação, sendo esses numeros que vamos indicar no codigo que irá controlar o output e input da nossa montagem.
+
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
 - Resultados Esperados
