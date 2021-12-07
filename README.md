@@ -160,6 +160,8 @@ No começo deste trabalho, foi montado um carrinho simples que possui duas rodas
 
 O primeiro passo é arranjar um cartão sd para install o sistema operativo Ubuntu versão 18.08, o motivo de ser esta versão e não a mais recente é pelo facto desta versão conter algumas funções e operações que permitam a utilização da camera que as versões mais recentes não pessuem, tendo ocorrido erros quando estas versões foram testadas.
 
+Ao installar e fazer set-up do sistema operativo, é necessario instalar o ROS melodic para o projecto, tambem pode ser instalado o ROS kinetc, no entanto, tendo em atenção existem certas funções e operações que o kinectic não possui em comparação com o melodic para o que nos desejamos executar, podendo dando assim algumas dificuldades durante o processo. Para fazer a instalção, vais se ao site do ROS.org e seguese os passo de instalação lá indicados.
+
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
 - Resultados Esperados
