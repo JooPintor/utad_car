@@ -162,6 +162,8 @@ O primeiro passo é arranjar um cartão sd para install o sistema operativo Ubun
 
 Ao installar e fazer set-up do sistema operativo, é necessario instalar o ROS melodic para o projecto, tambem pode ser instalado o ROS kinetc, no entanto, tendo em atenção existem certas funções e operações que o kinectic não possui em comparação com o melodic para o que nos desejamos executar, podendo dando assim algumas dificuldades durante o processo. Para fazer a instalção, vais se ao site do ROS.org e seguese os passo de instalação lá indicados.
 
+
+
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
 - Resultados Esperados
