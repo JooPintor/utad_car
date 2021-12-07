@@ -152,71 +152,13 @@ hostnamectl
             Kernel: Linux 4.9.201-tegra
       Architecture: arm64
 
-
-Portátil ASUSLaptop X512DA.313, 24/8/2020: Microsoft Windows 10 Home verº10.0.19043: ROS-melodic
-
-OS Name:                   Microsoft Windows 10 Home
-OS Version:                10.0.19043 N/A Build 19043
-OS Manufacturer:           Microsoft Corporation
-OS Configuration:          Standalone Workstation
-OS Build Type:             Multiprocessor Free
-Product ID:                00325-81937-05138-AAOEM
-Original Install Date:     03/11/2020, 01:58:26
-System Boot Time:          26/09/2021, 15:40:39
-System Manufacturer:       ASUSTeK COMPUTER INC.
-System Model:              VivoBook_ASUSLaptop X512DA_F512DA
-System Type:               x64-based PC
-Processor(s):              1 Processor(s) Installed.
-                           [01]: AMD64 Family 23 Model 24 Stepping 1 AuthenticAMD ~2100 Mhz
-BIOS Version:              American Megatrends Inc. X512DA.313, 24/08/2020
-Windows Directory:         C:\Windows
-System Directory:          C:\Windows\system32
-Boot Device:               \Device\HarddiskVolume1
-System Locale:             pt;Português (Portugal)
-Input Locale:              pt;Português (Portugal)
-Time Zone:                 (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres
-Total Physical Memory:     5 068 MB
-Available Physical Memory: 1 438 MB
-Virtual Memory: Max Size:  7 116 MB
-Virtual Memory: Available: 1 642 MB
-Virtual Memory: In Use:    5 474 MB
-Page File Location(s):     C:\pagefile.sys
-Domain:                    WORKGROUP
-Logon Server:              \\HB
-Hotfix(s):                 13 Hotfix(s) Installed.
-                           [01]: KB5004331
-                           [02]: KB4534170
-                           [03]: KB4537759
-                           [04]: KB4542335
-                           [05]: KB4545706
-                           [06]: KB4577586
-                           [07]: KB4580325
-                           [08]: KB4586864
-                           [09]: KB4589212
-                           [10]: KB4598481
-                           [11]: KB5000736
-                           [12]: KB5005565
-                           [13]: KB5005699
-Network Card(s):           2 NIC(s) Installed.
-                           [01]: Qualcomm Atheros QCA9377 Wireless Network Adapter
-                                 Connection Name: Wi-Fi
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     192.168.1.1
-                                 IP address(es)
-                                 [01]: 192.168.1.35
-                                 [02]: fe80::95fb:61cd:d25e:e483
-                           [02]: Bluetooth Device (Personal Area Network)
-                                 Connection Name: Ligação de Rede Bluetooth
-                                 Status:          Media disconnected
-Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
-
-
-
 - incluindo os links para fazer download
 
 - Explicação de alguns dos processos
 
 No começo deste trabalho, foi montado um carrinho simples que possui duas rodas motorizadas e uma roda na frente ao centro, tendo as placa RasperryPi 3 montada com o chapeu en-cima. A montagem que feita no RPI3 é feita para que tenhamos o numero de portas necessarias para fazer não só a ligação dos nossos motores para a placa mas tambem para efetuar a ligação da camera utilizada para a placa, uma coisa que se tem de ter em conta enquanto a esta montagem é o numero das portas utilizadas para transmitir a informação, sendo esses numeros que vamos indicar no codigo que irá controlar o output e input da nossa montagem.
+
+O primeiro passo é arranjar um cartão sd para install o sistema operativo Ubuntu versão 18.08, o motivo de ser esta versão e não a mais recente é pelo facto desta versão conter algumas funções e operações que permitam a utilização da camera que as versões mais recentes não pessuem, tendo ocorrido erros quando estas versões foram testadas.
 
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
