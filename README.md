@@ -167,6 +167,8 @@ How criar o catkin_ws, executase catkin_make para fazer a primeira compilação 
 
 Proximo passo é arranjar software para escrever os nodes e os pacotes em python, pode-se tambem escrever o codigo em c++ mas isso exigerá mais passo conseguir fazer o codigo funcionar e fazer download the varias biobliotecas que serão necessarios para o que queremos, no entanto, em python, so teremos que fazer um simples pip setup para instalar o que for necessario para a nossa maquina.
 
+Depois de fazer alguns dos exemplos, nos iremos começar escrever o codigo para controlarmos o nosso carro com comandos vindo do teclado.
+
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
 - Resultados Esperados
