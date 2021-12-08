@@ -162,12 +162,11 @@ O primeiro passo que se fez foi arranjar um cartão sd para install o sistema op
 
 Ao installar e fazer set-up do sistema operativo, foi instalado o ROS melodic para o projecto, tambem pode se testou instalar o ROS kinetic, no entanto, existem certas funções e operações que o kinectic não possui em comparação com o melodic para o que nos desejamos executar, dando algumas dificuldades durante o processo quando tentamos o utilizar. Para fazer a instalação, foi-se ao site do ROS.org e seguio-se os passo de instalação lá indicados. 
 
-É aconcelhado que o catkin workspace, o espaço onde vai ser focado os nossos nodes para o trabalho, seja posto numa pasta de facil acesso para que não hajá complicações quando escrever o caminho que os fecheiros terão que fazer quando buscar certa informação.
-How criar o catkin_ws, executase catkin_make para fazer a primeira compilação e para nôs criar a past devel e src, sendo estes 2 os mais importantes quanto á execução e criação de nodes. É se sujerido fazer os exemplos iniciais que estão no site do ROS, para não so apanhar o jeito mas tambem para ter um conceito basico de como ROS funciona.
+O catkin workspace, o espaço onde vai ser focado os nossos nodes para o trabalho, ouve alguma complicação no inicio, mas só por causa que não se percebia-se muito bem como o catkin_make funcionava. Ao perceber melhor o que catkin_make faz, e tambem perceber que tem se que executar o ficheiro setup.bat sempre que modificamos algo enquanto a direções e criações de nodes e pacotes, tornou-se mais facil de perceber como é que os pacotes e nodes se irão posicionar e ligar no catkin workspace.
 
-Proximo passo é arranjar software para escrever os nodes e os pacotes em python, pode-se tambem escrever o codigo em c++ mas isso exigerá mais passo conseguir fazer o codigo funcionar e fazer download the varias biobliotecas que serão necessarios para o que queremos, no entanto, em python, so teremos que fazer um simples pip setup para instalar o que for necessario para a nossa maquina.
+Para modificar e escrever o codigo que se arranjou para o projecto foi utilizado o iditor de texto que já vinha no Ubuntu chamado Pluma, tambem se tentou escrever o codigo em c++ mas isso exigiu mais bibliotecas e funcões, que Ubuntu não pessuia, para conseguir fazer o codigo funcionar, fazer assim necessario fazer download disso tudo ocupando espaço que nos precisamos para o projeto, no entanto em python so teremos que fazer um simples apt get install para instalar o que for necessario, sendo isto não so mais rapido mas tambem mais eficiente para que o que for instalado seja utilizavel por qualquer aplicação.
 
-Depois de fazer alguns dos exemplos, nos iremos começar escrever o codigo para controlarmos o nosso carro com comandos vindo do teclado.
+Foi se fazer os exemplos que estão no site do ROS para começar a perceber a metedologia do firmware e para ajudar a perceber como as funções basicas que o ROS consegue fazer. Só depois de acabar de fazer o ultimo tutorial do nivel basico do ROS é que se começou a fazer os nodes para o projeto.
 
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
