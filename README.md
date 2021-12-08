@@ -162,7 +162,10 @@ O primeiro passo é arranjar um cartão sd para install o sistema operativo Ubun
 
 Ao installar e fazer set-up do sistema operativo, é necessario instalar o ROS melodic para o projecto, tambem pode ser instalado o ROS kinetc, no entanto, tendo em atenção existem certas funções e operações que o kinectic não possui em comparação com o melodic para o que nos desejamos executar, podendo dando assim algumas dificuldades durante o processo. Para fazer a instalção, vais se ao site do ROS.org e seguese os passo de instalação lá indicados.
 
+É aconcelhado que o catkin workspace, o espaço onde vai ser focado os nossos nodes para o trabalho, seja posto numa pasta de facil acesso para que não hajá complicações quando escrever o caminho que os fecheiros terão que fazer quando buscar certa informação.
+How criar o catkin_ws, executase catkin_make para fazer a primeira compilação e para nôs criar a past devel e sorce, sendo estes 2 os mais importantes quanto á execução e criação de nodes. É se sujerido fazer os exemplos iniciais que estão no site do ROS, para não so apanhar o jeito mas tambem para ter um conceito basico de como ROS funciona.
 
+Proximo passo é arranjar software para escrever os nodes e os pacotes em python, pode-se tambem escrever o codigo em c++ mas isso exigerá mais passo conseguir fazer o codigo funcionar e fazer download the varias biobliotecas que serão necessarios para o que queremos, no entanto, em python, so teremos que fazer um simples pip setup para instalar o que for necessario para a nossa maquina.
 
 - Algumas das dificuldades encontradas
 - A explicação de como funciona
