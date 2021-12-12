@@ -4,17 +4,21 @@ Esta pagina tem o objectivo de ser um depositorio de conhecimento para o ensino 
 
 Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](./docs/Equipamento%20Utilizado.md), com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
-##Temas abordados
+## Temas abordados
 - O que é o ROS?
 - Instalação do SO no SBC
-- 
+- Instalação do ROS
+- Insatalação de Divers dos Motores
+- Insatalação dos Codificadores
+- Instalação do Robot
+- Instalação do RobotPeak Lidar
+- Instalação da Camera Intel RealSense
+- Processamento de Imagem
+- Deteção de obstaculos
 
-- O que é ROS?\n
+# O que é ROS?
 Robot Operating System é o sistema mais utilizados nos ultimos anos quando se vem há robotica, sendo este uma framework crianda a partir da ligação de diferentes computadores que assim vai criar o seu proprio sistema operativo para o robo que está a ser programado, para comprir as suas funções.
 
-- incluindo os links para fazer download
-
-- Explicação de alguns dos processos
 
 No começo deste trabalho, foi montado um carrinho simples que possui duas rodas motorizadas e uma roda na frente ao centro, tendo as placa RasperryPi 3 montada com o chapeu en-cima. A montagem que foi feita no RPI3 é feita para que tenhamos o numero de portas necessarias para fazer não só a ligação dos nossos motores para a placa mas tambem para efetuar a ligação da camera utilizada para a placa, uma coisa que se tem de ter em conta enquanto a esta montagem é o numero das portas utilizadas para transmitir a informação, sendo esses numeros que vamos indicar no codigo que irá controlar o output e input da nossa montagem.
 
