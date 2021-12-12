@@ -10,7 +10,7 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 - Instalação do ROS
 - Insatalação de Divers dos Motores
 - Insatalação dos Codificadores
-- Instalação do Robot
+- Montagem do Robot
 - Instalação do RobotPeak Lidar
 - Instalação da Camera Intel RealSense
 - Processamento de Imagem
