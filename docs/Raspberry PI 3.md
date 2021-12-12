@@ -3,7 +3,7 @@
  
 Processors: 4
 
-model name      : ARMv7 Processor rev 4 (v7l)
+emsp model name      : ARMv7 Processor rev 4 (v7l)
 
 BogoMIPS           : 57.60
 
