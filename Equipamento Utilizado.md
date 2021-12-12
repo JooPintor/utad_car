@@ -1,4 +1,4 @@
-**Equipamentos Utilizados
+**Equipamentos Utilizados**
 
 Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipamento:\n
 \t-Rasperry Pi 3: Ubuntu Rob3: Linux verº18.04: ROS-melodic\n
