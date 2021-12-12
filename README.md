@@ -6,7 +6,7 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 
 ## Temas abordados
 - O que é o ROS?
-- Instalação do SO no SBC
+- Instalação do SO nos SBC
 - Instalação do ROS
 - Insatalação de Divers dos Motores
 - Insatalação dos Codificadores
@@ -16,7 +16,7 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 - Processamento de Imagem
 - Deteção de obstaculos
 
-# O que é ROS?
+## O que é ROS?
 Robot Operating System é o sistema mais utilizados nos ultimos anos quando se vem há robotica, sendo este uma framework crianda a partir da ligação de diferentes computadores que assim vai criar o seu proprio sistema operativo para o robo que está a ser programado, para comprir as suas funções.
 
 
