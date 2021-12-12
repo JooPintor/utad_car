@@ -2,7 +2,7 @@
 
 Esta pagina tem o objectivo de ser um depositorio de conhecimento para o ensino de utilização do ROS e introdução à visão dos robos.
 
-Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento "Equipamentos Utilizados", com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
+Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](https://github.com/JooPintor/Trabalho-de-Mestrado-de-Joao-Bastos-Pintor/main/"Equipamentos Utilizados".md), com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
 ##Temas abordados
 - O que é o ROS?
