@@ -1,4 +1,6 @@
 ### Raspberry PI 3
+SBC (Single Board Computer)
+
 (cat /proc/cpuinfo)
  
            Processors: 4
