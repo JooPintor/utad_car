@@ -1,25 +1,25 @@
 ### Raspberry PI 3
 (cat /proc/cpuinfo)
  
-           Processors : 4
-           model name : ARMv7 Processor rev 4 (v7l)
-             BogoMIPS : 57.60
-             Features : half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32
-      CPU implementer : 0x41
-     CPU architecture : 7
-          CPU variant : 0x0
-             CPU part : 0xd03
-         CPU revision : 4
+           Processors: 4
+           model name: ARMv7 Processor rev 4 (v7l
+             BogoMIPS: 57.60
+             Features: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32
+      CPU implementer: 0x41
+     CPU architecture: 7
+          CPU variant: 0x0
+             CPU part: 0xd03
+         CPU revision: 4
          
-             Hardware : BCM2835
-             Revision : a02082
-               Serial : 00000000b0efcb08
-                Model : Raspberry Pi 3 Model B Rev 1.2
+             Hardware: BCM2835
+             Revision: a02082
+               Serial: 00000000b0efcb08
+                Mode : Raspberry Pi 3 Model B Rev 1.2
 
  
 (cat /proc/meminfo)
 
-             MemTotal : 876176 kB
+             MemTotal: 876176 kB
 
  
 OS:
@@ -39,10 +39,10 @@ OS:
 
 No LSB modules are available.
 
-       Distributor ID : Ubuntu
-          Description : Ubuntu 18.04.6 LTS
-              Release : 18.04
-             Codename : bionic
+       Distributor ID: Ubuntu
+          Description: Ubuntu 18.04.6 LTS
+              Release: 18.04
+             Codename: bionic
 
  
 (hostnamectl)
