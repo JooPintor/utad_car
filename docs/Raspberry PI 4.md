@@ -74,17 +74,11 @@ OS:
 
 hostnamectl
 
-   Static hostname: rpi4
-   
+    Static hostname: rpi4
          Icon name: computer
-         
         Machine ID: 0f314813462c45599e46b4825c222602
-        
            Boot ID: 45fe831cc2764fa48426dac216f3a48e
-           
-  Operating System: Ubuntu 20.04.2 LTS
-  
+    Operating System: Ubuntu 20.04.2 LTS
             Kernel: Linux 5.4.0-1044-raspi
-            
       Architecture: arm64
       
