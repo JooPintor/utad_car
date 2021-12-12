@@ -4,7 +4,7 @@ Esta pagina tem o objectivo de ser um depositorio de conhecimento para o ensino 
 
 Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento "Equipamentos Utilizados", com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
-*#Temas abordados*
+** Temas abordados**
 - O que é o ROS?
 - Instalação do SO no SBC
 - 
