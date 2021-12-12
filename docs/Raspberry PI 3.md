@@ -19,7 +19,7 @@
  
 (cat /proc/meminfo)
 
-MemTotal: 876176 kB
+             MemTotal : 876176 kB
 
  
 OS:
@@ -27,21 +27,14 @@ OS:
 (cat /etc/os-release)
 
  
-NAME="Ubuntu"
-
-VERSION="18.04.6 LTS (Bionic Beaver)"
-
-ID=ubuntu
-
-ID_LIKE=debian
-
-PRETTY_NAME="Ubuntu 18.04.6 LTS"
-
-VERSION_ID="18.04"
-
-VERSION_CODENAME=bionic
-
-UBUNTU_CODENAME=bionic
+                 NAME = "Ubuntu"
+              VERSION = "18.04.6 LTS (Bionic Beaver)"
+                   ID = ubuntu
+              ID_LIKE = debian
+          PRETTY_NAME = "Ubuntu 18.04.6 LTS"
+           VERSION_ID = "18.04"
+     VERSION_CODENAME = bionic
+      UBUNTU_CODENAME = bionic
  
 (lsb_release -a)
 
