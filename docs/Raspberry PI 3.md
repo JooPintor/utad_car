@@ -10,15 +10,11 @@
           CPU variant : 0x0
              CPU part : 0xd03
          CPU revision : 4
-
- 
-Hardware            : BCM2835
-
-Revision              : a02082
-
-Serial                    : 00000000b0efcb08
-
-Model                  : Raspberry Pi 3 Model B Rev 1.2
+         
+             Hardware : BCM2835
+             Revision : a02082
+               Serial : 00000000b0efcb08
+                Model : Raspberry Pi 3 Model B Rev 1.2
 
  
 (cat /proc/meminfo)
