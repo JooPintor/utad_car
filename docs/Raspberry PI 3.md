@@ -23,7 +23,6 @@
 
  
 OS:
-
 (cat /etc/os-release)
 
  
@@ -40,23 +39,20 @@ OS:
 
 No LSB modules are available.
 
-Distributor ID:   Ubuntu
-
-Description:        Ubuntu 18.04.6 LTS
-
-Release:              18.04
-
-Codename:         bionic
+       Distributor ID : Ubuntu
+          Description : Ubuntu 18.04.6 LTS
+              Release : 18.04
+             Codename : bionic
 
  
 (hostnamectl)
 
-    Static hostname: utad 
-          Icon name: computer        
-         Machine ID: 17642ad8b86c40e7a23ee63a6d24d4ad        
-            Boot ID: 252b8a7a773a4e8bb00e9d6c9e3b4cef           
-   Operating System: Ubuntu 18.04.6 LTS  
-             Kernel: Linux 5.4.0-1042-raspi          
-       Architecture: arm
+       Static hostname: utad 
+             Icon name: computer        
+            Machine ID: 17642ad8b86c40e7a23ee63a6d24d4ad        
+               Boot ID: 252b8a7a773a4e8bb00e9d6c9e3b4cef           
+      Operating System: Ubuntu 18.04.6 LTS  
+                Kernel: Linux 5.4.0-1042-raspi          
+          Architecture: arm
 
 
