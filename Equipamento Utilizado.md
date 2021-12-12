@@ -1,4 +1,4 @@
-**Equipamentos Utilizados**
+##Equipamentos Utilizados
 
 Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipamento:
 
