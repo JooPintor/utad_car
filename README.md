@@ -67,7 +67,11 @@ Existem diversos softwares de criação decópia de imagens para cartões SD sen
 - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 - [balenaEtcher](https://www.balena.io/etcher/)
 
-
+Para a realização do trabalho foi testada a instalação de diversa imagens de SOs, nomeadamente as seguintes:
+- [2021-05-07-raspios-buster-armhf-full.zip](https://linuxdistros.org/torrents/raspios-2021-05-07-buster-armhf.zip.html)
+- [ubuntu-20.04.3-live-server-arm64.iso](https://cdimage.ubuntu.com/releases/20.04/release/)
+- [ububtu-mate-20.04.1-desktop-armhf+raspi.img.xz](https://releases.ubuntu-mate.org/20.04/armhf/)
+- 
 
 
 
