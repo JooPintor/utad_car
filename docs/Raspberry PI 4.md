@@ -27,32 +27,32 @@ OS:
 
 (cat /etc/os-release)
 
-    NAME="Ubuntu"
-    VERSION="20.04.2 LTS (Focal Fossa)"
-    ID=ubuntu
-    ID_LIKE=debian
-    PRETTY_NAME="Ubuntu 20.04.2 LTS"
-    VERSION_ID="20.04"
-    VERSION_CODENAME=focal
-    UBUNTU_CODENAME=focal
+                NAME = "Ubuntu"
+             VERSION = "20.04.2 LTS (Focal Fossa)"
+                  ID = ubuntu
+             ID_LIKE = debian
+         PRETTY_NAME = "Ubuntu 20.04.2 LTS"
+          VERSION_ID = "20.04"
+    VERSION_CODENAME = focal
+     UBUNTU_CODENAME = focal
 
-    lsb_release -a
+(lsb_release -a)
 
-  No LSB modules are available.
+    No LSB modules are available.
 
-    Distributor ID:   Ubuntu
-    Description:        Ubuntu 20.04.2 LTS
+      Distributor ID: Ubuntu
+         Description: Ubuntu 20.04.2 LTS
 
-    Release:              20.04
-    Codename:         focal
+             Release: 20.04
+            Codename: focal
 
-hostnamectl
+(hostnamectl)
 
-    Static hostname: rpi4
-         Icon name: computer
-        Machine ID: 0f314813462c45599e46b4825c222602
-           Boot ID: 45fe831cc2764fa48426dac216f3a48e
+     Static hostname: rpi4
+           Icon name: computer
+          Machine ID: 0f314813462c45599e46b4825c222602
+             Boot ID: 45fe831cc2764fa48426dac216f3a48e
     Operating System: Ubuntu 20.04.2 LTS
-            Kernel: Linux 5.4.0-1044-raspi
-      Architecture: arm64
+              Kernel: Linux 5.4.0-1044-raspi
+        Architecture: arm64
       
