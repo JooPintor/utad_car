@@ -17,19 +17,20 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 - Deteção de obstaculos
 
 ## O que é ROS?
-__Robot Operating System__ (ROS, sistema operativo de robôs) é uma coleção de frameworks de software para desenvolvimento de robôs, que fornece a funcionalidade de um sistema operativo num cluster de computadores heterogêneo.
+O __Robot Operating System__ (ROS, sistema operativo de robôs) é uma coleção de frameworks de software para desenvolvimento e programação de robôs, que fornece as funcionalidades dum sistema operativo num cluster de computadores heterogêneo.
 
-O ROS fornece serviços padrão de um sistema operativo, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, passagem de mensagens entre processos e gerenciamento de pacotes.
+O ROS fornece serviços normalmente fornecidos pelos sistemas operativos, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, passagem de mensagens entre processos e gestão de pacotes.
 
-Conjuntos de processos de ROS em execução são representados numa arquitetura de grafos onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
-Apesar da importância da reatividade e baixa latência no controle de robôs, o ROS em si, não é um sistema operativo de tempo real, embora seja possível integrar ROS com código em tempo real.
+O conjuntos de processos do ROS em execução são representados numa arquitetura gráfica onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
 
-O Software do ecossistema do ROS pode ser dividido em três grupos:
+Apesar da importância da reatividade e baixa latência no controle de robôs, o ROS em si, não é um sistema operativo de tempo real, embora seja possível integrar o ROS com código em tempo real.
+
+O Software do ecossistema ROS pode ser dividido em três grupos:
 - Ferramentas independentes da linguagem e plataforma usadas para a construção e distribuição de software baseado em ROS;
 - Implementações de bibliotecas clientes de ROS como roscpp, rospy e roslisp;
 - Pacotes com código relacionado com aplicações que usam uma ou mais bibliotecas cliente de ROS.
 
-Tanto as ferramentas independentes da língua quanto as principais bibliotecas clientes (C++, Python e Lisp) são lançadas sob os termos da licença BSD, e como tal são softwares de fonte aberta e livre para uso comercial e de investigação.
+Tanto as ferramentas independentes da língua como as principais bibliotecas clientes (C++, Python e Lisp) são lançadas sob os termos da licença BSD, e como tal são softwares de fonte aberta e livre para uso comercial e de investigação.
 
 A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, percepção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
 
