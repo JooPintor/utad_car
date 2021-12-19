@@ -1,4 +1,4 @@
-##Stepper Motor Expansion Shield
+## Stepper Motor Expansion Shield
 
 O Stepper Motor Expansion Shield é versátil para suportar vários Steppers / Motores / Servos ao mesmo tempo e suporta a laminação de placas múltiplas, que é adequada para jogadores fazerem você mesmo, robôs inteligentes, carros mecânicos e assim por diante. Utiliza conector de fácil controle I2C que é compatível com 3.3v / 5v e também adequado para outras placas de expansão no mercado. O conector I2C também está disponível com todos os tipos de sensores para expandir várias aplicações e fazer a entrada ou saída de dados através do raspberry pi I2C
 
