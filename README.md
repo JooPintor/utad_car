@@ -1,27 +1,27 @@
 # Objetivo
 
-Esta pagina tem o objectivo de ser um depositorio de conhecimento para o ensino de utilização do ROS e introdução à visão dos robos.
+Esta página tem o objetivo de ser um repositório de conhecimento para o ensino de utilização do ROS e introdução à visão dos robots.
 
-Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](./docs/Equipamento%20Utilizado.md), com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
+Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](./docs/Equipamento%20Utilizado.md), com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
 - [Instalação do SO nos SBC](#instalação-do-so-nos-sbc)
 - Instalação do ROS
-- Insatalação de Divers dos Motores
-- Insatalação dos Codificadores
+- Instalação de Divers dos Motores
+- Instalação dos Codificadores
 - Montagem do Robot
 - Instalação do RobotPeak Lidar
 - Instalação da Camera Intel RealSense
 - Processamento de Imagem
-- Deteção de obstaculos
+- Deteção de obstáculos
 
 ## O que é ROS?
 O __Robot Operating System__ (ROS, sistema operativo de robôs) é uma coleção de frameworks de software para desenvolvimento e programação de robôs, que fornece as funcionalidades dum sistema operativo num cluster de computadores heterogêneo.
 
 O ROS fornece serviços normalmente fornecidos pelos sistemas operativos, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, tais como passagem de mensagens entre processos e gestão de pacotes.
 
-O conjuntos de processos do ROS em execução são representados numa arquitetura gráfica onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
+O conjunto de processos do ROS em execução são representados numa arquitetura gráfica onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
 
 Apesar da importância da reatividade e baixa latência no controle de robôs, o ROS em si, não é um sistema operativo de tempo real, embora seja possível integrar o ROS com código em tempo real.
 
@@ -32,7 +32,7 @@ O Software do ecossistema ROS pode ser dividido em três grupos:
 
 Tanto as ferramentas independentes da língua como as principais bibliotecas clientes (C++, Python e Lisp) são lançadas sob os termos da licença BSD, e como tal são softwares de fonte aberta e livre para uso comercial e de investigação.
 
-A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, percepção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
+A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, perceção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
 
  Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
 
@@ -42,17 +42,18 @@ Os SBCs vêm completos com memória, um microprocessador, entradas e saídas.
 
 Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e versáteis, está longe de ser a única opção.
 
-A maioria dos SBCs executa bem os sistemas operatios Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
+A maioria dos SBCs executa bem os sistemas operativos Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
 
-Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das caracteristicas de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs em utilização.
+Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das características de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs em utilização.
 
-São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que denvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
+São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que desenvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
 
-Tendo em conta que o ROS foi uriginalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
+Tendo em conta que o ROS foi originalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
 
-Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquiteura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
+Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
 
 O Raspberry Pi 3 tem arquitetura ARM de 32 bits e o Raspbery Pi4 tem arquitetura ARM de 64 bits.
+
 
 O sistema operativo que foi escolhido para este trabalho foi o sistema Linux, Ubuntu 18.04. O motivo para asta escolha é por ser o mais apropriado para a versão de ROS que nos utilizamos, o ROS melodic, sendo este um que possui certos pacotes e funções que estão só preparados para essa versão do Ubuntu e por causa do Rasperri Pi 3, que o proprio circuito só conseguio fazer o setup do SO desta versão, sendo que quando usamos a mais recente o RPI3 tem dificuldades em começar o proprio sistema. Tambem se tentou instalar na placa NVIDEA jetson o SO mas esse deu ainda piores resultados, sendo a placa inentulizavel para o trabalho quando se tentou fazer o setup.
 
