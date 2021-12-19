@@ -50,10 +50,10 @@ São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4
 
 Tendo em conta que o ROS foi originalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
 
-Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
+Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compatível com o numero de bits do processador e com a memória RAM disponível no SBC.
 
 As arquiteturas dos SBCs testados foram as seguintes:
-- O Raspberry Pi 3 - procesador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flotuante por hardware)
+- O Raspberry Pi 3 - processador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flotuante por hardware)
 - O Raspberry Pi 4 - processador ARMv8 com arquitetura ARM de 64 bits ARM64.
 - Nvidia Jetson Nano - processador ARMv8 com arquitetura ARM de 64 bits ARM64
 
