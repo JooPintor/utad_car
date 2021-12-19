@@ -17,7 +17,7 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 - Deteção de obstaculos
 
 ## O que é ROS?
-__Robot Operating System__ (ROS, sistema operacional de robôs) é uma coleção de frameworks de software para desenvolvimento de robôs, que fornece a funcionalidade de um sistema operativo num cluster de computadores heterogêneo.
+__Robot Operating System__ (ROS, sistema operativo de robôs) é uma coleção de frameworks de software para desenvolvimento de robôs, que fornece a funcionalidade de um sistema operativo num cluster de computadores heterogêneo.
 
 O ROS fornece serviços padrão de um sistema operativo, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, passagem de mensagens entre processos e gerenciamento de pacotes.
 
