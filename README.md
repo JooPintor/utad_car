@@ -37,6 +37,17 @@ A maioria dos outros pacotes estão licenciados sob uma variedade de licenças d
  Para saber mais pode-se ir ao site do ["ROS"](http://wiki.ros.org/)
 
 ## Instalação do SO nos SBC
+Um computador de placa única (SBC - Single Board Computer) é um computador inteiro construído numa só placa de circuito impresso.
+Os SBCs vêm completos com memória, um microprocessador, entradas e saídas.
+Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e versáteis, está longe de ser a única opção.
+A maioria dos SBCs executa bem os sistemas operatios Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
+Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das caracteristicas de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs, criando plataformas independentes do SBC em utilização.
+São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que denvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
+Tendo em conta que o ROS foi uriginalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores. Também cheguei a instalar o Raspbian, no entanto neste SO é necessário compilar o ROS a partir do código fonte.
+Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquiteura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
+
+
+
 O sistema operativo que foi escolhido para este trabalho foi o sistema Linux, Ubuntu 18.04. O motivo para asta escolha é por ser o mais apropriado para a versão de ROS que nos utilizamos, o ROS melodic, sendo este um que possui certos pacotes e funções que estão só preparados para essa versão do Ubuntu e por causa do Rasperri Pi 3, que o proprio circuito só conseguio fazer o setup do SO desta versão, sendo que quando usamos a mais recente o RPI3 tem dificuldades em começar o proprio sistema. Tambem se tentou instalar na placa NVIDEA jetson o SO mas esse deu ainda piores resultados, sendo a placa inentulizavel para o trabalho quando se tentou fazer o setup.
 
 No começo deste trabalho, foi montado um carrinho simples que possui duas rodas motorizadas e uma roda na frente ao centro, tendo as placa RasperryPi 3 montada com o chapeu en-cima. A montagem que foi feita no RPI3 é feita para que tenhamos o numero de portas necessarias para fazer não só a ligação dos nossos motores para a placa mas tambem para efetuar a ligação da camera utilizada para a placa, uma coisa que se tem de ter em conta enquanto a esta montagem é o numero das portas utilizadas para transmitir a informação, sendo esses numeros que vamos indicar no codigo que irá controlar o output e input da nossa montagem.
