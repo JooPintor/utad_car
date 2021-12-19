@@ -5,7 +5,7 @@ Esta pagina tem o objectivo de ser um depositorio de conhecimento para o ensino 
 Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](./docs/Equipamento%20Utilizado.md), com os quais foram realizados diversos estudos, sendo registadas as principais dificudades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
 ## Temas abordados
-- ["O que é o ROS?"](#O que é ROS?)
+- ["O que é o ROS?"](#o-que-é-ROS)
 - Instalação do SO nos SBC
 - Instalação do ROS
 - Insatalação de Divers dos Motores
