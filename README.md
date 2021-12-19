@@ -17,7 +17,23 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 - Deteção de obstaculos
 
 ## O que é ROS?
-Robot Operating System é o sistema mais utilizados nos ultimos anos quando se vem há robotica, sendo este uma framework crianda a partir da ligação de diferentes computadores que assim vai criar o seu proprio sistema operativo para o robo que está a ser programado, para comprir as suas funções. Para saber mais pode-se ir ao site do ["ROS"](http://wiki.ros.org/)
+__Robot Operating System__ (ROS, sistema operacional de robôs) é uma coleção de frameworks de software para desenvolvimento de robôs, que fornece a funcionalidade de um sistema operativo num cluster de computadores heterogêneo.
+
+O ROS fornece serviços padrão de um sistema operativo, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, passagem de mensagens entre processos e gerenciamento de pacotes.
+
+Conjuntos de processos de ROS em execução são representados numa arquitetura de grafos onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
+Apesar da importância da reatividade e baixa latência no controle de robôs, o ROS em si, não é um sistema operativo de tempo real, embora seja possível integrar ROS com código em tempo real.
+
+O Software do ecossistema do ROS pode ser dividido em três grupos:
+- Ferramentas independentes da linguagem e plataforma usadas para a construção e distribuição de software baseado em ROS;
+- Implementações de bibliotecas clientes de ROS como roscpp, rospy e roslisp;
+- Pacotes com código relacionado com aplicações que usam uma ou mais bibliotecas cliente de ROS.
+
+Tanto as ferramentas independentes da língua quanto as principais bibliotecas clientes (C++, Python e Lisp) são lançadas sob os termos da licença BSD, e como tal são softwares de fonte aberta e livre para uso comercial e de investigação.
+
+A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, percepção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
+
+ Para saber mais pode-se ir ao site do ["ROS"](http://wiki.ros.org/)
 
 ## Instalação do SO nos SBC
 O sistema operativo que foi escolhido para este trabalho foi o sistema Linux, Ubuntu 18.04. O motivo para asta escolha é por ser o mais apropriado para a versão de ROS que nos utilizamos, o ROS melodic, sendo este um que possui certos pacotes e funções que estão só preparados para essa versão do Ubuntu e por causa do Rasperri Pi 3, que o proprio circuito só conseguio fazer o setup do SO desta versão, sendo que quando usamos a mais recente o RPI3 tem dificuldades em começar o proprio sistema. Tambem se tentou instalar na placa NVIDEA jetson o SO mas esse deu ainda piores resultados, sendo a placa inentulizavel para o trabalho quando se tentou fazer o setup.
