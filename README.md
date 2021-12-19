@@ -34,7 +34,7 @@ Tanto as ferramentas independentes da língua como as principais bibliotecas cli
 
 A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, percepção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
 
- Para saber mais pode-se ir ao site do ["ROS"](http://wiki.ros.org/)
+ Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
 
 ## Instalação do SO nos SBC
 Um computador de placa única (SBC - Single Board Computer) é um computador inteiro construído numa só placa de circuito impresso.
