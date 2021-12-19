@@ -1,4 +1,4 @@
-## Nvidia Jetson Nano 2GB develepor kit
+### Nvidia Jetson Nano 2GB develepor kit
 
     model name      : ARMv8 Processor rev 1 (v8l)
     Processors: 4
