@@ -39,11 +39,17 @@ A maioria dos outros pacotes estão licenciados sob uma variedade de licenças d
 ## Instalação do SO nos SBC
 Um computador de placa única (SBC - Single Board Computer) é um computador inteiro construído numa só placa de circuito impresso.
 Os SBCs vêm completos com memória, um microprocessador, entradas e saídas.
+
 Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e versáteis, está longe de ser a única opção.
+
 A maioria dos SBCs executa bem os sistemas operatios Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
+
 Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das caracteristicas de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs, criando plataformas independentes do SBC em utilização.
+
 São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que denvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
+
 Tendo em conta que o ROS foi uriginalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores. Também cheguei a instalar o Raspbian, no entanto neste SO é necessário compilar o ROS a partir do código fonte.
+
 Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquiteura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
 
 
