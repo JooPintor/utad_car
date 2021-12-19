@@ -8,7 +8,7 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 
 - [Rapsperry Pi 4](./Raspberry%20PI%204.md): __Linux ver 20.07: ROS-noetic__
 
-- [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano.md) 2GB develepor kit: Ubuntu Rob3: __Linux ver. 18.04: ROS-melodic__
+- [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano%202GB%20develepor%20kit.md) 2GB develepor kit: Ubuntu Rob3: __Linux ver. 18.04: ROS-melodic__
 
 ### Drivers (HATs)
 
