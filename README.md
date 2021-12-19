@@ -57,6 +57,16 @@ As arquiteturas dos SBCs testados foram as seguintes:
 - O Raspberry Pi 4 - processador ARMv8 com arquitetura ARM de 64 bits ARM64.
 - Nvidia Jetson Nano - processador ARMv8 com arquitetura ARM de 64 bits ARM64
 
+No caso dos SBCs testados o sitema opertivo arranca a partir de um cartão uSD que funciona como "disco" do sistema tendo sido utilizados cartões com o minimo de 16 GB, apesar de ser possível instalar o sistema com cartões de apenas 8 GB.
+
+Para a instalação dos sistemas nos SBCs deve-se começar por criar a imagem de um disco com capacidade de arranque (com informação de arranque nos primeiros sectores do disco) e que contenha a informação minima para a configuração do sistema.
+
+Em alternativa pode-se criar uma imagem de um sistema já instalado num SBC semelhante.
+
+Existem diversos softwares de criação decópia de imagens para cartões SD sendo os mais utilizados os seguintes:
+- [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+- [balenaEtcher](https://www.balena.io/etcher/)
+
 
 
 
