@@ -1,6 +1,6 @@
 ## Raspberry PI 4
 
-cat /proc/cpuinfo
+(cat /proc/cpuinfo)
 
 
                  Model: Raspberry Pi 4 Model B Rev 1.
