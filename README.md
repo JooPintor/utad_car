@@ -44,7 +44,7 @@ Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e vers�
 
 A maioria dos SBCs executa bem os sistemas operatios Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
 
-Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das caracteristicas de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs, criando plataformas independentes do SBC em utilização.
+Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das caracteristicas de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs em utilização.
 
 São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que denvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
 
