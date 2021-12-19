@@ -1,23 +1,23 @@
 ## Nvidia Jetson Nano 2GB develepor kit
 
-model name      : ARMv8 Processor rev 1 (v8l)
+    model name      : ARMv8 Processor rev 1 (v8l)
 
-Processors: 4
+    Processors: 4
 
- 
-BogoMIPS           : 38.40
 
-Features              : fp asimd evtstrm aes pmull sha1 sha2 crc32
+    BogoMIPS           : 38.40
 
-CPU implementer            : 0x41
+    Features              : fp asimd evtstrm aes pmull sha1 sha2 crc32
 
-CPU architecture: 8
+    CPU implementer            : 0x41
 
-CPU variant        : 0x1
+    CPU architecture: 8
 
-CPU part             : 0xd07
+    CPU variant        : 0x1
 
-CPU revision       : 1
+    CPU part             : 0xd07
+
+    CPU revision       : 1
 
  
 cat /proc/meminfo
@@ -27,37 +27,37 @@ MemTotal:        2027380 kB
  
 OS:
 
-cat /etc/os-release
+    cat /etc/os-release
 
- 
-NAME="Ubuntu"
 
-VERSION="18.04.5 LTS (Bionic Beaver)"
+    NAME="Ubuntu"
 
-ID=ubuntu
+    VERSION="18.04.5 LTS (Bionic Beaver)"
 
-ID_LIKE=debian
+    ID=ubuntu
 
-PRETTY_NAME="Ubuntu 18.04.5 LTS"
+    ID_LIKE=debian
 
-VERSION_ID="18.04"
+    PRETTY_NAME="Ubuntu 18.04.5 LTS"
 
-VERSION_CODENAME=bionic
+    VERSION_ID="18.04"
 
-UBUNTU_CODENAME=bionic
+    VERSION_CODENAME=bionic
+
+    UBUNTU_CODENAME=bionic
 
  
 lsb_release -a
 
 No LSB modules are available.
 
-Distributor ID:   Ubuntu
+    Distributor ID:   Ubuntu
 
-Description:        Ubuntu 18.04.5 LTS
+    Description:        Ubuntu 18.04.5 LTS
 
-Release:              18.04
+    Release:              18.04
 
-Codename:         bionic
+    Codename:         bionic
 
  
 hostnamectl
