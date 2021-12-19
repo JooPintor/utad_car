@@ -52,7 +52,19 @@ Tendo em conta que o ROS foi originalmente desenvolviso para o sistema Linux, a 
 
 Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compativel com o numero de bits do processador e com a memória RAM disponível no SBC.
 
-O Raspberry Pi 3 tem arquitetura ARM de 32 bits e o Raspbery Pi4 tem arquitetura ARM de 64 bits.
+As arquiteturas dos SBCs testados foram as seguintes:
+- O Raspberry Pi 3 - procesador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flotuante por hardware)
+- O Raspberry Pi 4 - processador ARMv8 com arquitetura ARM de 64 bits ARM64.
+- Nvidia Jetson Nano - processador ARMv8 com arquitetura ARM de 64 bits ARM64
+
+
+
+
+
+
+
+
+
 
 
 O sistema operativo que foi escolhido para este trabalho foi o sistema Linux, Ubuntu 18.04. O motivo para asta escolha é por ser o mais apropriado para a versão de ROS que nos utilizamos, o ROS melodic, sendo este um que possui certos pacotes e funções que estão só preparados para essa versão do Ubuntu e por causa do Rasperri Pi 3, que o proprio circuito só conseguio fazer o setup do SO desta versão, sendo que quando usamos a mais recente o RPI3 tem dificuldades em começar o proprio sistema. Tambem se tentou instalar na placa NVIDEA jetson o SO mas esse deu ainda piores resultados, sendo a placa inentulizavel para o trabalho quando se tentou fazer o setup.
