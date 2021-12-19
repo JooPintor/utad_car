@@ -19,13 +19,13 @@
                 Serial: 1000000077cc0d0c
                  Model: Raspberry Pi 4 Model B Rev 1.2
  
-cat /proc/meminfo
+(cat /proc/meminfo)
 
-    MemTotal:        3884324 kB
+              MemTotal: 3884324 kB
  
 OS:
 
-    cat /etc/os-release
+(cat /etc/os-release)
 
     NAME="Ubuntu"
     VERSION="20.04.2 LTS (Focal Fossa)"
