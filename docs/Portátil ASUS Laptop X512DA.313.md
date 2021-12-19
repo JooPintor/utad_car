@@ -1,26 +1,16 @@
-OS Name:                   Microsoft Windows 10 Home
-
-OS Version:                10.0.19043 N/A Build 19043
-
-OS Manufacturer:           Microsoft Corporation
-
-OS Configuration:          Standalone Workstation
-
-OS Build Type:             Multiprocessor Free
-
-Product ID:                00325-81937-05138-AAOEM
-
-Original Install Date:     03/11/2020, 01:58:26
-
-System Boot Time:          26/09/2021, 15:40:39
-
-System Manufacturer:       ASUSTeK COMPUTER INC.
-
-System Model:              VivoBook_ASUSLaptop X512DA_F512DA
-
-System Type:               x64-based PC
-
-Processor(s):              1 Processor(s) Installed.
+    OS Name:                   Microsoft Windows 10 Home
+    OS Version:                10.0.19043 N/A Build 19043
+    OS Manufacturer:           Microsoft Corporation
+    OS Configuration:          Standalone Workstation
+    OS Build Type:             Multiprocessor Free
+    Product ID:                00325-81937-05138-AAOEM
+    Original Install Date:     03/11/2020, 01:58:26
+    System Boot Time:          26/09/2021, 15:40:39
+    System Manufacturer:       ASUSTeK COMPUTER INC.
+    System Model:              VivoBook_ASUSLaptop X512DA_F512DA
+    System Type:               x64-based PC
+  
+  Processor(s):              1 Processor(s) Installed.
 
                            [01]: AMD64 Family 23 Model 24 Stepping 1 AuthenticAMD ~2100 Mhz
 BIOS Version:              American Megatrends Inc. X512DA.313, 24/08/2020
