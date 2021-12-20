@@ -71,7 +71,9 @@ Para a realização do trabalho foi testada a instalação de diversa imagens de
 - [2021-05-07-raspios-buster-armhf-full.zip](https://linuxdistros.org/torrents/raspios-2021-05-07-buster-armhf.zip.html)
 - [ubuntu-20.04.3-live-server-arm64.iso](https://cdimage.ubuntu.com/releases/20.04/release/)
 - [ububtu-mate-20.04.1-desktop-armhf+raspi.img.xz](https://releases.ubuntu-mate.org/20.04/armhf/)
-- 
+- [2021-05-07-raspios-buster-arm64.zip](http://ftp.jaist.ac.jp/pub/raspberrypi/raspios_arm64/images/raspios_arm64-2021-05-28/)
+- [ubuntu-18.04.5-preinstalled-server-armhf+raspi3.img.xz](https://cdimage.ubuntu.com/releases/18.04/release/)
+- [ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz](https://cdimage.ubuntu.com/releases/20.04/release/)
 
 
 
