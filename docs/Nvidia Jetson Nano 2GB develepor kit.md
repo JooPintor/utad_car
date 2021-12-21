@@ -36,7 +36,7 @@ No LSB modules are available.
            Release: 18.04
           Codename: bionic
  
-hostnamectl
+(hostnamectl)
 
      Static hostname: nvidia
            Icon name: computer
