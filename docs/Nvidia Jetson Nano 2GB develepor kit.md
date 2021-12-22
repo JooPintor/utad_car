@@ -1,5 +1,7 @@
 ### Nvidia Jetson Nano 2GB develepor kit
 
+(cat /proc/cpuinfo)
+
           model name: ARMv8 Processor rev 1 (v8l)
           Processors: 4
             BogoMIPS: 38.40
