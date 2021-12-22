@@ -16,30 +16,30 @@
 (cat /proc/meminfo)
 
 
-            MemTotal: 2027380 kB
+           MemTotal: 2027380 kB
 
  
 OS:
 (cat /etc/os-release)
 
     
-                NAME="Ubuntu"
-             VERSION="18.04.5 LTS (Bionic Beaver)"
-                  ID=ubuntu
-             ID_LIKE=debian
-         PRETTY_NAME="Ubuntu 18.04.5 LTS"
-          VERSION_ID="18.04"
-    VERSION_CODENAME=bionic
-     UBUNTU_CODENAME=bionic
+                NAME= "Ubuntu"
+             VERSION= "18.04.5 LTS (Bionic Beaver)"
+                  ID= ubuntu
+             ID_LIKE= debian
+         PRETTY_NAME= "Ubuntu 18.04.5 LTS"
+          VERSION_ID= "18.04"
+    VERSION_CODENAME= bionic
+     UBUNTU_CODENAME= bionic
  
 (lsb_release -a)
 
-No LSB modules are available.
+    No LSB modules are available.
 
-    Distributor ID: Ubuntu
-       Description: Ubuntu 18.04.5 LTS
-           Release: 18.04
-          Codename: bionic
+      Distributor ID: Ubuntu
+         Description: Ubuntu 18.04.5 LTS
+             Release: 18.04
+            Codename: bionic
  
 (hostnamectl)
 
