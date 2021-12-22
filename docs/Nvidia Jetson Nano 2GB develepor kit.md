@@ -10,14 +10,17 @@
             CPU part: 0xd07
         CPU revision: 1
  
-cat /proc/meminfo
 
-MemTotal:        2027380 kB
+(cat /proc/meminfo)
+
+
+            MemTotal: 2027380 kB
 
  
 OS:
+(cat /etc/os-release)
 
-    cat /etc/os-release
+    
                 NAME="Ubuntu"
              VERSION="18.04.5 LTS (Bionic Beaver)"
                   ID=ubuntu
@@ -27,7 +30,7 @@ OS:
     VERSION_CODENAME=bionic
      UBUNTU_CODENAME=bionic
  
-lsb_release -a
+(lsb_release -a)
 
 No LSB modules are available.
 
