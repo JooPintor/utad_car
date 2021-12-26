@@ -46,7 +46,9 @@ No caso de imagens pré-instaladas é necessário saber o nome de utilizador e a
 
 Em particular nas situações em que não esteja disponível uma ligação por cabo ao SBC há necessidade de [configurar o acesso á rede LAN](#configuração-do-acesso-á-rede-lan) a que o SBC se poderá ligar quando arrancar.
 
-Nas opções de servidores é ainda conveniente instalar um “desktop”. Sugiro a instalação do desktop “lubuntu” por se tratar de um desktop simples, mas com tudo o que necessitamos para a utilização pretendida.
+Nas opções de servidores é ainda conveniente instalar um “desktop”.
+
+Sugiro a instalação do desktop “lubuntu” por se tratar de um desktop simples, mas com tudo o que necessitamos para a utilização pretendida.
 
 Para a instalação do desktop deverão ser executados os seguintes comandos numa janela de comandos do servidor:
 
@@ -56,11 +58,11 @@ Para a instalação do desktop deverão ser executados os seguintes comandos num
     sudo reboot
 
 
-Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do nome do utilizador e a palavra passe, bem como do nome do servidor.
+Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-“username”-em-sistemas-linux) e a [palavra passe](#alteração-da-“password”-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-da-“password”-em-sistemas-linux).
 
 Essas alterações podem ser feitas seguindo estas instruções.
 
-## Configuração do acesso á rede LAN 
+### Configuração do acesso á rede LAN 
 Com o cartão SD inserido no PC, na partição de “system-boot” do cartão, que contém arquivos de configuração inicial que são carregados durante o primeiro processo de inicialização, devemos editar o ficheiro “network-config” , introduzindo as credenciais de acesso á rede WiFi e o modo de ligação, se com endereço obtido por DHCH ou se com endereço fixo.
 
 Para fazer isso, deve-se descomentar (remover o “#” no início da linha) e editar as seguintes linhas:
@@ -109,3 +111,42 @@ Exemplo:
         nameservers:
           addresses: [192.168.1.23]
         optional: true 
+
+### Alteração do “username” em sistemas Linux
+Para alterar o nome de um utilizador esse utilizador não poderá estar ativo no sistema, pelo que se deverá começar por atribuir password ao utilizador “root” e arrancar a cessão com esse utilizador
+
+    sudo passwd root
+    sudo reboot
+
+Fazendo login com a conta "root" e a senha definida anteriormente alterar nome de utilizador e a pasta pessoal para o novo nome desejado.
+
+    usermod -l <novonome> -d /home/<novonome> -m <velhonome>
+	groupmod -n <novonome> <velhonome>
+    passwd -l root
+    exit
+
+
+### Alteração da “password” em sistemas Linux
+Algumas imagens obrigam á alteração da palavra passe durantre a primeira inicialização.
+
+No caso das imagens em que tal não ocorre ou por qualquer outra razão, a palavra passe de um sitema Linux pode a qualquer momento ser alterada utilizando o comando seguinte:
+
+    passwd
+
+### Alteração da “hostname” em sistemas Linux
+Digitar o seguinte comando para editar "/etc/hostname" utilizando o editor de texto nano:
+
+    sudo nano /etc/hostname
+
+Neste ficheiro deve-se substituir o antigo nome pelo novo nome.
+
+De seguida, deve-se editar também o ficheiro "/etc/hosts" com o comando:
+
+    sudo nano /etc/hosts
+
+Neste ficheiro deverá ser substituida qualquer ocorrência do antigo nome pelo novo nome.
+
+As alterações terão efeito no proximo arranque do sistema:
+
+    sudo reboot
+
