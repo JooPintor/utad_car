@@ -125,7 +125,7 @@ Fazendo login com a conta "root" e a senha definida anteriormente alterar nome d
     passwd -l root
     exit
 
-Nota: Em SBCs que apenas estejam acessiveis por SSH (não estejam ligados com teclado e monitor) poderá ser necessário alterar a [configuração do servidor SSH]() para permitir o login do utilizador "root"  
+Nota: Em SBCs que apenas estejam acessiveis por SSH (não estejam ligados com teclado e monitor) poderá ser necessário alterar a [configuração do servidor SSH](#configuração-do-servidor-ssh-para-permitir-o-login-do-root) para permitir o login do utilizador "root"  
 
 ### Alteração da “password” em sistemas Linux
 Algumas imagens obrigam á alteração da palavra passe durantre a primeira inicialização.
