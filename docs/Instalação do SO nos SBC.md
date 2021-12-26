@@ -44,7 +44,7 @@ No caso das imagens para a instalação do sistema desde o início, não são ne
 
 No caso de imagens pré-instaladas é necessário saber o nome de utilizador e a palavra passe utilizadas na pré-instalação.
 
-Em particular nas situações em que não esteja disponível uma ligação por cabo ao SBC há necessidade de [configurar o acesso á rede LAN]() a que o SBC se poderá ligar quando arrancar.
+Em particular nas situações em que não esteja disponível uma ligação por cabo ao SBC há necessidade de [configurar o acesso á rede LAN](#configuração-do-acesso-á-rede-lan) a que o SBC se poderá ligar quando arrancar.
 
 Nas opções de servidores é ainda conveniente instalar um “desktop”. Sugiro a instalação do desktop “lubuntu” por se tratar de um desktop simples, mas com tudo o que necessitamos para a utilização pretendida.
 
@@ -74,13 +74,13 @@ Para fazer isso, descomente (remova o “#” no início) e edite as seguintes l
 
 Por exemplo:
 
-wifis:
-  wlan0:
-    dhcp4: true
-    optional: true
-    access-points:
-      "home network":
-        password: "123456789"
+    wifis:
+      wlan0:
+        dhcp4: true
+        optional: true
+        access-points:
+          "home network":
+            password: "123456789"
 
 Nota: o nome da rede deve ser colocado entre aspas.
 
