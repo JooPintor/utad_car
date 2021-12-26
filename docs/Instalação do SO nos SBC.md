@@ -58,7 +58,7 @@ Para a instalação do desktop deverão ser executados os seguintes comandos num
     sudo reboot
 
 
-Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-username-em-sistemas-linux) e a [palavra passe](#alteração-da-password-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-do-hostname-em-sistemas-linux).
+Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-username-em-sistemas-linux) e da [palavra passe](#alteração-da-password-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-do-hostname-em-sistemas-linux).
 
 Essas alterações podem ser feitas seguindo estas instruções.
 
@@ -125,6 +125,7 @@ Fazendo login com a conta "root" e a senha definida anteriormente alterar nome d
     passwd -l root
     exit
 
+Nota: Em SBCs que apenas estejam acessiveis por SSH (não estejam ligados com teclado e monitor) poderá ser necessário alterar a [configuração do servidor SSH]() para permitir o login do utilizador "root"  
 
 ### Alteração da “password” em sistemas Linux
 Algumas imagens obrigam á alteração da palavra passe durantre a primeira inicialização.
@@ -149,4 +150,27 @@ Neste ficheiro deverá ser substituida qualquer ocorrência do antigo nome pelo 
 As alterações terão efeito no proximo arranque do sistema:
 
     sudo reboot
+
+### Configuração do servidor SSH para permitir o "login" do "root"
+Para habilitar o login via SSH ao utilizador root num sistema Debian Linux, é necessário primeiro configurar o servidor SSH.
+
+Para isso é necessário editar o ficheiro "/etc/ssh/sshd_config"
+
+	sudo nano /etc/ssh/sshd_config
+
+Neste ficheiro deverá ser alterada a seguinte linha:
+
+	De:
+	PermitRootLogin without-password
+	
+	Para:
+	PermitRootLogin yes
+	
+Depois de feita a alteração acima, deve-se reiniciar o servidor SSH:
+
+	sudo /etc/init.d/ssh restart
+	
+__Nota importante: Logo que não seja necessário o login do root por SSH o mesmo deve ser desabilitado por razões de segurança, repondo a configuração por defeito__
+
+
 
