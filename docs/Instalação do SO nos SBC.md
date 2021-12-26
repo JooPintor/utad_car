@@ -44,7 +44,7 @@ No caso das imagens para a instalação do sistema desde o início, não são ne
 
 No caso de imagens pré-instaladas é necessário saber o nome de utilizador e a palavra passe utilizadas na pré-instalação.
 
-No caso de não estar disponível uma ligação por cabo ao SBC deverá ser configurada a rede móvel a que o SBC se poderá ligar quando arrancar.
+Em particular nas situações em que não esteja disponível uma ligação por cabo ao SBC há necessidade de [configurar o acesso á rede LAN]() a que o SBC se poderá ligar quando arrancar.
 
 Nas opções de servidores é ainda conveniente instalar um “desktop”. Sugiro a instalação do desktop “lubuntu” por se tratar de um desktop simples, mas com tudo o que necessitamos para a utilização pretendida.
 
@@ -60,4 +60,48 @@ Nas versões pré-instaladas, por razões de segurança ou outras pode ser desej
 
 Essas alterações podem ser feitas seguindo estas instruções.
 
+## Configuração do acesso á rede LAN 
+Com o cartão SD inserido no PC, na partição de “system-boot” do cartão, que contém arquivos de configuração inicial que são carregados durante o primeiro processo de inicialização, devemos editar o ficheiro “network-config” , introduzindo as credenciais de acesso á rede WiFi e o modo de ligação, se com endereço obtido por DHCH ou se com endereço fixo.
 
+Para fazer isso, descomente (remova o “#” no início) e edite as seguintes linhas:
+    wifis:
+      wlan0:
+        dhcp4: true
+        optional: true
+        access-points:
+          <wifi network name>:
+            password: "<wifi password>"
+
+Por exemplo:
+
+wifis:
+  wlan0:
+    dhcp4: true
+    optional: true
+    access-points:
+      "home network":
+        password: "123456789"
+
+Nota: o nome da rede deve ser colocado entre aspas.
+
+O exemplo de configuração corresponde á opção de obtenção de endereço por DHCP, para configurar um endereço de IP fixo podem-se seguir as seguintes instruções:
+
+Definição dum IP estático
+Para definir um IP estático, é necessário substituir no arquivo de configuração de rede a linha
+
+dhcp4: true
+
+por linhas que especificam o endereço IP pretendido,  o gateway padrão e o servidor DNS.
+Esta configuração pode ser feita para a interface eth0 ou wlan0 (ou ambas).
+__É importante utilizar o “ident” correto para que a configuração seja reconhecida__
+
+Exemplo:
+
+    ethernets:
+      eth0:
+        addresses:
+          - 192.168.101.23/24
+        gateway4: 192.168.1.1
+        nameservers:
+          addresses: [192.168.1.23]
+        optional: true 
