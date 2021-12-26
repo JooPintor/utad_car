@@ -6,7 +6,7 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
-- [Instalação do SO nos SBC](#instalação-do-so-nos-sbc)
+- [Instalação do SO nos SBC](./docs/Instalação%20do%20SO%20nos%20SBC.md)
 - Instalação do ROS
 - Instalação de Divers dos Motores
 - Instalação dos Codificadores
@@ -35,48 +35,6 @@ Tanto as ferramentas independentes da língua como as principais bibliotecas cli
 A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, perceção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
 
  Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
-
-## Instalação do SO nos SBC
-Um computador de placa única (SBC - Single Board Computer) é um computador inteiro construído numa só placa de circuito impresso.
-Os SBCs vêm completos com memória, um microprocessador, entradas e saídas.
-
-Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e versáteis, está longe de ser a única opção.
-
-A maioria dos SBCs executa bem os sistemas operativos Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
-
-Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das características de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs em utilização.
-
-São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que desenvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
-
-Tendo em conta que o ROS foi originalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
-
-Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compatível com o numero de bits do processador e com a memória RAM disponível no SBC.
-
-As arquiteturas dos SBCs testados foram as seguintes:
-- O Raspberry Pi 3 - processador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flotuante por hardware)
-- O Raspberry Pi 4 - processador ARMv8 com arquitetura ARM de 64 bits ARM64.
-- Nvidia Jetson Nano - processador ARMv8 com arquitetura ARM de 64 bits ARM64
-
-No caso dos SBCs testados o sitema opertivo arranca a partir de um cartão uSD que funciona como "disco" do sistema tendo sido utilizados cartões com o minimo de 16 GB, apesar de ser possível instalar o sistema com cartões de apenas 8 GB.
-
-Para a instalação dos sistemas nos SBCs deve-se começar por criar a imagem de um disco com capacidade de arranque (com informação de arranque nos primeiros sectores do disco) e que contenha a informação minima para a configuração do sistema.
-
-Em alternativa pode-se criar uma imagem de um sistema já instalado num SBC semelhante.
-
-Existem diversos softwares de criação decópia de imagens para cartões SD sendo os mais utilizados os seguintes:
-- [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-- [balenaEtcher](https://www.balena.io/etcher/)
-
-Para a realização do trabalho foi testada a instalação de diversa imagens de SOs, nomeadamente as seguintes:
-- [2021-05-07-raspios-buster-armhf-full.zip](https://linuxdistros.org/torrents/raspios-2021-05-07-buster-armhf.zip.html)
-- [ubuntu-20.04.3-live-server-arm64.iso](https://cdimage.ubuntu.com/releases/20.04/release/)
-- [ububtu-mate-20.04.1-desktop-armhf+raspi.img.xz](https://releases.ubuntu-mate.org/20.04/armhf/)
-- [2021-05-07-raspios-buster-arm64.zip](http://ftp.jaist.ac.jp/pub/raspberrypi/raspios_arm64/images/raspios_arm64-2021-05-28/)
-- [ubuntu-18.04.5-preinstalled-server-armhf+raspi3.img.xz](https://cdimage.ubuntu.com/releases/18.04/release/)
-- [ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz](https://cdimage.ubuntu.com/releases/20.04/release/)
-- [jetson-nano-2gb-jp451-sd-card-image.zip](https://developer.nvidia.com/embedded/downloads#?search=jetson-nano-2gb-sd-)
-
-
 
 
 
