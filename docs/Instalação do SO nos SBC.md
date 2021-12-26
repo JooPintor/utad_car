@@ -63,7 +63,8 @@ Essas alterações podem ser feitas seguindo estas instruções.
 ## Configuração do acesso á rede LAN 
 Com o cartão SD inserido no PC, na partição de “system-boot” do cartão, que contém arquivos de configuração inicial que são carregados durante o primeiro processo de inicialização, devemos editar o ficheiro “network-config” , introduzindo as credenciais de acesso á rede WiFi e o modo de ligação, se com endereço obtido por DHCH ou se com endereço fixo.
 
-Para fazer isso, descomente (remova o “#” no início) e edite as seguintes linhas:
+Para fazer isso, deve-se descomentar (remover o “#” no início da linha) e editar as seguintes linhas:
+
     wifis:
       wlan0:
         dhcp4: true
@@ -86,13 +87,16 @@ Nota: o nome da rede deve ser colocado entre aspas.
 
 O exemplo de configuração corresponde á opção de obtenção de endereço por DHCP, para configurar um endereço de IP fixo podem-se seguir as seguintes instruções:
 
-Definição dum IP estático
+__Definição de um IP estático__
+
 Para definir um IP estático, é necessário substituir no arquivo de configuração de rede a linha
 
-dhcp4: true
+    dhcp4: true
 
 por linhas que especificam o endereço IP pretendido,  o gateway padrão e o servidor DNS.
-Esta configuração pode ser feita para a interface eth0 ou wlan0 (ou ambas).
+
+Esta configuração pode ser feita para a interface __eth0__ ou __wlan0__ (ou ambas).
+
 __É importante utilizar o “ident” correto para que a configuração seja reconhecida__
 
 Exemplo:
