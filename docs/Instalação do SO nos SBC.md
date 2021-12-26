@@ -58,7 +58,7 @@ Para a instalação do desktop deverão ser executados os seguintes comandos num
     sudo reboot
 
 
-Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-“username”-em-sistemas-linux) e a [palavra passe](#alteração-da-“password”-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-da-“password”-em-sistemas-linux).
+Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-username-em-sistemas-linux) e a [palavra passe](#alteração-da-password-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-do-hostname-em-sistemas-linux).
 
 Essas alterações podem ser feitas seguindo estas instruções.
 
@@ -133,7 +133,7 @@ No caso das imagens em que tal não ocorre ou por qualquer outra razão, a palav
 
     passwd
 
-### Alteração da “hostname” em sistemas Linux
+### Alteração do “hostname” em sistemas Linux
 Digitar o seguinte comando para editar "/etc/hostname" utilizando o editor de texto nano:
 
     sudo nano /etc/hostname
