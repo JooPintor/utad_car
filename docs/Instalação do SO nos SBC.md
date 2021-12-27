@@ -39,6 +39,7 @@ Para a realização do trabalho foi testada a instalação de diversa imagens de
 - [jetson-nano-2gb-jp451-sd-card-image.zip](https://developer.nvidia.com/embedded/downloads#?search=jetson-nano-2gb-sd-)
 - [ros-melodic-arm-2021-02-01.img.tar.gz](https://husarion.com/downloads/)
 - [ros-noetic-arm-2021-02-01.img.tar.gz](https://husarion.com/downloads/)
+- [ ros4raspbian-melodic-armhf-1.0.0.zip](https://github.com/nomumu/ros4raspbian/releases)
 
 Com o cartão SD com a imagem pretendida gravada deve proceder-se á preparação do cartão para o primeiro arranque do SBC com o mesmo.
 
