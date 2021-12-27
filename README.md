@@ -52,6 +52,8 @@ Aseguir irá ser instalado, apartir da linha de comando como admistrador, o choc
 
 Uma coisa que temos de ter em atenção ao fazer o processo de instalação é ter qualquer software de anti-virus e firewall completamente desativado, que durante o processo de instalação, como os pacotes e até mesmo o setup feito para o proprio ROS e chocolatey vem de uma fonte que não tem identificação, o anti-virus identificará sempre como um virus, impedindo de os executar, se tal caso acontecer, irás ter que desinstalar tudo, desativar qualquer tipo de proteção que o computador tenha e recomeçar a instalação.
 
+##Instalação dos Divers dos Motores
+
 No começo deste trabalho, foi montado um carrinho simples que possui duas rodas motorizadas e uma roda na frente ao centro, tendo as placa RasperryPi 3 montada com o chapeu en-cima. A montagem que foi feita no RPI3 é feita para que tenhamos o numero de portas necessarias para fazer não só a ligação dos nossos motores para a placa mas tambem para efetuar a ligação da camera utilizada para a placa, uma coisa que se tem de ter em conta enquanto a esta montagem é o numero das portas utilizadas para transmitir a informação, sendo esses numeros que vamos indicar no codigo que irá controlar o output e input da nossa montagem.
 
 O primeiro passo que se fez foi arranjar um cartão sd para install o sistema operativo Ubuntu versão 18.08, o motivo de ser esta versão e não a mais recente é pelo facto desta versão conter algumas funções e operações que permitam a utilização da camera que as versões mais recentes não pessuem, tendo ocorrido erros quando estas versões foram testadas.
