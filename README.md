@@ -7,8 +7,8 @@ Para a realização deste trabalho, foram utilizados os equipamentos indicados n
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
 - [Instalação do SO nos SBC](./docs/Instalação%20do%20SO%20nos%20SBC.md)
-- Instalação do ROS
-- Instalação de Divers dos Motores
+- [Instalação do ROS](./docs/Instalação%20do%20ROS.md)
+- Instalação dos Divers dos Motores
 - Instalação dos Codificadores
 - Montagem do Robot
 - Instalação do RobotPeak Lidar
