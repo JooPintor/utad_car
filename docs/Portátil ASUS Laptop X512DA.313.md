@@ -25,7 +25,7 @@
                    Time Zone : (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres
        Total Physical Memory : 5 068 MB
    Available Physical Memory : 1 438 MB
-    Virtual Memory: Max Size :  7 116 MB
+    Virtual Memory: Max Size : 7 116 MB
    Virtual Memory: Available : 1 642 MB
       Virtual Memory: In Use : 5 474 MB
        Page File Location(s) : C:\pagefile.sys
