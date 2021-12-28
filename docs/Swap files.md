@@ -4,7 +4,7 @@
 
 Quando o sistema Linux fica sem RAM disponível, as páginas inativas são copiadas da RAM para esse espaço de troca.
 
-Os comando aqui apresentados foram testados no ubuntu 18.04, mas deverão funcionar noutros sistemas Linux.
+Os comandos aqui apresentados foram testados no ubuntu 18.04, mas deverão funcionar noutros sistemas Linux.
 
 ### Verificação do espaço de swap existente
 Para verificar o espaço de swap existente deve-se executar o comando:
@@ -41,7 +41,7 @@ Se o _fallocate_ não estiver instalado ou se surgir uma mensagem de erro a info
   
         sudo swapon /swapfile
   
-  Para tornar a alteração permanente deve-seeditar o ficheiro "/etc/fstab" com o comando:
+  Para tornar a alteração permanente deve-se editar o ficheiro "/etc/fstab" com o comando:
     
         sudo nano /etc/fstab
   
@@ -72,7 +72,7 @@ Para desativar e remover a "swap file", seguir as seguintes etapas:
 
 - 2 - De seguida remover a linha _/swapfile swap swap defaults 0 0_ do ficheiro _"/etc/fstab"_.
 
-- 3 - Finalmente remover o ficheiro do sitema usado com o colmando:
+- 3 - Finalmente remover o ficheiro do sistema usado com o colmando:
   
         sudo rm /swapfile
 
