@@ -21,8 +21,10 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 ### Cameras
 
 
-### Motores
+### Motores/Tração
 
+- [Motores DC](./Motores%20de%20tração.md) com controlo de velocidade e rotação nos dois sentidos
+- [Rodas]() acopladas aos eixos dos motores 
 
 ### Codificadores
 
