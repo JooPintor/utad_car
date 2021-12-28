@@ -17,47 +17,47 @@
                            
                 BIOS Version : American Megatrends Inc. X512DA.313, 24/08/2020
 
-           Windows Directory : C:\Windows
-            System Directory : C:\Windows\system32
-                 Boot Device : \Device\HarddiskVolume1
-               System Locale : pt;Português (Portugal)
-                Input Locale : pt;Português (Portugal)
-                   Time Zone : (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres
-       Total Physical Memory : 5 068 MB
-   Available Physical Memory : 1 438 MB
-    Virtual Memory: Max Size : 7 116 MB
-   Virtual Memory: Available : 1 642 MB
-      Virtual Memory: In Use : 5 474 MB
-       Page File Location(s) : C:\pagefile.sys
-                      Domain : WORKGROUP
-                Logon Server : \\HB
+             Windows Directory : C:\Windows
+              System Directory : C:\Windows\system32
+                   Boot Device : \Device\HarddiskVolume1
+                 System Locale : pt;Português (Portugal)
+                  Input Locale : pt;Português (Portugal)
+                     Time Zone : (UTC+00:00) Dublin, Edimburgo, Lisboa, Londres
+         Total Physical Memory : 5 068 MB
+     Available Physical Memory : 1 438 MB
+      Virtual Memory: Max Size : 7 116 MB
+     Virtual Memory: Available : 1 642 MB
+        Virtual Memory: In Use : 5 474 MB
+         Page File Location(s) : C:\pagefile.sys
+                        Domain : WORKGROUP
+                  Logon Server : \\HB
 
-                   Hotfix(s) : 13 Hotfix(s) Installed.
-                        [01] : KB5004331
-                        [02] : KB4534170
-                        [03] : KB4537759
-                        [04] : KB4542335
-                        [05] : KB4545706
-                        [06] : KB4577586
-                        [07] : KB4580325
-                        [08] : KB4586864
-                        [09] : KB4589212
-                        [10] : KB4598481
-                        [11] : KB5000736
-                        [12] : KB5005565
-                        [13] : KB5005699
+                     Hotfix(s) : 13 Hotfix(s) Installed.
+                          [01] : KB5004331
+                          [02] : KB4534170
+                          [03] : KB4537759
+                          [04] : KB4542335
+                          [05] : KB4545706
+                          [06] : KB4577586
+                          [07] : KB4580325
+                          [08] : KB4586864
+                          [09] : KB4589212
+                          [10] : KB4598481
+                          [11] : KB5000736
+                          [12] : KB5005565
+                          [13] : KB5005699
 
-             Network Card(s) : 2 NIC(s) Installed.
-                        [01] : Qualcomm Atheros QCA9377 Wireless Network Adapter
-                               Connection Name : Wi-Fi
-                                  DHCP Enabled : Yes
-                                   DHCP Server : 192.168.1.1
-                               IP address(es)
-                                          [01] : 192.168.1.35
-                                          [02] : fe80::95fb:61cd:d25e:e483
-                        [02] : Bluetooth Device (Personal Area Network)
-                               Connection Name : Ligação de Rede Bluetooth
-                                        Status : Media disconnected
+               Network Card(s) : 2 NIC(s) Installed.
+                          [01] : Qualcomm Atheros QCA9377 Wireless Network Adapter
+                                 Connection Name : Wi-Fi
+                                    DHCP Enabled : Yes
+                                     DHCP Server : 192.168.1.1
+                                 IP address(es)
+                                            [01] : 192.168.1.35
+                                            [02] : fe80::95fb:61cd:d25e:e483
+                          [02] : Bluetooth Device (Personal Area Network)
+                                 Connection Name : Ligação de Rede Bluetooth
+                                          Status : Media disconnected
 
-         Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed.
+           Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed.
 
