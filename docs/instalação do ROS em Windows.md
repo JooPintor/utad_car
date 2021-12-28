@@ -1,4 +1,4 @@
-##Instalação no Wimdows
+## Instalação no Wimdows
  
 Para fazer o setup the ROS no sistema windows, neste caso no portatil que está indicado na lista de materiais, nos temos que seguir mais alguns passos em comparação com o Linux, que ao contrario do outro a linha de comando do windows é incapaz de buscar pacotes ou até mesmo fazer instalação de certos programas sem primeiro installar certas bibliotecas e funções para a execução de ROS. Um dos programas que se teve que installar, porque senão nem poderiamos criar nodes para o project, é o Visual Studio 2019.
 O Visual Studio 2019 é necessario por varios motivos sendo algus deles o facto de não só nos dar VCPKG, que é algo que nôs permetirá utilizar os pacotes no proprio ROS, mas tambem o Windows 10 SDK(Software Develepment Kit), que irá permitir a criação dos programas no windows que podem ser usados no ROS.
