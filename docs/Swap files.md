@@ -4,7 +4,7 @@
 
 Quando o sistema Linux fica sem RAM, as páginas inativas são copiadas da RAM para esse espaço de troca.
 
-Os comando aqui apresntados foram testados no ubuntu 18.04,mas deverão funcionar noutros sistemas linux.
+Os comando aqui apresntados foram testados no ubuntu 18.04, mas deverão funcionar noutros sistemas linux.
 
 ### Verificação do espaço de swap existente
 Para verificar o espaço de swap existente deve-se executar o comando:
