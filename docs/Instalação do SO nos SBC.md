@@ -164,7 +164,7 @@ As alterações terão efeito no proximo arranque do sistema:
 
     sudo reboot
 
-### Configuração do servidor SSH para permitir o "login" do "root"
+### Configuração do servidor SSH para permitir o "login" como "root"
 Para habilitar o login via SSH ao utilizador root num sistema Debian Linux, é necessário primeiro configurar o servidor SSH.
 
 Para isso é necessário editar o ficheiro "/etc/ssh/sshd_config"
