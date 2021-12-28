@@ -13,5 +13,5 @@ Note-se que nem todas as arquiteturas de processadores e sistemas opertivos têm
 
 A compilação do código fonte do ROS,para além de demorar algum tempo exige a disponibilidade de recursos, em particular a memória, pelo que se deve garantir uma __"swap file"__ com dimensão suficiente para que a compilação tenha sucesso.
 
-A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./docs/Swap files.md) instruçẽs.
+A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./docs/Swap%20files.md) instruçẽs.
 
