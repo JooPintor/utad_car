@@ -9,7 +9,7 @@ Para o Raspberry PI 4 a preferência recaiu sobre o sistema operativo __ubuntu 2
 
 Para o [PC Portátil](./Portátil%20ASUS%20Laptop%20X512DA.313.md), com o SO Windows 10, optou-se pela instalação __ROS Melodic__ por se tratar da distribuição mais estável para o seu sistema operativo. 
 
-A instalação do ROS foi feita a partir das instruções disponíveis no site da Organização ROS, o [ROS-Wiki](http://wiki.ros.org/ROS/Installation).
+A instalação do ROS foi feita a partir das instruções disponíveis no site da Organização ROS, o [ROS-Wiki](http://wiki.ros.org/Installation/Windows).
 
 Note-se que nem todas as arquiteturas de processadores e sistemas operativos têm imagens disponíveis para instalação, pelo que em alguns casos foi necessário compilar o código fonte no sistema em que se pretendia fazer a instalação.
 
