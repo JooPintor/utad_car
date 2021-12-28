@@ -1,12 +1,14 @@
-### Stepper Motor Expansion Shield
+### Stepper Motor HAT for Raspberry Pi
 
-O Stepper Motor Expansion Shield é versátil para suportar vários Steppers / Motores / Servos ao mesmo tempo e suporta a laminação de placas múltiplas, que é adequada para jogadores fazerem você mesmo, robôs inteligentes, carros mecânicos e assim por diante. Utiliza conector de fácil controle I2C que é compatível com 3.3v / 5v e também adequado para outras placas de expansão no mercado. O conector I2C também está disponível com todos os tipos de sensores para expandir várias aplicações e fazer a entrada ou saída de dados através do raspberry pi I2C
+O "[Stepper Motor HAT for Raspberry Pi](https://www.elecrow.com/stepper-motor-hat-for-raspberry-pi.html)" é uma placa de expanção adaptada aos SBCs Raspberry PI 3 e Raspberry PI4 que permite o controlo de motores DC, motores paso a passo e servomotores.
+
+versátil para suportar vários Steppers / Motores / Servos ao mesmo tempo e suporta a laminação de placas múltiplas, que é adequada para jogadores fazerem você mesmo, robôs inteligentes, carros mecânicos e assim por diante. Utiliza conector de fácil controle I2C que é compatível com 3.3v / 5v e também adequado para outras placas de expansão no mercado. O conector I2C também está disponível com todos os tipos de sensores para expandir várias aplicações e fazer a entrada ou saída de dados através do raspberry pi I2C
 
     4 roads Rudder interface：#0，#1，#14，#15
     4 roads Gear motor interface：M1,M2,M3,M4
     2 roads stepping motor：M1+M2,M3+M4
 
-Features:
+Features: 
 
     Supports 2 road 6V~12V stepping motor
     Supports 4 roads 6V~12V Gear motor
@@ -29,3 +31,5 @@ Specifications:
 Package list:
 
     Stepper Motor HAT for Raspberry Pi x1
+
+[Manual de utilização](https://www.elecrow.com/download/Stepper-Motor-HAT-User-Guide1.pdf)
