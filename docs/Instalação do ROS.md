@@ -11,3 +11,7 @@ A instalação do ROS foi feita a partir das instruções disponíveis no site d
 
 Note-se que nem todas as arquiteturas de processadores e sistemas opertivos têm imagens disponoiveis para instalação, pelo que em alguns casos foi necessário compilar o código fonte no sistema em que se pretendia fazer a instalação.
 
+A compilação do código fonte do ROS,para além de demorar algum tempo exige a disponibilidade de recursos, em particular a memória, pelo que se deve garantir uma __"swap file"__ com dimensão suficiente para que a compilação tenha sucesso.
+
+A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./docs/Swap files.md) instruçẽs.
+
