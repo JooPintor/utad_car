@@ -23,7 +23,7 @@ Neste exemplo, adicionaremos o espaço de 1G. Para adicionar um espaço diferent
 
 - 1 - Começa-se por criar o ficheiro que será utilizado:
 
-    sudo fallocate -l 1G /swapfile
+        sudo fallocate -l 1G /swapfile
 
 Se o _fallocate_ não estiver instalado ou se surgir uma mensagem de erro a informar que o _fallocate_ falhou, utilizar o seguinte comando para criar o ficheiro:
 
