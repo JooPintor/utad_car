@@ -1,35 +1,36 @@
 ### Stepper Motor HAT for Raspberry Pi
 
-O "[Stepper Motor HAT for Raspberry Pi](https://www.elecrow.com/stepper-motor-hat-for-raspberry-pi.html)" é uma placa de expanção adaptada aos SBCs Raspberry PI 3 e Raspberry PI4 que permite o controlo de motores DC, motores paso a passo e servomotores.
+O "[Stepper Motor HAT for Raspberry Pi](https://www.elecrow.com/stepper-motor-hat-for-raspberry-pi.html)" é uma placa de expanção adaptada aos SBCs Raspberry PI e  permite o controlo de motores DC, motores paso a passo e servomotores.
 
-versátil para suportar vários Steppers / Motores / Servos ao mesmo tempo e suporta a laminação de placas múltiplas, que é adequada para jogadores fazerem você mesmo, robôs inteligentes, carros mecânicos e assim por diante. Utiliza conector de fácil controle I2C que é compatível com 3.3v / 5v e também adequado para outras placas de expansão no mercado. O conector I2C também está disponível com todos os tipos de sensores para expandir várias aplicações e fazer a entrada ou saída de dados através do raspberry pi I2C
+Utiliza um conector que pode ser montado em camadas sobre os pinos das placas dos Raspberry e controle I2C que é compatível com 3.3v / 5v, também adequado para outras placas de expansão no mercado.
 
-    4 roads Rudder interface：#0，#1，#14，#15
-    4 roads Gear motor interface：M1,M2,M3,M4
-    2 roads stepping motor：M1+M2,M3+M4
+O conector I2C está disponível para ligação a todos os tipos de sensores que utilizem este tipo de ligação, permitindo a expansão para várias aplicações que necessitem de fazer a entrada ou saída de dados através do raspberry pi I2C.
 
-Features: 
 
-    Supports 2 road 6V~12V stepping motor
-    Supports 4 roads 6V~12V Gear motor
-    Supports 16 roads PWM Channel output
-    Single power supply for normal supply voltage range of 5v to 12v
-    Shares 12 bit resolution and could adjust PWM up to 1.6KHz
-    Supports Infrared receiving function for handy Infrared control
-    Supports 4 roads Rudder interface,3P standard interface for convenient connection of 5V rudder and LED
-    One I2C connector which is compatible with 3.3v/5v and also suitable for other Arduino and expansion boards on market
-    4 H-Bridges:provides 1.2A per bridge (3A peak) with thermal shutdown protection, internal kickback protection diodes. Can run motors on 5VDC to 12VDC.
-    Works best with Raspberry Pi model A+, B+, or Pi 2;
+    4 Saidas para servomotores：#0，#1，#14，#15
+    4 Saidas para motores DC com controlo de velocidade：M1,M2,M3,M4
+    2 Saidas para motores passo a passo unipolares e bipolares：M1+M2,M3+M4
 
-Specifications:
+Caracteristicas: 
 
-    Working voltage: 5v-12v
-    Interface: I2C
-    Size: 65×56×21mm
-    Weight：0.02kg
+    Controlo de 2 motores passo a passo com tensão entre 6V~12V
+    Controlo de 4 motores DC com comtrolo de velocoidade para tenões entre 6V~12V
+    Controlo de 16 canais de saida PWM 
+    Alimentação unica e independente para o smotores com tensaão entre 5v e 12v
+    Resolução partilhada de 12 bit e capacidade de ajuste do PWM até 1.6KHz
+    Suporte para receptor de Infra-vermelhos para facilitar o controlo por Infra-vermelhos
+    Suporte para 4 saidas controladas com capacidade para alimentar um LED até 5 V
+    Um conector I2C compativel com 3.3v/5v e disponivel ara ligação a outras cartas disponivei sno mercado
+    Inclui 4 pontes H com 1.2A por ponte (3A pico) com proteção de desligamento térmico, diodos de proteção free-welling.
+    Podem controlar motores com tensão entre 5 VCC e 12 VCC.
+    Mais adaptado para os modelos Raspberry Pi A+, B+, Pi2, Pi3 ou Pi4
 
-Package list:
+Especificações:
 
-    Stepper Motor HAT for Raspberry Pi x1
+    Tensão de trabalho : 5v-12v
+             Interface : I2C
+               Tamanho : 65 × 56 × 21 mm
+                  Peso : 0,02 kg
+
 
 [Manual de utilização](https://www.elecrow.com/download/Stepper-Motor-HAT-User-Guide1.pdf)
