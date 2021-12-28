@@ -9,5 +9,5 @@ Para o Raspberry PI 4 a preferencia recaiu sobre o sistema operativo __ubuntu 20
 
 A instalação do ROS foi feita a partir das instruções disponíveis no site da Organisação ROS, o [ROS-Wiki](http://wiki.ros.org/ROS/Installation).
 
-__Note-se que nem todas as arquiteturas de processadores e sistemas opertivos têm imagens disponoiveis para instalação, pelo qu em alguns casos foi necessário compilar o código fonte no sistema em que se pretendia fazer a instalação__.
+Note-se que nem todas as arquiteturas de processadores e sistemas opertivos têm imagens disponoiveis para instalação, pelo que em alguns casos foi necessário compilar o código fonte no sistema em que se pretendia fazer a instalação.
 
