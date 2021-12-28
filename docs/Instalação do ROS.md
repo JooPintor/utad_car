@@ -17,3 +17,4 @@ A compilação do código fonte do ROS,para além de demorar algum tempo exige a
 
 A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./Swap%20files.md) instruçẽs.
 
+Uma coisa que temos de ter em atenção ao fazer o processo de instalação no Windows é ter qualquer software de anti-virus e firewall completamente desativado, que durante o processo de instalação, como os pacotes e até mesmo o setup feito para o proprio ROS e chocolatey vem de uma fonte que não tem identificação, o anti-virus identificará sempre como um virus, impedindo de os executar, se tal caso acontecer, irás ter que desinstalar tudo, desativar qualquer tipo de proteção que o computador tenha e recomeçar a instalação.
