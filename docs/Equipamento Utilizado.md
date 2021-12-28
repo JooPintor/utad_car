@@ -16,6 +16,7 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 
 ### Drivers (HATs)
 
+- [Stepper Motor HAT](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) Placa de controlo da velocidade dos motores e da rotação dos mesmos
 
 ### Cameras
 
