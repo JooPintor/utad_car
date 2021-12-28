@@ -7,7 +7,7 @@ Tendo o Raspberry PI 3 de uma arquitetura __armhf__ e memória limitada, verific
 
 Para o Raspberry PI 4 a preferência recaiu sobre o sistema operativo __ubuntu 20.04 focal__ e o __ROS Noetic__
 
-Para o [PC portátil](), com o SO Windows 10, optou-se pela instalação __ROS Melodic__ por se tratar da distribuição mais estável para o seu sistema operativo. 
+Para o [PC portátil](./Portátil ASUS Laptop X512DA.313.md), com o SO Windows 10, optou-se pela instalação __ROS Melodic__ por se tratar da distribuição mais estável para o seu sistema operativo. 
 
 A instalação do ROS foi feita a partir das instruções disponíveis no site da Organização ROS, o [ROS-Wiki](http://wiki.ros.org/ROS/Installation).
 
@@ -19,4 +19,4 @@ A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./
 
 Verifiquei no processo de instalação do ROS no Windows que para ter sucesso é necessário desativar completamente software antivírus e de firewall, já que os mesmos interferem com o processo de instalação. Como tanto os pacotes do ROS como do Chocolatey provêm de fontes não identificadas, o antivírus trata-os como vírus, impedindo-os executar. No caso de tal ocorrer, tora-se necessário desinstalar tudo o que já tenha sido instalado, desativar as proteções do computador e recomeçar a instalação.
 
-Uma dificuldade na instalação do ROS no sistema Windows, resulta deste sistema operativo não possuir repositórios e ferramentas como o _apt get_ do ubuntu, que nos permita transferir e controlar as transferências dos pacotes necessários tal como se pode fazer nos sistemas Linux a partir da linha de comandos. 
+Uma dificuldade na instalação do ROS no sistema Windows, resulta deste sistema operativo não possuir repositórios e ferramentas como o _"apt get"_ do ubuntu, que nos permita transferir e controlar as transferências dos pacotes necessários tal como se pode fazer nos sistemas Linux a partir da linha de comandos. 
