@@ -1,7 +1,8 @@
 ## Criação de "swap files"
 
 "Swap" é um espaço de disco usado quando a memória RAM física fica cheia.
-Quando um sistema Linux fica sem RAM, as páginas inativas são copiadas da RAM para esse espaço de troca.
+
+Quando o sistema Linux fica sem RAM, as páginas inativas são copiadas da RAM para esse espaço de troca.
 
 Os comando aqui apresntados foram testados no ubuntu 18.04,mas deverão funcionar noutros sistemas linux.
 
