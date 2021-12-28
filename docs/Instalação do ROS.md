@@ -7,6 +7,8 @@ Tendo o Raspberry PI 3 de uma arquitetura __armhf__ e memória limitada, verific
 
 Para o Raspberry PI 4 a preferencia recaiu sobre o sistema operativo __ubuntu 20.04 focal__ e o __ROS Noetic__
 
+Uma coisa que foi tentado fazer é executar o trabalho num PC portatil, com o Windows como o seu SO, pelo facto que maiore parte dos computadores utilizados pelos os alunos e pelo publico em geral são computadores que possuem o sistema da Microsoft. O se pesquisou foi que tanto o __ROS Melodic__ e o  __ROS Noetic__ irião servir para este caso, então decidiu-se utilizar o primeiro mencionado.
+
 A instalação do ROS foi feita a partir das instruções disponíveis no site da Organisação ROS, o [ROS-Wiki](http://wiki.ros.org/ROS/Installation).
 
 Note-se que nem todas as arquiteturas de processadores e sistemas opertivos têm imagens disponoiveis para instalação, pelo que em alguns casos foi necessário compilar o código fonte no sistema em que se pretendia fazer a instalação.
