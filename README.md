@@ -2,7 +2,7 @@
 
 Esta página tem o objetivo de ser um repositório de conhecimento para o ensino de utilização do ROS e introdução à visão dos robots.
 
-Para a realização deste trabalho, foram utilizados os equipamentos indicados no documento ["Equipamentos Utilizados"](./docs/Equipamento%20Utilizado.md), com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
+Para a realização deste trabalho, foram utilizados os equipamentos [aqui](./docs/Equipamento%20Utilizado.md) descritos, com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
