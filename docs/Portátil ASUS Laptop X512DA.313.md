@@ -31,6 +31,7 @@
        Page File Location(s) : C:\pagefile.sys
                       Domain : WORKGROUP
                 Logon Server : \\HB
+
                    Hotfix(s) : 13 Hotfix(s) Installed.
                         [01] : KB5004331
                         [02] : KB4534170
