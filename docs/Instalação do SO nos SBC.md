@@ -49,21 +49,30 @@ No caso de imagens pré-instaladas é necessário saber o nome de utilizador e a
 
 Em particular nas situações em que não esteja disponível uma ligação por cabo ao SBC há necessidade de [configurar o acesso á rede LAN](#configuração-do-acesso-á-rede-lan) a que o SBC se poderá ligar quando arrancar.
 
-Nas opções de servidores é ainda conveniente instalar um “desktop”.
+### Instalação do "desktop"
+Nas opções de imagens apenas servidores é ainda conveniente instalar um “desktop” para permitir o interface gráfico com o sistema.
 
 Sugiro a instalação do desktop “lubuntu” por se tratar de um desktop simples, mas com tudo o que necessitamos para a utilização pretendida.
 
 Para a instalação do desktop deverão ser executados os seguintes comandos numa janela de comandos do servidor:
 
     sudo apt update
-    sudo apt upgrade
     sudo apt install lubuntu-desktop
     sudo reboot
 
+Para se tirar partido do interface gráfico do "desktop" nos acessos ao SBC a partir de um PC, pode-se optar pela [instalação de um servidor RDP](#instalação-de-um-servidor-rdp) o que permitirá aceder ao desktop através da interface gráfica. 
 
 Nas versões pré-instaladas, por razões de segurança ou outras pode ser desejável a troca do [nome do utilizador](#alteração-do-username-em-sistemas-linux) e da [palavra passe](#alteração-da-password-em-sistemas-linux), bem como do [nome do SBC na rede](#alteração-do-hostname-em-sistemas-linux).
 
 Essas alterações podem ser feitas seguindo estas instruções.
+
+### Instalação de um servidor RDP
+O pacote Xrdp está disponível nos repositórios padrão do Linux. Para instalá-lo basta executar os seguintes comandos:
+
+	sudo apt update
+	sudo apt install xrdp
+	sudo adduser xrdp ssl-cert
+
 
 ### Configuração do acesso á rede LAN 
 Com o cartão SD inserido no PC, na partição de “system-boot” do cartão, que contém arquivos de configuração inicial que são carregados durante o primeiro processo de inicialização, devemos editar o ficheiro “network-config” , introduzindo as credenciais de acesso á rede WiFi e o modo de ligação, se com endereço obtido por DHCH ou se com endereço fixo.
