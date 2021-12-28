@@ -1,7 +1,7 @@
 ## Instalação do ROS
 O processo de instalação do ROS depende do sistema operativo e do hardware em que o mesmo é instalado.
 
-Tendo a universidade disponibilizado um SBC [Raspberry PI 3](./Raspberry%20PI%203.md), foi sobre esse hardware que incidiram maioritáriamente os estudos das diferentes alternativas, no entanto tambem foram testados o [Raspeberry PI 4](./Raspberry%20PI%204.md), o [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano%202GB%20develepor%20kit.md) e a instalação do ROS num [PC Portátil]() com Windows.
+Tendo a universidade disponibilizado um SBC [Raspberry PI 3](./Raspberry%20PI%203.md), foi sobre esse hardware que incidiram maioritáriamente os estudos das diferentes alternativas, no entanto tambem foram testados o [Raspeberry PI 4](./Raspberry%20PI%204.md), o [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano%202GB%20develepor%20kit.md) e a instalação do ROS num [PC Portátil](./Portátil%20ASUS%20Laptop%20X512DA.313.md) com Windows.
 
 Tendo o Raspberry PI 3 de uma arquitetura __armhf__ e memória limitada, verificou-se que a melhor combinação de sistema operativo e versão de ROS para este SBC é o sistema operativo __ubuntu 18.04 bionic__ e o __ROS Melodic__. 
 
