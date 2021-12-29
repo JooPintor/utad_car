@@ -22,8 +22,8 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existitrem duas linhas s
 A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com estas ligações activas.
 
 
-### Configuração do sistema operativo para aceder aa ligações I2C, SPI e GPIO.
-Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
+### Configuração do sistema operativo para aceder aa ligações SPI e GPIO.
+Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
 
     sudo nano /etc/udev/rules.d/local.rules
 
@@ -35,7 +35,7 @@ com o seguinte conteudo:
     SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
 
 ### Configuração do utilizador para aceder aa ligações I2C, SPI e GPIO 
-Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário verificar a existencia de grupos de utilizadores para cada tipo de ligação, crialos caso não existam e incluir nos mesmo o utilizador que se pretenda vir a utilizar estas ligaçoes.
+Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário [verificar a existencia de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligaçoes, caso ainda não esteja incluido. A utilização das entradas/saidas GPIO requerem a utilização do grupo _kmem_.
 
 #### Verificar a existencia de grupos
 Para verificar a existencia dos grupos que nos interessam deve-se realizar um comando para cada grupo como mostrado a seguir:
@@ -51,7 +51,7 @@ No caso de não existir resposta é porque o grupo não existe e nesse caso é n
 
 No caso de existir o grupo mas o _utilizador_ não lhe pertencer deve-se acrescentar o _utilizador_ ao grupo.
 
-#### Criação de um grupo
+#### Criação de grupos
 Para a criação dos grupos poderão ser utilizados os seguintes comandos:
 
     sudo groupadd kmem
