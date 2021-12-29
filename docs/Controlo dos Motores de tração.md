@@ -3,6 +3,7 @@ Para controlar a movimentação do robot "utad_car" foi utilizada a [placa de ex
 
 Tratando-se de uma placa que comunica com o Raspberry PI por I2C foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do acesso ao I2C no sistema operativo](#configuração-do-acesso-ao-i2c-no-sistema-operativo) antes de se poder enviar comandos para essa placa.
 
+Para além das configurações já mensionadas, para a utilização da ligação I2C são necessárias diversa feramentas, nomeadamente "i2c-tools", "libi2c-dev" e "python3-smbus".
 
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
@@ -22,7 +23,7 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existitrem duas linhas s
 A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com estas ligações activas.
 
 
-### Configuração do sistema operativo para aceder aa ligações SPI e GPIO.
+### Configuração do sistema operativo para aceder as ligações SPI e GPIO.
 Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
 
     sudo nano /etc/udev/rules.d/local.rules
@@ -69,6 +70,5 @@ Para acrescentar utilizadores aos grupos poderão ser utilizados os seguintes co
     
 
 
-Para permitir o acesso do sistema operativo á ligação I2C são necessárias diversa feramentas, nomeadamente "i2c-tools", "libi2c-dev" e "python3-smbus".
 
 
