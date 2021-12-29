@@ -62,10 +62,10 @@ Para a criação dos grupos poderão ser utilizados os seguintes comandos:
 #### Acrescentar um _utilizador_ a um grupo
 Para acrescentar utilizadores aos grupos poderão ser utilizados os seguintes comandos:
 
-    sudo usermod -a -G kmem _utilizador_
-    sudo usermod -a -G gpio _utilizador_
-    sudo usermod -a -G spi _utilizador_
-    sudo usermod -a -G i2c _utilizador_
+    sudo usermod -a -G kmem "nome_do_utilizador"
+    sudo usermod -a -G gpio "nome_do_utilizador"
+    sudo usermod -a -G spi "nome_do_utilizador"
+    sudo usermod -a -G i2c "nome_do_utilizador"
     
 
 
