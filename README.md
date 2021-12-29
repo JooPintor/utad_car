@@ -4,6 +4,10 @@ Esta página tem o objetivo de ser um repositório de conhecimento para o ensino
 
 Para a realização deste trabalho, foram utilizados os equipamentos [aqui](./docs/Equipamento%20Utilizado.md) descritos, com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
+Os estudos foram acompanhados e suportados pela montagem de um robot a que chamei "utad_car".
+
+Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abordados.
+
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
 - [Instalação do SO nos SBC](./docs/Instalação%20do%20SO%20nos%20SBC.md)
