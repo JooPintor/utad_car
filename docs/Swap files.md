@@ -31,7 +31,7 @@ Se o _fallocate_ não estiver instalado ou se surgir uma mensagem de erro a info
 
 - 2 - Apenas o root deve ser capaz de escrever e ler o ficheiro de troca. Definem-se as permissões corretas com o comando:
   
-        sudo chmod 600 /swapfile
+        sudo chmod 0600 /swapfile
 
 - 3 - Utilizar o utilitário _mkswap_ para configurar o ficheiro como área de troca do Linux com o comando:
   
