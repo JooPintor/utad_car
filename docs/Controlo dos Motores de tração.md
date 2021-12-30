@@ -28,19 +28,7 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existitrem duas linhas s
 A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com estas ligações activas.
 
 
-### Configuração do sistema operativo para aceder as ligações SPI e GPIO
-Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
-
-    sudo nano /etc/udev/rules.d/local.rules
-
-com o seguinte conteudo:
-
-    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
-    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
-    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
-    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
-
-### Configuração do utilizador para aceder aa ligações I2C, SPI e GPIO 
+### Configuração do utilizador para aceder às ligações I2C, SPI e GPIO 
 Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário [verificar a existencia de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligaçoes, caso ainda não esteja incluido. A utilização das entradas/saidas GPIO requerem a utilização do grupo _kmem_.
 
 Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos gropos.
@@ -75,7 +63,7 @@ Para acrescentar utilizadores aos grupos poderão ser utilizados os seguintes co
     sudo usermod -a -G spi  "nome_do_utilizador"
     sudo usermod -a -G i2c  "nome_do_utilizador"
 
-### Atribuição de permisões ás ligações
+#### Atribuição de permisões ás ligações
 Para que o utilizador possa aceder ás ligações é necessário dar permições de acesso aos grupos criados
 
     sudo chgrp spi /dev/spidev0.0
@@ -88,7 +76,7 @@ Para que o utilizador possa aceder ás ligações é necessário dar permições
     sudo chown :i2c /dev/i2c-1
     sudo chmod g+rw /dev/i2c-1
 
-### Instalação de ferramentas necessárias à ligação I2C
+#### Instalação de ferramentas necessárias à ligação I2C
 Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instalas as ferramentas seguintes, através da execução dos seguintes comandos:
 
     sudo apt-get update -y
@@ -102,6 +90,19 @@ Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instala
 No caso do _pip3_ não estar instalado, deve proceder-se á sua instalação com o comando
 
     sudo apt install python-pip
+
+### Configuração do sistema operativo para aceder às ligações SPI e GPIO
+Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
+
+    sudo nano /etc/udev/rules.d/local.rules
+
+com o seguinte conteudo:
+
+    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
+    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
+    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
+    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
+
 
 ### Verificação da configuração
 Para verificar se todas as configurações estão corretas deverão ser executados os seguintes comando e verificados os correspondentes resultados:
