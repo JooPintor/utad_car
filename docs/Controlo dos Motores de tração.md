@@ -3,7 +3,7 @@ O "utad_car" trata-se de um carro robotico de duas rodas motrizes com motorizaç
 
 Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry PI 3](./Raspberry%20PI%203.md) e a [placa de expanção do Raspberry PI](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) que a Universidade me forneceu para a realização do trabalho.
 
-A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe ao I2C](#configuração-do-sistema-operativo-para-aceder-as-ligações-i2c-SPI-e-GPIO) antes de se poder enviar comandos para essa placa.
+A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C,-SPI-e-GPIO) antes de se poder enviar comandos para essa placa ou poder activar saídas e ler entradas nos pinos do Raspberry.
 
 Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-as-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.
 
@@ -28,7 +28,7 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existitrem duas linhas s
 A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com estas ligações activas.
 
 
-### Configuração do utilizador para aceder às ligações I2C, SPI e GPIO 
+### Configuração do sistema operativo para aceder às ligações I2C, SPI e GPIO 
 Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário [verificar a existencia de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligaçoes, caso ainda não esteja incluido. A utilização das entradas/saidas GPIO requerem a utilização do grupo _kmem_.
 
 Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos gropos.
