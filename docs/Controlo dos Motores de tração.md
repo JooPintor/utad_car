@@ -3,13 +3,13 @@ O "utad_car" trata-se de um carro robotico de duas rodas motrizes com motorizaç
 
 Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry PI 3](./Raspberry%20PI%203.md) e a [placa de expanção do Raspberry PI](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) que a Universidade me forneceu para a realização do trabalho.
 
-A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe ao I2C](#configuração-do-sistema-operativo-para-aceder-as-ligações-SPI-e-GPIO) antes de se poder enviar comandos para essa placa.
+A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe ao I2C](#configuração-do-sistema-operativo-para-aceder-as-ligações-i2c-SPI-e-GPIO) antes de se poder enviar comandos para essa placa.
 
-Em simultâneo com a configuração da ligação I2C pode-se fazer a configuração das ligações SPI e GPIO, já que envolvem acções semelhantes e também são necessárias para o controlo.
+Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-as-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
-No final das convigurações deverá ser feito um conjunto de [verificações]() para nos acegurar-mos que tudo ficou corretamente configurado- 
+No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos acegurar-mos que tudo ficou corretamente configurado- 
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
 O Raspberry PI por defeito arranca sem as ligações I2C e SPI activas.
@@ -103,7 +103,7 @@ No caso do _pip3_ não estar instalado, deve proceder-se á sua instalação com
 
     sudo apt install python-pip
 
-### Verificações da configuração
+### Verificação da configuração
 Para verificar se todas as configurações estão corretas deverão ser executados os seguintes comando e verificados os correspondentes resultados:
 
     ls -l /dev/spi*
