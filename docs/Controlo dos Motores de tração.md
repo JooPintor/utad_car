@@ -5,7 +5,7 @@ Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry P
 
 A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) antes de se poder enviar comandos para essa placa ou poder activar saídas e ler entradas nos pinos do Raspberry.
 
-Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-as-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.
+Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
@@ -76,6 +76,18 @@ Para que o utilizador possa aceder ás ligações é necessário dar permições
     sudo chown :i2c /dev/i2c-1
     sudo chmod g+rw /dev/i2c-1
 
+### Configuração do sistema operativo para aceder às ligações SPI e GPIO
+Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
+
+    sudo nano /etc/udev/rules.d/local.rules
+
+com o seguinte conteudo:
+
+    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
+    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
+    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
+    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
+
 #### Instalação de ferramentas necessárias à ligação I2C
 Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instalas as ferramentas seguintes, através da execução dos seguintes comandos:
 
@@ -90,18 +102,6 @@ Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instala
 No caso do _"pip3"_ não estar instalado, deve proceder-se á sua instalação com o comando
 
     sudo apt install python-pip
-
-### Configuração do sistema operativo para aceder às ligações SPI e GPIO
-Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
-
-    sudo nano /etc/udev/rules.d/local.rules
-
-com o seguinte conteudo:
-
-    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
-    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
-    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
-    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
 
 
 ### Verificação da configuração
