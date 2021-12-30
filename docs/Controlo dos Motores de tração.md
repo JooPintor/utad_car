@@ -87,7 +87,7 @@ Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instala
     sudo -H pip3 install smbus2
     sudo apt-get install -y python3-smbus
     
-No caso do _pip3_ não estar instalado, deve proceder-se á sua instalação com o comando
+No caso do _"pip3"_ não estar instalado, deve proceder-se á sua instalação com o comando
 
     sudo apt install python-pip
 
