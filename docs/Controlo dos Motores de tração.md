@@ -3,7 +3,7 @@ O "utad_car" trata-se de um carro robotico de duas rodas motrizes com motorizaç
 
 Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry PI 3](./Raspberry%20PI%203.md) e a [placa de expanção do Raspberry PI](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) que a Universidade me forneceu para a realização do trabalho.
 
-A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do acesso ao I2C no sistema operativo](#configuração-do-acesso-ao-i2c-no-sistema-operativo) antes de se poder enviar comandos para essa placa.
+A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe ao I2C](#configuração-do-sistema-operativo-para-aceder-as-ligações-SPI-e-GPIO) antes de se poder enviar comandos para essa placa.
 
 Em simultâneo com a configuração da ligação I2C pode-se fazer a configuração das ligações SPI e GPIO, já que envolvem acções semelhantes e também são necessárias para o controlo.
 
@@ -28,7 +28,7 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existitrem duas linhas s
 A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com estas ligações activas.
 
 
-### Configuração do sistema operativo para aceder as ligações SPI e GPIO.
+### Configuração do sistema operativo para aceder as ligações SPI e GPIO
 Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
 
     sudo nano /etc/udev/rules.d/local.rules
