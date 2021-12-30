@@ -139,4 +139,4 @@ Para verificar se todas as configurações estão corretas deverão ser executad
     60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 6f 
     70: 70 -- -- -- -- -- -- --     
 
-
+    (Os valores retornados pelo comando "sudo i2cdetect -y 1" dependem do hardware ligado)
