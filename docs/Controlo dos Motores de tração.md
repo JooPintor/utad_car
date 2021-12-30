@@ -3,7 +3,7 @@ Para controlar a movimentação do robot "utad_car" foi utilizada a [placa de ex
 
 Tratando-se de uma placa que comunica com o Raspberry PI por I2C foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do acesso ao I2C no sistema operativo](#configuração-do-acesso-ao-i2c-no-sistema-operativo) antes de se poder enviar comandos para essa placa.
 
-Para além das configurações já mensionadas, para a utilização da ligação I2C são necessárias diversa feramentas, nomeadamente ["i2c-tools"](#instalação-de-i2c-tools), ["libi2c-dev"](#instalação-de-libi2c-dev) e ["python3-smbus"](#instalação-de-python3-smbus).
+Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
@@ -65,28 +65,24 @@ Para acrescentar utilizadores aos grupos poderão ser utilizados os seguintes co
 
     sudo usermod -a -G kmem "nome_do_utilizador"
     sudo usermod -a -G gpio "nome_do_utilizador"
-    sudo usermod -a -G spi "nome_do_utilizador"
-    sudo usermod -a -G i2c "nome_do_utilizador"
+    sudo usermod -a -G spi  "nome_do_utilizador"
+    sudo usermod -a -G i2c  "nome_do_utilizador"
     
-### Instalação de "i2c-tools"
-Para instalar as "i2c-tools" deverão ser executados os seguintes comandos:
+### Instalação de ferramentas necessárias à ligação I2C
+Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instalas as ferramentas seguintes, através da execução dos seguintes comandos:
 
     sudo apt-get update -y
     sudo apt-get install -y i2c-tools
- 
-### Instalação de "libi2c-dev"
-Para instalar "libi2c-dev" deverão ser executados os seguintes comandos:
-
-    sudo apt-get update -y
     sudo apt-get install -y libi2c-dev
- 
-### Instalação de "python3-smbus"
-Para instalar "python3-smbus2" deverão ser executados os seguintes comandos:
-
-    sudo apt-get update -y
+    sudo apt-get install -y python3-dev
     sudo -H pip3 install smbus
     sudo -H pip3 install smbus2
     sudo apt-get install -y python3-smbus
+    
+No caso do _pip3_ não estar instalado, deve proceder-se á sua instalação com o comando
+
+    sudo apt install python-pip
+
  
 
 
