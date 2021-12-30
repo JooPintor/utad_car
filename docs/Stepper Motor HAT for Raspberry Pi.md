@@ -1,6 +1,6 @@
 ### "Stepper Motor HAT" para Raspberry Pi
-
-O "![Stepper Motor HAT para Raspberry Pi](../img/stepper-motor-hat-for-raspberry-pi.jpg)" é uma placa de expanção adaptada aos SBCs Raspberry PI e  permite o controlo de motores DC, motores paso a passo e servomotores.
+![Stepper Motor HAT para Raspberry Pi](../img/stepper-motor-hat-for-raspberry-pi.jpg)
+O "Stepper Motor HAT para Raspberry Pi" é uma placa de expanção adaptada aos SBCs Raspberry PI e  permite o controlo de motores DC, motores paso a passo e servomotores.
 
 Utiliza um conector que pode ser montado em camadas sobre os pinos das placas dos Raspberry e controle I2C que é compatível com 3.3v / 5v, também adequado para outras placas de expansão no mercado.
 
