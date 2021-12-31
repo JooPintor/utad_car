@@ -33,7 +33,7 @@ A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com 
 ### Configuração do sistema operativo para aceder às ligações I2C, SPI e GPIO 
 Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário [verificar a existencia de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligaçoes, caso ainda não esteja incluido. A utilização das entradas/saidas GPIO requerem a utilização do grupo __kmem__.
 
-Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos gropos.
+Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos grupos e [configurar o hardware das ligações](#Configuração-do-hardware das-ligações-I2C-SPI-e-GPIO-no-sistema-operativo) para que este seja reconhecido pelo sistema operativo.
 
 #### Verificar a existencia de grupos
 Para verificar a existencia dos grupos que nos interessam deve-se realizar um comando para cada grupo como mostrado a seguir:
