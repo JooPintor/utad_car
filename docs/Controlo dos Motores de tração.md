@@ -114,7 +114,7 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 
     ls -l /dev/mem
 
-    crw-r----- 1 root kmem 1, 1 ago 26 15:26 /dev/mem
+    crw-rw---- 1 root kmem 1, 1 ago 26 15:26 /dev/mem
 
     ls -l /dev/gpiomem
 
@@ -127,6 +127,10 @@ Para verificar se todas as configurações estão corretas deverão ser executad
     SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
     SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
 
+    ls -l /dev/i2c*
+
+    crw-rw---- 1 root i2c 89, 1 ago 26 15:26 /dev/i2c-1
+    
     sudo i2cdetect -y 1
 
          0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
@@ -140,3 +144,5 @@ Para verificar se todas as configurações estão corretas deverão ser executad
     70: 70 -- -- -- -- -- -- --     
 
     (Os valores retornados pelo comando "sudo i2cdetect -y 1" dependem do hardware ligado)
+
+Notar as permições "crw-rw----"  
