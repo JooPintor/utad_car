@@ -3,7 +3,7 @@ O "utad_car" trata-se de um carro robotico de duas rodas motrizes com motorizaç
 
 Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry PI 3](./Raspberry%20PI%203.md) e a [placa de expanção do Raspberry PI](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) que a Universidade me forneceu para a realização do trabalho.
 
-A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) antes de se poder enviar comandos para essa placa ou poder activar saídas e ler entradas nos pinos do Raspberry.
+A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) de forma a preparar o Raspberry para comunicar com o speriféricos, de se poder enviar comandos para alteração da velocidade de rotação dos motores e/ou poder activar saídas e ler entradas nos seus pinos.
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
@@ -76,7 +76,7 @@ Para que o utilizador possa aceder ás ligações é necessário dar permições
     sudo chown :i2c /dev/i2c-1
     sudo chmod g+rw /dev/i2c-1
 
-### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
+#### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
 Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
 
     sudo nano /etc/udev/rules.d/local.rules
@@ -94,7 +94,7 @@ Depois de ter criado o ficheiro é necessário aplicar as novas regras executand
 
     sudo udevadm control --reload-rules && udevadm trigger
 
-#### Instalação de ferramentas necessárias à ligação I2C
+### Instalação de ferramentas necessárias à ligação I2C
 Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instalas as ferramentas seguintes, através da execução dos seguintes comandos:
 
     sudo apt-get update -y
