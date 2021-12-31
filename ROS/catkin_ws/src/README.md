@@ -1,15 +1,5 @@
-ROS Navigation Stack
+utad car Stack
 ====================
 
-A 2D navigation stack that takes in information from odometry, sensor
-streams, and a goal pose and outputs safe velocity commands that are sent
-to a mobile base.
+Conjunto de modulos desenvolvidos ou adaptados de diversas fontes no âmbito do meu trabalho de fina curso 
 
-Related stacks:
-
- * http://github.com/ros-planning/navigation_msgs (new in Jade+)
- * http://github.com/ros-planning/navigation_tutorials
- * http://github.com/ros-planning/navigation_experimental
-
-For discussion, please check out the
-https://groups.google.com/group/ros-sig-navigation mailing list.
