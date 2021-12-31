@@ -10,6 +10,7 @@ Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abor
 
 ## Temas abordados
 - [O que é o ROS?](#o-que-é-ros)
+- Como iniciar um projeto em ROS?
 - [Instalação do SO nos SBC](./docs/Instalação%20do%20SO%20nos%20SBC.md)
 - [Instalação do ROS](./docs/Instalação%20do%20ROS.md)
 - [Controlo dos Motores de Tração](./docs/Controlo%20dos%20Motores%20de%20tração.md)
