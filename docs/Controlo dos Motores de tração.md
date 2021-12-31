@@ -78,17 +78,22 @@ Para que o utilizador possa aceder ás ligações é necessário dar permições
     sudo chown :i2c /dev/i2c-1
     sudo chmod g+rw /dev/i2c-1
 
-### Configuração do sistema operativo para aceder às ligações SPI e GPIO
-Para que o sistema operativo possa comunicar com as ligações __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
+### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
+Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de ntradas e saidas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
 
     sudo nano /etc/udev/rules.d/local.rules
 
 com o seguinte conteudo:
 
+    ACTION=="add", KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
     ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
     SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
     SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
     SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
+
+Depois de ter criado o ficheiro é necessário aplicar as novas regras executando o seguinte comando:
+
+    sudo udevadm control --reload-rules && udevadm trigger
 
 #### Instalação de ferramentas necessárias à ligação I2C
 Para facilitar a utilização da ligação I2C pelo ubuntu, deverão ser instalas as ferramentas seguintes, através da execução dos seguintes comandos:
@@ -124,6 +129,7 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 
     cat /etc/udev/rules.d/local.rules
 
+    ACTION=="add", KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
     ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
     SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
     SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
