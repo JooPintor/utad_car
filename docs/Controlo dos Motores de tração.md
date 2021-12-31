@@ -5,7 +5,7 @@ Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry P
 
 A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) antes de se poder enviar comandos para essa placa ou poder activar saídas e ler entradas nos pinos do Raspberry.
 
-Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.
+<-Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.->
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
