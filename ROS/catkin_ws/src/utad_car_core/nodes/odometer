@@ -1,0 +1,189 @@
+#!/usr/bin/env python
+
+'''
+Controls the position and velocity of UTAD Car Robot
+Author: Joao Pintor
+'''
+
+import math
+from math import sin, cos, pi
+
+import rospy
+import tf
+import tf2_ros
+import geometry_msgs.msg
+from nav_msgs.msg import Odometry
+from std_msgs.msg import Int16, Empty
+from geometry_msgs.msg import Point, Pose2D, Pose, Quaternion, Twist, Vector3
+
+import RPi.GPIO as GPIO
+
+RW_TIC = 12             #Wheel right tick couter
+RW_DIR = 11             #Direction of the weel (1-forward else backard)
+LW_TIC = 36             #Wheel left tick couter
+LW_DIR = 35             #Direction of the weel (1-forward else backard)
+
+
+# ===========================================================================
+# Encoders
+# ===========================================================================
+
+class Encoder:
+    def __init__(self,pinA,pinB):
+        self.pinA = pinA  #pin of ticks
+        self.pinB = pinB  #direction
+            
+        self.ticksCounter = 0
+        
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(self.pinA, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+        GPIO.setup(self.pinB, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)        
+        GPIO.add_event_detect(self.pinA, GPIO.RISING, callback=self.ticksCount, bouncetime=10)
+
+    def ticksCount(self, channel):
+        if GPIO.input(self.pinB):
+            self.ticksCounter += 1
+        else:
+            self.ticksCounter -= 1
+                    
+    def ticks(self):
+        return self.ticksCounter
+
+	def __del__(self):
+		GPIO.cleanup()
+
+
+# ===========================================================================
+# Odometer
+# ===========================================================================
+
+class Odometer:
+    def __init__(self):
+        rospy.init_node("odometer")
+        rospy.loginfo("Node 'odometer' configuring.")
+        self.odom_pub = rospy.Publisher("odom", Odometry, queue_size=2)
+        self.odom_pose_pub = rospy.Publisher("odom/pose", geometry_msgs.msg.Pose2D, queue_size=2)
+        self.odom_broadcaster = tf2_ros.TransformBroadcaster()
+        #Parameters
+        self.rate = rospy.Rate(rospy.get_param('~rate', 1.0))
+        self.distanceWheels = rospy.get_param('~wheel_base', 0.13)      #The distance between the wheels 
+        self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.067)  #Wheel diameter in meters
+        self.ticksPerRevolution = rospy.get_param('~ticks_per_revolution', 20.0)  #Ticks per revolution
+
+        # Setup subscriber for reset message
+        rospy.Subscriber("reset", Empty, self.reset_received_callback)
+
+        self.encRwheel = Encoder(RW_TIC, RW_DIR)
+        self.encLwheel = Encoder(LW_TIC, LW_DIR)
+
+        self.right_ticks = self.encRwheel.ticks()
+        self.left_ticks  = self.encLwheel.ticks()
+        self.last_right_ticks = self.right_ticks
+        self.last_left_ticks  = self.left_ticks
+
+        self.initOdom()
+        rospy.loginfo("Node 'odometer' configuration complete.")
+
+    def initOdom(self):
+        self.left_ticks = 0.0
+        self.right_ticks = 0.0         
+        self.last_left_ticks = 0.0
+        self.last_right_ticks = 0.0
+
+        self.x = 0.0
+        self.y = 0.0
+        self.th = 0.0
+
+        self.vx =  0.0
+        self.vy =  0.0
+        self.vth =  0.0
+
+    def reset_received_callback(self, message):
+        rospy.loginfo("Node 'odometer' reset message received")
+        self.initOdom()
+        rospy.loginfo("Node 'odometer' reset message executed")
+        
+    def run(self):
+        rospy.loginfo("Node 'odometer' running.")
+        self.current_time = rospy.Time.now()
+        self.last_time = self.current_time
+        while not rospy.is_shutdown():
+            self.current_time = rospy.Time.now()
+            self.right_ticks = self.encRwheel.ticks()
+            self.left_ticks  = self.encLwheel.ticks()
+            self.dRight = ((self.right_ticks - self.last_right_ticks) * pi * self.wheelDiameter/ self.ticksPerRevolution)
+            self.dLeft  = ((self.left_ticks - self.last_left_ticks) * pi * self.wheelDiameter/ self.ticksPerRevolution)
+            self.last_right_ticks = self.right_ticks
+            self.last_left_ticks  = self.left_ticks
+            self.dCenter = (self.dRight + self.dLeft) / 2
+            self.dth = (self.dRight - self.dLeft) / self.distanceWheels
+            
+            self.dt = (self.current_time - self.last_time).to_sec()
+            self.last_time = self.current_time
+
+            if self.dRight == self.dLeft:
+                self.dx=self.dRight*cos(self.th)
+                self.dy=self.dRight*sin(self.th)
+
+            else:
+                self.radius = self.dCenter / self.dth
+
+                self.iccX=self.x-self.radius*sin(self.th)
+                self.iccY=self.y+self.radius*cos(self.th)
+
+                self.dx = cos(self.dth) * (self.x-self.iccX) - sin(self.dth)* (self.y-self.iccY) + self.iccX - self.x
+                self.dy = sin(self.dth) * (self.x-self.iccX) + cos(self.dt)* (self.y-self.iccY) + self.iccY - self.y
+
+            self.x += self.dx  
+            self.y += self.dy 
+            self.th =(self.th+self.dth) %  (2 * pi)
+
+            self.odom_quat=tf.transformations.quaternion_from_euler(0,0,self.th)
+
+            # first, we'll publish the transform over tf
+#            t = geometry_msgs.msg.TransformStamped()
+#            t.header.stamp = rospy.Time.now()
+#            t.header.frame_id = "base_link"
+#            t.child_frame_id = "odom"
+#            t.transform.translation.x = self.x
+#            t.transform.translation.y = self.y
+#            t.transform.translation.z = 0.0
+#            t.transform.rotation.x = self.odom_quat[0]
+#            t.transform.rotation.y = self.odom_quat[1]
+#            t.transform.rotation.z = self.odom_quat[2]
+#            t.transform.rotation.w = self.odom_quat[3]
+#            
+#            self.odom_broadcaster.sendTransform(t)       
+            
+            # next, we'll publish the Pose2D geometry message over ROS
+            self.odom_pose_pub.publish(Pose2D(self.x, self.y, self.th))
+
+            # next, we'll publish the odometry message over ROS
+            self.odom = Odometry()
+            self.odom.header.stamp = self.current_time
+            self.odom.header.frame_id = "base_link"
+
+            self.odom.pose.pose = Pose(Point(self.x, self.y, 0.),
+                                     Quaternion(*self.odom_quat))
+
+            if self.dt>0:
+               self.vx=self.dx/self.dt
+               self.vy=self.dy/self.dt
+               self.vth=self.dth/self.dt
+
+            self.odom.child_frame_id = "odom"
+            self.odom.twist.twist = Twist(Vector3(self.vx, self.vy, 0),
+                                     Vector3(0, 0, self.vth))
+
+            self.odom_pub.publish(self.odom)
+
+            self.rate.sleep()
+            
+def main():
+    od = Odometer()
+    od.run()
+    GPIO.cleanup()
+    rospy.loginfo("Node 'odometer' Stopped")
+
+if __name__ == '__main__':
+    main()

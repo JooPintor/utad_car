@@ -1,0 +1,478 @@
+#!/usr/bin/env python
+
+'''
+Controls the Engine speed of UTAD Car Robot 
+Author: Joao Pintor
+'''
+
+import time
+import math
+import re
+import smbus
+import atexit
+
+import rospy
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist, Vector3
+from std_msgs.msg import String
+
+
+# ===========================================================================
+# Raspi_I2C Class
+# ===========================================================================
+class Raspi_I2C(object):
+
+  @staticmethod
+  def getPiRevision():
+    "Gets the version number of the Raspberry Pi board"
+    # Revision list available at: http://elinux.org/RPi_HardwareHistory#Board_Revision_History
+    try:
+      with open('/proc/cpuinfo', 'r') as infile:
+        for line in infile:
+          # Match a line of the form "Revision : 0002" while ignoring extra
+          # info in front of the revsion (like 1000 when the Pi was over-volted).
+          match = re.match('Revision\s+:\s+.*(\w{4})$', line)
+          if match and match.group(1) in ['0000', '0002', '0003']:
+            # Return revision 1 if revision ends with 0000, 0002 or 0003.
+            return 1
+          elif match:
+            # Assume revision 2 if revision ends with any other 4 chars.
+            return 2
+        # Couldn't find the revision, assume revision 0 like older code for compatibility.
+        return 0
+    except:
+      return 0
+
+  @staticmethod
+  def getPiI2CBusNumber():
+    # Gets the I2C bus number /dev/i2c#
+    return 1 if Raspi_I2C.getPiRevision() > 1 else 0
+
+  def __init__(self, address, busnum=-1, debug=False):
+    self.address = address
+    # By default, the correct I2C bus is auto-detected using /proc/cpuinfo
+    # Alternatively, you can hard-code the bus version below:
+    # self.bus = smbus.SMBus(0); # Force I2C0 (early 256MB Pi's)
+    # self.bus = smbus.SMBus(1); # Force I2C1 (512MB Pi's)
+    self.bus = smbus.SMBus(busnum if busnum >= 0 else Raspi_I2C.getPiI2CBusNumber())
+    self.debug = debug
+
+  def reverseByteOrder(self, data):
+    "Reverses the byte order of an int (16-bit) or long (32-bit) value"
+    # Courtesy Vishal Sapre
+    byteCount = len(hex(data)[2:].replace('L','')[::2])
+    val       = 0
+    for i in range(byteCount):
+      val    = (val << 8) | (data & 0xff)
+      data >>= 8
+    return val
+
+  def errMsg(self):
+    print ("Error accessing 0x%02X: Check your I2C address" % self.address)
+    return -1
+
+  def write8(self, reg, value):
+    "Writes an 8-bit value to the specified register/address"
+    try:
+      self.bus.write_byte_data(self.address, reg, value)
+      if self.debug:
+        print ("I2C: Wrote 0x%02X to register 0x%02X" % (value, reg))
+    except IOError:
+      return self.errMsg()
+
+  def writeRaw8(self, value):
+    "Writes an 8-bit value on the bus"
+    try:
+      self.bus.write_byte(self.address, value)
+      if self.debug:
+        print ("I2C: Wrote 0x%02X" % value)
+    except IOError :
+      return self.errMsg()
+
+  def readU8(self, reg):
+    "Read an unsigned byte from the I2C device"
+    try:
+      result = self.bus.read_byte_data(self.address, reg)
+      if self.debug:
+        print ("I2C: Device 0x%02X returned 0x%02X from reg 0x%02X" %
+         (self.address, result & 0xFF, reg))
+      return result
+    except IOError:
+      return self.errMsg()
+
+# ============================================================================
+# Raspi PCA9685 16-Channel PWM Driver
+# ============================================================================
+class PWM :
+  # Registers/etc.
+  __MODE1              = 0x00
+  __MODE2              = 0x01
+  __SUBADR1            = 0x02
+  __SUBADR2            = 0x03
+  __SUBADR3            = 0x04
+  __PRESCALE           = 0xFE
+  __LED0_ON_L          = 0x06
+  __LED0_ON_H          = 0x07
+  __LED0_OFF_L         = 0x08
+  __LED0_OFF_H         = 0x09
+  __ALL_LED_ON_L       = 0xFA
+  __ALL_LED_ON_H       = 0xFB
+  __ALL_LED_OFF_L      = 0xFC
+  __ALL_LED_OFF_H      = 0xFD
+
+  # Bits
+  __RESTART            = 0x80
+  __SLEEP              = 0x10
+  __ALLCALL            = 0x01
+  __INVRT              = 0x10
+  __OUTDRV             = 0x04
+
+  general_call_i2c = Raspi_I2C(0x00)
+
+  @classmethod
+  def softwareReset(cls):
+    "Sends a software reset (SWRST) command to all the servo drivers on the bus"
+    cls.general_call_i2c.writeRaw8(0x06)        # SWRST
+
+  def __init__(self, address=0x40, debug=False):
+    self.i2c = Raspi_I2C(address)
+    self.i2c.debug = debug
+    self.address = address
+    self.debug = debug
+    if (self.debug):
+      print ("Reseting PCA9685 MODE1 (without SLEEP) and MODE2")
+    self.setAllPWM(0, 0)
+    self.i2c.write8(self.__MODE2, self.__OUTDRV)
+    self.i2c.write8(self.__MODE1, self.__ALLCALL)
+    time.sleep(0.005)                             # wait for oscillator
+    
+    mode1 = self.i2c.readU8(self.__MODE1)
+    mode1 = mode1 & ~self.__SLEEP                 # wake up (reset sleep)
+    self.i2c.write8(self.__MODE1, mode1)
+    time.sleep(0.005)                             # wait for oscillator
+
+  def setPWMFreq(self, freq):
+    "Sets the PWM frequency"
+    prescaleval = 25000000.0    # 25MHz
+    prescaleval /= 4096.0       # 12-bit
+    prescaleval /= float(freq)
+    prescaleval -= 1.0
+    if (self.debug):
+      print ("Setting PWM frequency to %d Hz" % freq)
+      print ("Estimated pre-scale: %d" % prescaleval)
+    prescale = math.floor(prescaleval + 0.5)
+    if (self.debug):
+      print ("Final pre-scale: %d" % prescale)
+
+    oldmode = self.i2c.readU8(self.__MODE1);
+    newmode = (oldmode & 0x7F) | 0x10             # sleep
+    self.i2c.write8(self.__MODE1, newmode)        # go to sleep
+    self.i2c.write8(self.__PRESCALE, int(math.floor(prescale)))
+    self.i2c.write8(self.__MODE1, oldmode)
+    time.sleep(0.005)
+    self.i2c.write8(self.__MODE1, oldmode | 0x80)
+
+  def setPWM(self, channel, on, off):
+    "Sets a single PWM channel"
+    self.i2c.write8(self.__LED0_ON_L+4*channel, on & 0xFF)
+    self.i2c.write8(self.__LED0_ON_H+4*channel, on >> 8)
+    self.i2c.write8(self.__LED0_OFF_L+4*channel, off & 0xFF)
+    self.i2c.write8(self.__LED0_OFF_H+4*channel, off >> 8)
+
+  def setAllPWM(self, on, off):
+    "Sets a all PWM channels"
+    self.i2c.write8(self.__ALL_LED_ON_L, on & 0xFF)
+    self.i2c.write8(self.__ALL_LED_ON_H, on >> 8)
+    self.i2c.write8(self.__ALL_LED_OFF_L, off & 0xFF)
+    self.i2c.write8(self.__ALL_LED_OFF_H, off >> 8)
+
+# ============================================================================
+# Raspi DC Motor Driver
+# ============================================================================	
+class DCMotor:
+    def __init__(self, controller, num):
+        self.MC = controller
+        self.motornum = num
+        self.speed = 0
+        pwm = in1 = in2 = fwd = 0
+
+        if (num == 0):
+            pwm = 8
+            in2 = 9
+            in1 = 10
+            fwd = 0
+        elif (num == 1):
+            pwm = 13
+            in2 = 12
+            in1 = 11
+            fwd = 1
+        elif (num == 2):
+            pwm = 2
+            in2 = 3
+            in1 = 4
+            fwd = 14
+        elif (num == 3):
+            pwm = 7
+            in2 = 6
+            in1 = 5
+            fwd = 15
+        else:
+            raise NameError('MotorHAT Motor must be between 1 and 4 inclusive')
+        self.PWMpin = pwm
+        self.IN1pin = in1
+        self.IN2pin = in2
+        self.OUTpin = fwd
+            
+    def _clip(self,value,minimum,maximum):
+        if value < minimum:
+            return minimum
+        elif value > maximum:
+            return maximum
+        return value
+
+    def run(self, command):
+        if not self.MC:
+            return
+        if (command == MotorHAT.FORWARD):
+            self.MC.setPin(self.OUTpin, 1)
+            self.MC.setPin(self.IN2pin, 0)
+            self.MC.setPin(self.IN1pin, 1)
+        if (command == MotorHAT.BACKWARD):
+            self.MC.setPin(self.OUTpin, 0)
+            self.MC.setPin(self.IN1pin, 0)
+            self.MC.setPin(self.IN2pin, 1)
+        if (command == MotorHAT.RELEASE):
+            self.MC.setPin(self.OUTpin, 0)
+            self.MC.setPin(self.IN1pin, 0)
+            self.MC.setPin(self.IN2pin, 0)
+
+    def move(self, speed):
+        if not self.MC:
+            return
+
+        if speed != self.speed:
+            self.speed = speed
+            self.setSpeed(speed)
+
+            # A positive speed moves wheels forward, negative moves backwards
+            if speed > 0:
+                self.run(MotorHAT.FORWARD)
+            elif speed < 0:
+                self.run(MotorHAT.BACKWARD)
+            else:
+                self.run(MotorHAT.RELEASE)
+
+
+    def setSpeed(self, speed):
+        speed = self._clip(abs(speed), 0, 4095)
+        self.MC._pwm.setPWM(self.PWMpin, 0, speed)
+
+# ============================================================================
+# Raspi Motor HAT Driver
+# ============================================================================
+class MotorHAT:
+    FORWARD = 1
+    BACKWARD = 2
+    BRAKE = 3
+    RELEASE = 4
+
+    def __init__(self, addr = 0x60, freq = 60):
+        self._i2caddr = addr            # default addr on HAT
+        self._frequency = freq		# default @1600Hz PWM freq
+        self.motors = [ DCMotor(self, m) for m in range(4) ]
+        self._pwm = PWM(addr, debug=False)
+        self._pwm.setPWMFreq(self._frequency)
+
+    def setPin(self, pin, value):
+        if (pin < 0) or (pin > 15):
+            raise NameError('PWM pin must be between 0 and 15 inclusive')
+        if (value != 0) and (value != 1):
+            raise NameError('Pin value must be 0 or 1!')
+        if (value == 0):
+            self._pwm.setPWM(pin, 0, 4096)
+        if (value == 1):
+            self._pwm.setPWM(pin, 4096, 0)
+
+    def getMotor(self, num):
+        if (num < 1) or (num > 4):
+            raise NameError('MotorHAT Motor must be between 1 and 4 inclusive')
+        return self.motors[num-1]
+
+# ===========================================================================
+# Engine speed control
+# ===========================================================================
+
+_ADDR = 0x6f
+_FREQUENCY = 1600
+_ML = 3
+_MR = 2
+
+LINEAR = 0
+ANGULAR = 1
+LEFT = 0
+RIGHT = 1
+
+
+# create a default object, to I2C address and frequency 
+mh = MotorHAT(addr=_ADDR, freq=_FREQUENCY)
+
+Motor = [0,0]
+Motor[LEFT] = mh.getMotor(_ML)
+Motor[RIGHT] = mh.getMotor(_MR)
+
+
+# recommended for auto-disabling motors on shutdown!
+def turnOffMotors():
+    Motor[LEFT].run(MotorHAT.RELEASE)
+    Motor[RIGHT].run(MotorHAT.RELEASE)
+
+atexit.register(turnOffMotors)
+
+class motion_driver:
+    def __init__(self):
+        rospy.init_node("motion_driver")
+        rospy.loginfo("Node 'motion' configuring driver.")
+
+        self._motor = [0,0]
+        self._speed = [0,0]
+        self._speed_percent = [0,0]
+        self._last_received = rospy.get_time()
+        self._timeout = rospy.get_param('~timeout', 5)
+        self.rate = rospy.Rate(rospy.get_param('~rate', 1.0))
+        self._max_speed = rospy.get_param('~max_speed', 4095)
+        self._wheel_base = rospy.get_param('~wheel_base', 0.93)
+        self._motor[LEFT] = Motor[LEFT]
+        self._motor[RIGHT] = Motor[RIGHT]
+
+        WHEEL_RADIUS =     0.033           # meter
+        WHEEL_SEPARATION = 0.160           # meter 
+        TURNING_RADIUS =   0.080           # meter 
+        #ROBOT_RADIUS =     0.105           # meter 
+
+        MAX_LINEAR_VELOCITY = (WHEEL_RADIUS * 2 * 3.14159265359) # m/s 
+        MAX_ANGULAR_VELOCITY = (MAX_LINEAR_VELOCITY / TURNING_RADIUS)   # rad/s
+
+        MIN_LINEAR_VELOCITY = -MAX_LINEAR_VELOCITY  
+        MIN_ANGULAR_VELOCITY = -MAX_ANGULAR_VELOCITY 
+        
+        self.goal_velocity_from_cmd = [0,0]
+        self.atual_velocity = [0,0]
+        self.whell_speed = [0,0]
+        self.whell_speed_goal = [0,0]
+
+        # Setup subscriber for velocity twist message
+        rospy.Subscriber('cmd_vel', Twist, self.commandVelocityCallback)
+
+        # Setup subscriber for collision detection
+        rospy.Subscriber("collision", String, self.collision_callback)
+
+        # Setup subscriber for odom Odometry messages
+        rospy.Subscriber("odom", Odometry, self.odometry_msg_callback)
+
+        # Setup publisher for velocity. Used in collision to stop motors
+        self.pub = rospy.Publisher('cmd_vel', Twist, queue_size=4)
+
+        rospy.loginfo("Node 'motion' configuration complete.")
+
+    def odometry_msg_callback(self, odometry_msg):
+        # Extract linear and angular velocities from the message
+        self.atual_velocity[LINEAR]  = math.sqrt(math.pow(odometry_msg.twist.twist.linear.x,2) + \
+                                            math.pow(odometry_msg.twist.twist.linear.y,2))
+
+        self.atual_velocity[ANGULAR] = odometry_msg.twist.twist.angular.z
+
+        #rospy.loginfo("Node 'motion' Actual Linear velocity = "+str(self.atual_velocity[LINEAR])+" m/s.")
+        #rospy.loginfo("Node 'motion' Actual Angular velocity = "+str(self.atual_velocity[ANGULAR])+" rad/s.")
+        
+        # Calculate actual wheels speed in m/s
+        self.whell_speed[LEFT] = self.atual_velocity[LINEAR] - self.atual_velocity[ANGULAR]*self._wheel_base/2
+        self.whell_speed[RIGHT] = self.atual_velocity[LINEAR] + self.atual_velocity[ANGULAR]*self._wheel_base/2
+
+        self._speed[LEFT] = int(self.whell_speed[LEFT])
+        self._speed[RIGHT] = int(self.whell_speed[RIGHT])
+        
+        #rospy.loginfo("Node 'motion' Actual Left velocity = "+str(self._speed[LEFT])+" m/s.")
+        #rospy.loginfo("Node 'motion' Actual Right velocity = "+str(self._speed[RIGHT])+" rad/s.")
+
+        #rospy.loginfo("Node 'motion' Actual cmd Left velocity = "+str(self._speed_percent[LEFT])+"%.")
+        #rospy.loginfo("Node 'motion' Actual cmd Right velocity = "+str(self._speed_percent[RIGHT])+"%.")
+
+        if abs(self._speed_percent[LEFT]) < 100 :
+            if self.whell_speed_goal[LEFT] > self._speed[LEFT]:
+                if self.whell_speed_goal[LEFT] - self._speed[LEFT] > 10 :
+                    self._speed_percent[LEFT] = self._speed_percent[LEFT] + 10
+                else:
+                     self._speed_percent[LEFT] = self._speed_percent[LEFT] + 1
+            elif self.whell_speed_goal[LEFT] < self._speed[LEFT]:
+                if self.whell_speed_goal[LEFT] - self._speed[LEFT] < -10:
+                    self._speed_percent[LEFT] = self._speed_percent[LEFT] - 10
+                else:
+                     self._speed_percent[LEFT] = self._speed_percent[LEFT] - 1
+        if abs(self._speed_percent[RIGHT]) < 100 :
+            if self.whell_speed_goal[RIGHT] > self._speed[RIGHT]:
+                if self.whell_speed_goal[RIGHT] - self._speed[RIGHT] > 10:
+                    self._speed_percent[RIGHT] = self._speed_percent[RIGHT] + 10
+                else:
+                     self._speed_percent[RIGHT] = self._speed_percent[RIGHT] + 1
+            elif self.whell_speed_goal[RIGHT] < self._speed[RIGHT]:
+                if self.whell_speed_goal[RIGHT] - self._speed[RIGHT] < -10:
+                    self._speed_percent[RIGHT] = self._speed_percent[RIGHT] - 10
+                else:
+                     self._speed_percent[RIGHT] = self._speed_percent[RIGHT] - 1
+           
+    def commandVelocityCallback(self, cmd_vel_msg):
+        self._last_received = rospy.get_time()
+        #rospy.loginfo("Node 'motion' velocity message received")
+
+        #rospy.loginfo("Node 'motion' velocity message Linear = "+str(cmd_vel_msg.linear.x)+" m/s.")
+        #rospy.loginfo("Node 'motion' velocity message Angular = "+str(cmd_vel_msg.angular.z)+" rad/s.")
+
+        
+        # Extract linear and angular velocities from the message
+        self.goal_velocity_from_cmd[LINEAR]  = cmd_vel_msg.linear.x
+        self.goal_velocity_from_cmd[ANGULAR] = cmd_vel_msg.angular.z
+
+        #goal_velocity_from_cmd[LINEAR]  = constrain(goal_velocity_from_cmd[LINEAR],  MIN_LINEAR_VELOCITY, MAX_LINEAR_VELOCITY);
+        #goal_velocity_from_cmd[ANGULAR] = constrain(goal_velocity_from_cmd[ANGULAR], MIN_ANGULAR_VELOCITY, MAX_ANGULAR_VELOCITY);
+
+        # Calculate wheel speeds in m/s
+        self.whell_speed_goal[LEFT] = self.goal_velocity_from_cmd[LINEAR] - self.goal_velocity_from_cmd[ANGULAR]*self._wheel_base/2
+        self.whell_speed_goal[RIGHT] = self.goal_velocity_from_cmd[LINEAR] + self.goal_velocity_from_cmd[ANGULAR]*self._wheel_base/2
+        
+        if self.goal_velocity_from_cmd[LINEAR] == 0 and self.goal_velocity_from_cmd[ANGULAR] == 0:
+            self._speed_percent[LEFT] = 0
+            self._speed_percent[RIGHT] = 0
+            
+    def collision_callback(self, message):
+        rospy.loginfo("Node 'motion' collision detected. Stopping")
+        if(message.data == 'obstacle_right' or message.data == 'obstacle_left'):
+            self.pub.publish(Twist(Vector3(0,0,0),Vector3(0,0,0)))
+
+    def run(self):
+        rospy.loginfo("Node 'motion' running.")
+
+        while not rospy.is_shutdown():
+            # If we haven't received new commands for a while, we
+            # may have lost contact with the commander-- stop moving
+            delay = rospy.get_time() - self._last_received
+            # print('delay = '+ str(delay))
+            #rospy.loginfo("Node 'motion' cmd velocity Left  = "+str(self._speed_percent[LEFT])+"%.")
+            #rospy.loginfo("Node 'motion' cmd velocity Right = "+str(self._speed_percent[RIGHT])+"%.")
+            
+            if delay < self._timeout:
+                self._motor[LEFT].move(int(self._speed_percent[LEFT]*(self._max_speed/100)))
+                self._motor[RIGHT].move(int(self._speed_percent[RIGHT]*(self._max_speed/100)))
+            else:
+                self._motor[LEFT].move(0)
+                self._motor[RIGHT].move(0)
+            
+            self.rate.sleep()
+    
+def main():
+    rospy.loginfo("Starting node 'motion'")
+    driver = motion_driver()
+    driver.run()
+    rospy.loginfo("Node 'motion' Stopped")
+
+if __name__ == '__main__':
+    main()

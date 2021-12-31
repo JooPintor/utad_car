@@ -1,0 +1,32 @@
+<!--
+    This launch file runs the UTAD Car Robot core nodes.
+-->
+
+<launch>
+
+  <!-- Default ROS output location, set this to 'log' to write stdout to a log file instead of the screen -->
+  <arg name="output" default="screen" doc="ROS stdout output location (log/screen)"/>
+
+  <node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
+      <param name="timeout" value="5" />
+      <param name="rate" value="1.0" />
+      <param name="max_speed" value="4095" />
+      <param name="wheel_base" value="0.13" />
+  </node>
+  
+  <node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
+      <param name="wheel_base" value="0.13" />
+      <param name="wheel_diameter" value="0.067" />
+      <param name="ticks_per_revolution" value="20.0" />
+  </node>
+
+<!--
+  <node pkg="sensor_node_pkg" type="sensor_node_type" name="sensor_node_name" output="screen">
+    <param name="sensor_param" value="param_value" />
+  </node>
+-->
+<!--
+  <node pkg="utad_car_core" type="car_tf2_broadcast" name="car_tf2_transform" output="screen"/>
+-->
+
+</launch>

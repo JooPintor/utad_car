@@ -1,0 +1,32 @@
+<package>
+  <name>utad_car_core</name>
+  <version>0.1.0</version>
+  <description>UTAD Car Robot a Raspberry Pi powered robot.</description>
+  <maintainer email="al63116@utad.pt">Joao Pintor</maintainer>
+  <license>BSD</license>
+  <url type="website">https://www.utad.pt/</url>
+  
+  <author email="al63116@utad.pt">Joao Pintor</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>tf2_ros</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
+</package>
