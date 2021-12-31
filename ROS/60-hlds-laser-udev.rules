@@ -1,0 +1,4 @@
+# On precise, for some reason, USER and GROUP are getting ignored. 
+# So setting mode = 0660 for now. 
+SUBSYSTEM=="tty", ATTRS{idVendor}=="05e3", ATTRS{idProduct}=="0610", MODE:="0660", GROUP:="dialout", SYMLINK+="LDS01"
+
