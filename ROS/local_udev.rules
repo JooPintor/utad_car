@@ -1,0 +1,15 @@
+# Configurações "udev" necessárias á comunicação com 12c, spi e gpio.
+# Este ficheiro deverá ser copiado para "/etc/udev/rules.d/local.rules"
+#
+# $ sudo cp ./utad_car_udev.conf /etc/udev/rules.d/local.rules
+#
+# Após a cópia do ficheiro deverão ser reinicializadas as regras com o comando:
+#
+# $ sudo udevadm control --reload-rules && udevadm trigger
+#
+
+ACTION=="add", KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
+SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
+SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
+SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
