@@ -1,4 +1,7 @@
-### Portátil ASUS Laptop X512DA
+## Portátil ASUS Laptop X512DA
+
+![image](https://user-images.githubusercontent.com/89998899/147837621-fdca2a93-addf-40ec-ab7b-b6f1ab4a3ea5.png)
+
    
                      OS Name : Microsoft Windows 10 Home
                   OS Version : 10.0.19043 N/A Build 19043
