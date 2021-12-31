@@ -145,4 +145,4 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 
     (Os valores retornados pelo comando "sudo i2cdetect -y 1" dependem do hardware ligado)
 
-Notar as permições "crw-rw----"  
+Notar as permições de acesso "crw-rw----"  
