@@ -54,6 +54,7 @@ Primeiro é preciso decidir para onde iremos colocar o nosso workspace, é aconc
 How executar estas linhas de codigo iremos criar as pastas src e devel, src será onde vamos por os nosssos modulos e nodes do nosso projeto e dentro de devel irá conter o nosso setup.bash, sendo este necessario de ser executado cada vez que intrudozimos algo de novo no nosso projeto, para que seja introduzido no projeto a nova informação, escrevendo:
 
       source devel/setup.bash
+(Nota: para verificar que o caminho do catkin workspace esta a utilizar a versão do ROS que este foi feito escreve-se echo $ROS_PACKAGE_PATH.)
 
 ##Instalação do ROS
 
