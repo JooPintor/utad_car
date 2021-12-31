@@ -5,8 +5,6 @@ Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry P
 
 A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) antes de se poder enviar comandos para essa placa ou poder activar saídas e ler entradas nos pinos do Raspberry.
 
-<-Em simultâneo com a configuração da ligação I2C pode-se fazer a [configuração das ligações SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-SPI-e-GPIO), já que envolvem acções semelhantes e também são necessárias para o controlo.->
-
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
 No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos assegurarmos que tudo ficou corretamente configurado.
@@ -33,7 +31,7 @@ A presença destas linhas neste ficheiro fazem com que o Raspberry arranque com 
 ### Configuração do sistema operativo para aceder às ligações I2C, SPI e GPIO 
 Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de ntradas e saidas __GPIO__, será necessário [verificar a existencia de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligaçoes, caso ainda não esteja incluido. A utilização das entradas/saidas GPIO requerem a utilização do grupo __kmem__.
 
-Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos grupos e [configurar o hardware das ligações](#Configuração-do-hardware das-ligações-I2C-SPI-e-GPIO-no-sistema-operativo) para que este seja reconhecido pelo sistema operativo.
+Depois de verificada a iclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permisões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos grupos e [configurar o hardware das ligações](#Configuração-do-hardware-das-ligações-I2C-SPI-e-GPIO-no-sistema-operativo) para que este seja reconhecido pelo sistema operativo.
 
 #### Verificar a existencia de grupos
 Para verificar a existencia dos grupos que nos interessam deve-se realizar um comando para cada grupo como mostrado a seguir:
