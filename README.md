@@ -42,8 +42,15 @@ A maioria dos outros pacotes estão licenciados sob uma variedade de licenças d
  Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
 
 
+## Como iniciar um projeto em ROS?
 
+Para iniciar qualquer tipo de projecto em ROS é sempre necessario de criar um workspace para conter os modulos que serão utilizados para a contrução. Em ROS nos utilizamos a farrememta **Catkin** como não só o nosso repositorio dos modulos mas tamebem o nosso workspace para fazer a compilação dos nossos programas para o ROS.
 
+Primeiro é preciso decidir para onde iremos colocar o nosso workspace, é aconcelhado por num sitio que seja de facil acesso que varias das linhas de comando utilizados vão chamar o caminho um grando numero de vezes, ao escolher onde vamos por o catkin workspace iremos escrever na cmd:
+
+      mkdir -p ~/catkin_ws/src
+     cd ~/catkin_ws/
+     catkin_make
 
 
 ##Instalação do ROS
