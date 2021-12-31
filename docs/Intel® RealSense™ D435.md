@@ -6,3 +6,9 @@ A Intel® RealSense ™ Depth Camera D400 Series usa visão estéreo para calcul
 - Suporte para plataforma cruzada e código-fonte aberto Intel® RealSense ™ SDK 2.0.
 - Processador de sinal de imagem em cores dedicado para ajustes de imagem e dimensionamento de dados de cores.
 - Projetor infravermelho ativo para iluminar objetos para aprimorar os dados de profundidade.
+
+A câmera de profundidade Intel® RealSense ™ D435 foi projetada para se adequar melhor ao seu protótipo. Com o obturador de imagem global e amplo campo de visão (85,2 ° x 58 ° x 94 °), a câmera de profundidade Intel® RealSense ™ D435 oferece percepção de profundidade precisa quando o objeto está se movendo ou o dispositivo está em movimento, e cobre mais área, minimizando “ Pontos cegos".
+
+Para obter mais informações sobre as câmeras de profundidade Intel® RealSense ™ e a tecnologia Intel® RealSense ™, visite intelrealsense.com.
+
+A versão mais recente do Intel® RealSense ™ SDK 2.0 está disponível em nossa página GitHub em https://github.com/IntelRealSense/librealsense/.
