@@ -9,7 +9,9 @@ Em simultâneo com a configuração da ligação I2C pode-se fazer a [configura�
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
-No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos acegurar-mos que tudo ficou corretamente configurado- 
+No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos assegurarmos que tudo ficou corretamente configurado.
+
+Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com o spinos do Raspberry criei as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a partir de modulos ROS.
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
 O Raspberry PI por defeito arranca sem as ligações I2C e SPI activas.
@@ -146,3 +148,6 @@ Para verificar se todas as configurações estão corretas deverão ser executad
     (Os valores retornados pelo comando "sudo i2cdetect -y 1" dependem do hardware ligado)
 
 Notar as permições de acesso "crw-rw----"  
+
+### Classes em Python para controlo dos motores
+
