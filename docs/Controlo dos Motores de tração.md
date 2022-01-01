@@ -3,13 +3,13 @@ O "utad_car" trata-se de um carro robotico de duas rodas motrizes com motorizaç
 
 Para controlar a movimentação do robot "utad_car" foi utilizado o [Raspberry PI 3](./Raspberry%20PI%203.md) e a [placa de expanção do Raspberry PI](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) que a Universidade me forneceu para a realização do trabalho.
 
-A placa de expansão que faz o controlo dos motores, tratando-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) de forma a preparar o Raspberry para comunicar com o speriféricos, de se poder enviar comandos para alteração da velocidade de rotação dos motores e/ou poder activar saídas e ler entradas nos seus pinos.
+A placa de expansão que faz o controlo dos motores, trata-se de uma placa que comunica com o Raspberry PI por I2C, pelo que foi necessário proceder [ativação da ligação por I2C no Raspberry PI](#configuração-do-raspberry-pi-para-arranque-das-ligações-por-i2c-e-spi) e á [configuração do sistema operativo para aceder às ligaçõe por I2C, SPI e GPIO](#Configuração-do-sistema-operativo-para-aceder-às-ligações-I2C-SPI-e-GPIO) de forma a preparar o Raspberry para comunicar com os speriféricos, antes de se poder enviar comandos para alteração da velocidade de rotação dos motores e/ou poder activar saídas e ler entradas nos seus pinos.
 
 Para além das configurações já mensionadas, deverá proceder-se á [instalação de algumas feramentas necessárias à ligação I2C](#instalação-de-ferramentas-necessárias-à-ligação-i2c), nomeadamente "i2c-tools", "libi2c-dev", "python3-dev" e "python3-smbus".
 
 No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos assegurarmos que tudo ficou corretamente configurado.
 
-Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com o spinos do Raspberry criei as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a partir de modulos ROS.
+Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com os pinos do Raspberry criei as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a partir de modulos ROS.
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
 O Raspberry PI por defeito arranca sem as ligações I2C e SPI activas.
@@ -155,4 +155,4 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 Notar as permições de acesso "crw-rw----"  
 
 ### Classes em Python para controlo dos motores
-
+As classes Python para controlo dos motores foram baseadas 
