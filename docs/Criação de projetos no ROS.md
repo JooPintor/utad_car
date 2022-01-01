@@ -1,9 +1,6 @@
 ## Criação de projetos no ROS
 O ROS utiliza o [catkin](#Visão-geral-do-catkin) como compilador, pelo que o este deverá ser [instalado](#Instalação-do-catkin) antes de se começar a criar um projeto.
 
-
-Antes de se poderem criar projetos em ROS é necessário ter o ROS instalado no equipamento em que se pretenda criar o projeto e .
-
 A criação dos projetos no ROS deverá seguir as instruções da página ROS-Wiki Para iniciar qualquer tipo de projecto em ROS é sempre necessario de criar um workspace para conter os modulos que serão utilizados para a contrução. Em ROS nos utilizamos a farrememta **Catkin** como não só o nosso repositorio dos modulos mas tamebem o nosso workspace para fazer a compilação dos nossos programas para o ROS.
 
 Primeiro é preciso decidir para onde iremos colocar o nosso workspace, é aconcelhado por num sitio que seja de facil acesso que varias das linhas de comando utilizados vão chamar o caminho um grando numero de vezes, ao escolher onde vamos por o catkin workspace iremos escrever na cmd:
