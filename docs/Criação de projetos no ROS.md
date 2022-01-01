@@ -1,5 +1,5 @@
 ## Criação de projetos no ROS
-O ROS utiliza o [catkin](#Visão-geral-do-"catkin") como compilador, pelo que o mesmo deverá ser instalado antes de se começar a criar um projeto.
+O ROS utiliza o [catkin](#Visão-geral-do-catkin) como compilador, pelo que o este deverá ser instalado antes de se começar a criar um projeto.
 
 
 Antes de se poderem criar projetos em ROS é necessário ter o ROS instalado no equipamento em que se pretenda criar o projeto e .
