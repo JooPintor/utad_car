@@ -1,5 +1,5 @@
 ## Criação de projetos no ROS
-O ROS utiliza o [catkin](#Visão-geral-do-catkin) como compilador, pelo que o este deverá ser instalado antes de se começar a criar um projeto.
+O ROS utiliza o [catkin](#Visão-geral-do-catkin) como compilador, pelo que o este deverá ser [instalado](#Instalação-do-catkin) antes de se começar a criar um projeto.
 
 
 Antes de se poderem criar projetos em ROS é necessário ter o ROS instalado no equipamento em que se pretenda criar o projeto e .
@@ -23,4 +23,12 @@ O __catkin__ é o compilador oficial do ROS e o sucessor do compilador original,
 O __catkin__ é responsável por gerar 'ficheiros_destino' a partir do código-fonte, que podem ser usados por um utilizador final. Esses ficheiros podem ter a forma de bibliotecas, programas executáveis, scripts gerados, interfaces exportadas (por exemplo, arquivos de cabeçalho C ++) ou qualquer outra coisa que não seja um código estático. Na terminologia ROS, o código-fonte é organizado em 'pacotes', onde cada pacote normalmente consiste em um ou mais ficheiros quando compilado.
 
 Para saber mais sobre o __catkin__ [consultar a página](https://wiki.ros.org/catkin/conceptual_overview).
+
+## Instalação do "catkin"
+O __catkin__ é incluído por defeito quando o ROS é instalado, embora também possa ser instalado a partir de pacotes fonte ou pré-compilados.
+
+Por essa razão o ROS já deverá estra instalado quando se pretender criar um projeto.
+
+Para saber mais sobre a instalação do __catkin__ consultar [esta](https://wiki.ros.org/catkin) página.
+
 
