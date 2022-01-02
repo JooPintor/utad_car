@@ -155,4 +155,24 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 Notar as permições de acesso "crw-rw----"  
 
 ### Classes em Python para controlo dos motores
-As classes Python para controlo dos motores foram baseadas 
+As classes Python para controlo dos motores foram criadas a partir [destes exemplos](../utils/Raspi_MotorHAT/) de controlo disponiveis na Internet.
+
+O modulo __'motion'__ baseia-se na classe __'motion_driver'__ que mantem dois objetos da classe __'Motor'__ (Motor\[LEFT] e Motor\[RIGHT]) que permitem controlar a velocidade dos motores DC.
+
+Os objetos __'Motor'__ são obtidos pelo método __'getMotor()'__ da classe __'MotorHAT'__ que mantém as comunicações com a placa de expansão através da ligação I2C e o controlo de até 4 objetoc da classe __'DCMotor'__.
+
+Os objetos da classe __'DCMotor'__ permitem, com o método __'move()'__, a definição da velocidade do motor, através do ajuste do PWM da saída do respetivo motor e ainda a ativação de uma saida em função do sentido de rotação do motor, utilizando o método __'setPin()'__.
+
+
+
+O modulo __'motion'__ foi criado a partir [destes exemplos](../utils/Raspi_MotorHAT/) de controlo disponiveis na Internet.
+
+
+
+Este modulo baseia-se na classe __'motion_driver'__ que permite as seguintes funcionalidades:
+- Subscrever as mensagens dos tópicos __'cmd_vel'__, __'collision'__ e __'odom'__ 
+- Publicar nensagens no tópico __'cmd_vel'__
+
+
+
+- 
