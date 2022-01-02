@@ -1,4 +1,7 @@
 ### Raspberry PI 3
+
+![image](https://user-images.githubusercontent.com/89998899/147879928-4dc30d17-15fc-4f96-9eca-a9b4d658ed90.png)
+
 SBC (Single Board Computer)
 
 (cat /proc/cpuinfo)
