@@ -9,7 +9,7 @@ Para além das configurações já mensionadas, deverá proceder-se á [instala�
 
 No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos assegurarmos que tudo ficou corretamente configurado.
 
-Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com os pinos do Raspberry criei as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a partir de modulos ROS.
+Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com os pinos do Raspberry criei o modulo ['motion'](../ROS/catkin_ws/src/utad_car_core/nodes/motion), que inclui as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a comunicação com outros modulos ROS.
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
 O Raspberry PI por defeito arranca sem as ligações I2C e SPI activas.
