@@ -9,7 +9,7 @@ Para além das configurações já mensionadas, deverá proceder-se á [instala�
 
 No final das convigurações deverá ser feito um conjunto de [verificações](#Verificação-da-configuração) para nos assegurarmos que tudo ficou corretamente configurado.
 
-Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com os pinos do Raspberry criei o modulo ['motion'](../ROS/catkin_ws/src/utad_car_core/nodes/motion), que inclui as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) que permitem a interface com os motores a comunicação com outros modulos ROS.
+Depois de configurado o Raspberry PI e o ubuntu para permitir as comunicação com a placa de expansão e com os pinos do Raspberry foi necessário criar as [calsses em Python](#Classes-em-Python-para-controlo-dos-motores) contituintes oo modulo ['motion'](#Modulo-motion), que permitem a interface com os motores a comunicação com outros modulos ROS.
 
 ### Configuração do Raspberry PI para arranque das ligações por I2C e SPI
 O Raspberry PI por defeito arranca sem as ligações I2C e SPI activas.
@@ -163,16 +163,18 @@ Os objetos __'Motor'__ são obtidos pelo método __'getMotor()'__ da classe __'M
 
 Os objetos da classe __'DCMotor'__ permitem, com o método __'move()'__, a definição da velocidade do motor, através do ajuste do PWM da saída do respetivo motor e ainda a ativação de uma saida em função do sentido de rotação do motor, utilizando o método __'setPin()'__.
 
+## Modulo 'motion'
+O modulo ['motion'](../ROS/catkin_ws/src/utad_car_core/nodes/motion), alem de integrar as [classses de controlo dos motores](#Classes-em-Python-para-controlo-dos-motores) permite:  
 
-
-O modulo __'motion'__ foi criado a partir [destes exemplos](../utils/Raspi_MotorHAT/) de controlo disponiveis na Internet.
-
-
-
-Este modulo baseia-se na classe __'motion_driver'__ que permite as seguintes funcionalidades:
 - Subscrever as mensagens dos tópicos __'cmd_vel'__, __'collision'__ e __'odom'__ 
 - Publicar nensagens no tópico __'cmd_vel'__
 
+Neste modulo são recebidos comandos com valores de velocidade linear e angular pretendidas para o carro através do tópico __'cmd_vel'__, no formato __'Twist'__ que são utilizados para calcular as velocidades dos motores que lhes correspondem.
 
+As velocidades dos motores são calculadas como uma percentagem da velocidade máxima do motor e estão limitadas a 100%.
 
-- 
+Tendo em conta a não lineariedade da relação entre a percentagem pedida e a percentagem obtida, em especial para percentagens baixas, foi introduzida uma correção ao valor a comandar baseada na medição da velocidade efetiva, recebida pelo tópico __'odom'__ com mensagens no formato __'Odometry'__.
+
+No caso da receção de uma mensagem de colisão pelo tópico __'collision'__ no formato __'String'__, a dizer _'obstacle_right'_ ou _'obstacle_left'_ os motores são parados.
+
+Os motores também são parados se não forem recebidos comandos de velocidade durante um tempo superior ao definido em __'timeout'__. Este valor pode ser definido como parametro tendo por defeito o valor de 5 segundos.
