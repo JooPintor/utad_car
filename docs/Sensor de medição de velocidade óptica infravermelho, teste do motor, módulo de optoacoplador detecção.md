@@ -1,0 +1,1 @@
+O sensor fotoelétrico tipo slot é composto por um infravermelho com uma ranhura de 5,9 mm. Contanto que o objeto não transparente passe pelo tipo de slot, ele pode ser acionado para emitir nível baixo de TTL. O gatilho Schmitt é usado para agitar o pulso, que é muito estável e pode ser usado para medir a velocidade do carro, medir distâncias e similares.
