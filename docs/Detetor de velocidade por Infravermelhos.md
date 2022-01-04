@@ -1,8 +1,6 @@
 ## Detetor de velocidade por Infravermelhos
 
-
-
-
+![Detetor de velocidade por Infravermelhos](../imgs/Detetor de velocidade por Infravermelhos.jpg)
 
 O Módulo sensor de velocidade infravermelhos é um modulo que se liga através de três fios.
 
@@ -12,7 +10,7 @@ Colocando os uma roda com ranhuras a rodar entre o emissor e o recetor de infrav
 
 A partir da velocidade angular da roda chega-se fácilmente á velocidade linear do eixo.
 
-  Descrição:
-    Modulo com alimentação nível ttl 5v.
-    Gatilho schmitt para deteção de impulsos;
-    Muito estável
+    Descrição:
+      Modulo com alimentação nível ttl 5v.
+      Gatilho schmitt para deteção de impulsos;
+      Muito estável
