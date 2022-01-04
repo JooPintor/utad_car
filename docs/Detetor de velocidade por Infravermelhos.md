@@ -1,6 +1,7 @@
 ## Detetor de velocidade por Infravermelhos
 
-![Detetor de velocidade por Infravermelhos](../imgs/Detetor%20de%20velocidade%20por%20Infravermelhos.jpg)
+![Detetor de velocidade por Infravermelhos](https://user-images.githubusercontent.com/89998899/148084252-934db95f-f614-4415-86c4-cc3dc613d9f6.jpg)
+
 
 O Módulo sensor de velocidade infravermelhos é um modulo que se liga através de três fios.
 
