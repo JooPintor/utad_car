@@ -1,6 +1,6 @@
 ## Intel® RealSense™ D435
 
-![intelsense_D435](../imgs/intelsense_D435.jpg)
+![intelsense_D345](../imgs/intelsense_D345.jpg)
 
 A Intel® RealSense ™ Depth Camera D400 Series usa visão estéreo para calcular a profundidade. O D435 é uma câmera de profundidade alimentada por USB e consiste em um par de sensores de profundidade, sensor RGB e projetor infravermelho. É ideal para fabricantes e desenvolvedores adicionarem capacidade de percepção de profundidade ao seu protótipo.
 
