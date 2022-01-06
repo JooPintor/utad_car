@@ -16,15 +16,17 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 ### Cameras
 
 
-### Motores/Tração
+### Motores
 - [Motores DC](./Motores%20de%20tração.md) com controlo de velocidade e rotação nos dois sentidos
-- [Rodas]() acopladas aos eixos dos motores 
 
-### Odômetros
+### Rodas
+- [Rodas]() acopladas aos eixos dos motores DC
+
+### Odómetro
 - [Rodas Ranhuradas](./Roda%20ranhurada%20para%20odômetro.md) para odômetro acopladas aos eixos dos motores
-- [Detetores de velocidade por infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md) através da contagem de impulsos provocados pela rotação das rodas ranhuradas 
+- [Detetores de velocidade por infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md) através da contagem de impulsos provocados pela rotação das rodas ranhuradas acopladas aos eixos dos motores
 
-acopladas aos eixos dos motores
+
 ### Base usada como chassis do "utad_car"
 
-
+### Baterias
