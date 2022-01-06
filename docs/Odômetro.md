@@ -15,7 +15,9 @@ A classe __Odometer__ utiliza para a realização dos seus calculos os seguintes
         self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.067)            #Wheel diameter in meters
         self.ticksPerRevolution = rospy.get_param('~ticks_per_revolution', 20.0)  #Ticks per revolution
 
-Esta classe publica no tópico __"odom"__ mensagens do tipo __"Odometry"__ e no tópico __"odom/pose"__ mensagens do tipo __"geometry_msgs.msg.Pose2D"__.
+Esta classe publica no tópico __"odom"__ mensagens do tipo __"Odometry"__ basea das na frame ID __"base_link"__.
+
+Tabém publica no tópico __"odom/pose"__ mensagens do tipo __"geometry_msgs.msg.Pose2D"__.
 
 Nesta classe também é subcrito o tópico __"reset"__ com mensagens do tipo __"Empty"__ que permite fazer o reset aos contadores de impulsos e á posição e velocidade do carro.
 
@@ -25,9 +27,17 @@ Note-se que esta função poderia ser fácilmente modificada para em lugar de fa
 
 O __Encoder__ baseia-se na utilização de [rodas ranhuradas](./Roda%20ranhurada%20para%20odômetro.md) acopladas aos exos dos motores que ao girarem ligam e desligam os [dispositivos de deteção de infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md), permitindo assim medir a rotação do motor.
 
-Os impulsos gerados ao nível dos detetores de ifra-vermelhos são encaminhados através dos pinos __GPIO__ do Raspbery PI e contabilizadoa no moódulo __'odometer'__ para controlar a posição e a velocidade do __"utad_car"__.
+Os impulsos gerados ao nível dos detetores de ifravermelhos são encaminhados através dos pinos __GPIO__ do Raspbery PI, contabilizadoa nesta classe e utilizados para controlar a posição e a velocidade do __"utad_car"__.
 
-A activação das funcionalidades __GPIO__ no Raspberry PI com o sistema operativo __ubuntu 18.04__ está descrita [neste](./Controlo%20dos%20Motores%20de tração.md#configuração-do-sistema-operativo-para-aceder-às-ligações-i2c-spi-e-gpio) documento.0
+A activação das funcionalidades __GPIO__ no Raspberry PI com o sistema operativo __ubuntu 18.04__ está descrita [neste](./Controlo%20dos%20Motores%20de tração.md#configuração-do-sistema-operativo-para-aceder-às-ligações-i2c-spi-e-gpio) documento.
+
+Os pinos utilizados para o controlo dos motores direito e esquerdo foram os seguintes:
+
+        RW_TIC = 12             #Wheel right tick couter
+        RW_DIR = 11             #Direction of the weel (1-forward else backard)
+        LW_TIC = 36             #Wheel left tick couter
+        LW_DIR = 35             #Direction of the weel (1-forward else backard)
+
 
 
 
