@@ -4,6 +4,7 @@ O __utad_car__ com a [montagem básica](./Montagem%20do%20utad_car.md), tendo in
 Uma forma fácil de enviar comandos de velocidade para o tópico __'cmd_vel'__ é recorrer ao modulo [__teleop_twist_keyboard__](../utils/teleop_twist/teleop_twist_keyboard.py) que é instalado com o __ROS__.
 
 Para utilizar este modulo deverão ser utilizados os seguintes comandos:
+
     source ~/catkin_ws/devel/setup.bash
     cd ~/catkin_ws
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
