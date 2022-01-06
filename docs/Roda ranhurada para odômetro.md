@@ -1,8 +1,8 @@
-## Roda ranhurada para odômetro
+## Roda ranhurada para odómetro
 
-![Roda ranhurada para odômetro](../imgs/Roda%20ranhurada.jpg)
+![Roda ranhurada para odómetro](../imgs/Roda%20ranhurada.jpg)
 
-Trata-se de uma roda com ume polegada de diametro (25,5 mm) 
+Trata-se de uma roda com ume polegada de diâmetro (25,5 mm) 
 
 Apresenta 20 ranhuras 
 
