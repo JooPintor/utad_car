@@ -8,3 +8,7 @@ Para utilizar este modulo deverão ser utilizados os seguintes comandos:
     source ~/catkin_ws/devel/setup.bash
     cd ~/catkin_ws
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+Em alternativa podem ser utilizados __Scripts__ em Python para enviar mensagens para esse tópico, como é exemplificado nos seguintes scripts:
+- [testMotors.py](../utils/TestScripts/testMotors.py) que envia um comando para o carro avançar.
+- [testCarMoves.py](../utils/TestScripts/testCarMoves.py) que envia uma série de comandos que obrigam o carro a avançar, recuar, rodar sobre si mesmo, etc..
