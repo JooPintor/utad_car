@@ -1,6 +1,6 @@
 ## Odómetro
 
-O [__"odometer"__ é um modulo ROS](../ROS/catkin_ws/src/utad_car_core/nodes/odometer) cuja finalidade consiste em publicar a cada momento a velocidade linear e angular do __"utad_car"__ bem como a sua posição e orientação com base no movimento das rodas.
+O [__"odometer"__ é um modulo ROS](../ROS/catkin_ws/src/utad_car_core/nodes/odometer), desenvolvido em Paython, cuja finalidade consiste em publicar a cada momento a velocidade linear e angular do __"utad_car"__ bem como a sua posição e orientação com base no movimento das rodas.
 
 Este modo é composto por duas classes, a classe __"[Odometer](#Classe-Odometer)"__ e a classe __"[Encoder](#Classe-Encoder)"__.
 
