@@ -7,7 +7,7 @@ Este Kirr inclui:
 - ![Chassis para o carro](#Chassi%20de%20acr%C3%ADlico.md)
 - 2 ![Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
 - 2 ![Rodas para tração]
-- 2 ![rodas ranhuradas para deteção de rotação]
+- 2 ![rodas ranhuradas para deteção de rotação](#Roda%20ranhurada%20para%20od%C3%B4metro.md)
 - 1 ![roda de deslocação livre]
 - 1 interruptor (não utilizado)
 - Diversos acessários de fixação dos moteres e da roda livre
