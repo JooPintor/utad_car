@@ -29,7 +29,7 @@ O __Encoder__ baseia-se na utilização de [rodas ranhuradas](./Roda%20ranhurada
 
 Os impulsos gerados ao nível dos detetores de ifravermelhos são encaminhados através dos pinos __GPIO__ do Raspbery PI, contabilizadoa nesta classe e utilizados para controlar a posição e a velocidade do __"utad_car"__.
 
-A activação das funcionalidades __GPIO__ no Raspberry PI com o sistema operativo __ubuntu 18.04__ está descrita [neste](./Controlo%20dos%20Motores%20de tração.md#configuração-do-sistema-operativo-para-aceder-às-ligações-i2c-spi-e-gpio) documento.
+A activação das funcionalidades __GPIO__ no Raspberry PI com o sistema operativo __ubuntu 18.04__ está descrita [neste](./Controlo%20dos%20Motores%20de%20tração.md#configuração-do-sistema-operativo-para-aceder-às-ligações-i2c-spi-e-gpio) documento.
 
 Os pinos utilizados para o controlo dos motores direito e esquerdo foram os seguintes:
 
