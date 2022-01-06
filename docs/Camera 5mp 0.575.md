@@ -1,5 +1,5 @@
 
-![7b806017ed5ac4b601994cfbd5416a3c9112658d_original](https://user-images.githubusercontent.com/89998899/148089138-aa7cb625-ebf6-45de-b586-41e48436bd80.jpeg)
+![camera](../imgs/camera.jpg)
 
 Features:
 
