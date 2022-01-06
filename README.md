@@ -14,7 +14,7 @@ Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abor
 - [Instalação do ROS](./docs/Instalação%20do%20ROS.md)
 - [Criação de projetos no ROS](./docs/Criação%20de%20projetos%20no%20ROS.md)
 - [Controlo dos Motores de Tração](./docs/Controlo%20dos%20Motores%20de%20tração.md)
-- [Odómetro](./docs/Odômetro.md)
+- [Odómetro](./docs/Odómetro.md)
 - [Montagem do "utad_car"](./docs/Montagem%20do%20utad_car.md)
 - [Navegação básica do "utad_car"](./docs/Navegação%20básica%20do%20utad_car.md)
 - RobotPeak Lidar
