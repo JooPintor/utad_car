@@ -1,6 +1,6 @@
 ### Nvidia Jetson Nano 2GB develepor kit
 
-![image](https://user-images.githubusercontent.com/89998899/147837574-6d6754f9-a684-471f-9944-ed7c2e0c4ee8.png)
+![Nvidia_jetson](../imgs/Nvidia_jetson.jpg)
 
 (cat /proc/cpuinfo)
 
