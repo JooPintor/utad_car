@@ -1,6 +1,6 @@
 ## Raspberry PI 4
 
-![image](https://user-images.githubusercontent.com/89998899/147881107-c9d99f2f-bbf3-44df-b6e9-6e9f88bc97b8.png)
+![RP4](../imgs/RP4.jpg)
 
 (cat /proc/cpuinfo)
 
