@@ -16,4 +16,8 @@ Para alem deste Kitt foram ainda utilizados os seguintes equipamentos:
 - 2 detetores de infravermelhos
 - 1 Stepper Motor HAT
 - 1 Raspberry PI 3
+- 1 Bateria
+
+Depois de montado o __utad_car__ ficou com o seguinte aspeto:
+
 
