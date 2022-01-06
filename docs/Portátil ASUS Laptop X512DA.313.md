@@ -1,6 +1,6 @@
 ## Portátil ASUS Laptop X512DA
 
-![PC Portatil](https://user-images.githubusercontent.com/89998899/147837621-fdca2a93-addf-40ec-ab7b-b6f1ab4a3ea5.png)
+![PC Portatil](../imgs/PC%20Portatil.jpg)
 
    
                      OS Name : Microsoft Windows 10 Home
