@@ -12,4 +12,8 @@ Este Kirr inclui:
 - 1 interruptor (não utilizado)
 - Diversos acessários de fixação dos moteres e da roda livre
 
+Para alem deste Kitt foram ainda utilizados os seguintes equipamentos:
+- 2 detetores de infravermelhos
+- 1 Stepper Motor HAT
+- 1 Raspberry PI 3
 
