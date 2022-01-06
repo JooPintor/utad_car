@@ -6,6 +6,7 @@ Para a montagem de um carro robótico basico (o __utad_car__), foi utilizado kit
 Este Kirr inclui:
 - Chassis para o carro
 - 2 Motores DC
+- 2 Rodas para tração
 - 2 rodas ranhuradas para deteção de rotação
 - 1 roda de deslocação livre
 - 1 interruptor (não utilizado)
