@@ -2,8 +2,12 @@
 
 Por navegação autonoma, normalmente entende-se navegação sem intervenção humana.
 
-A navegação Autonuma implica controlos a tês niveis:
-  - 1 __Baixo nível__, que inclui o controlo de velocidade, a deteção de colisões e obstaculos (eminente colisão)
-  - 2 __Alto nível__, que trata issencialmente os problemas da localização, mapeamento e planeamento de trajetórias
+A navegação Autonuma implica controlos a dois niveis:
+  - __Baixo nível__, que inclui o controlo de velocidade, a deteção de colisões e obstaculos (eminente colisão)
+  - __Alto nível__, que trata issencialmente os problemas da localização, mapeamento e planeamento de trajetórias
  
- 
+### Controlo de Bixo nível
+
+O controlo de baixo nível é assegurado no __utad_car__ pelo modulo ROS [__motion__](./Controlo%20dos%20Motores%20de%20tração.md#modulo-motion), pela subscrição dos tópicos __'cmd_vel'__ e __'collision'__.
+
+
