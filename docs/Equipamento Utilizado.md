@@ -14,7 +14,8 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 - [Stepper Motor HAT](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) Placa de controlo da velocidade dos motores e da rotação dos mesmos
 
 ### Cameras
-
+- [Intel® RealSense™ D435](./Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera que consegue calcular distancias
+- [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
 
 ### Motores
 - [Motores DC](./Motores%20de%20tração.md) com controlo de velocidade e rotação nos dois sentidos
@@ -28,5 +29,7 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 
 
 ### Base usada como chassis do "utad_car"
+- [chassis de acrilico](./Chassi%20de%20acr%C3%ADlico.md)
 
 ### Baterias
+- Bateria de 5V
