@@ -6,11 +6,11 @@ __Mapeamento__
 
 SLAM é geralmente referenciado pelo comunidade de robótica como um processo para criar mapas geometricamente consistentes. 
 
-SLAM é adaptado para as informações disponíveis no ambiente, não focando na perfeição, mas sim na conformidade operacional.
+SLAM é adaptado para as informações disponíveis no ambiente, focado menos na perfeição que  na conformidade operacional.
 
 __Percepção__
 
-SLAM pode utilizar diferentes tipos de sensores para obter informações estatisticamente independentes de erros. Independência estatística é um requisito para trabalhar com informações parciais e com métricas contendo ruídos.
+SLAM pode utilizar diferentes tipos de sensores para obter informações estatisticamente independentes para minorar os erros. Independência estatística é um requisito para trabalhar com informações parciais e com métricas contendo ruídos.
 
 __Localização__
 
