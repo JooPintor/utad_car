@@ -13,10 +13,6 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 ### Drivers (HATs)
 - [Stepper Motor HAT](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md) Placa de controlo da velocidade dos motores e da rotação dos mesmos
 
-### Cameras
-- [Intel® RealSense™ D435](./Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera que consegue calcular distancias
-- [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
-
 ### Motores
 - [Motores DC](./Motores%20de%20tração.md) com controlo de velocidade e rotação nos dois sentidos
 
@@ -24,7 +20,7 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 - [Rodas]() acopladas aos eixos dos motores DC
 
 ### Odómetro
-- [Rodas Ranhuradas](./Roda%20ranhurada%20para%20odômetro.md) para odômetro acopladas aos eixos dos motores
+- [Rodas Ranhuradas](./Roda%20ranhurada%20para%20odómetro.md) para odômetro acopladas aos eixos dos motores
 - [Detetores de velocidade por infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md) através da contagem de impulsos provocados pela rotação das rodas ranhuradas acopladas aos eixos dos motores
 
 
@@ -33,3 +29,10 @@ Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipame
 
 ### Baterias
 - Bateria de 5V
+
+### LIDAR
+- Referencia do equipamento LIDAR utilizado
+
+### Cameras
+- [Intel® RealSense™ D435](./Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera que consegue calcular distancias
+- [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
