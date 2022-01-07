@@ -4,9 +4,7 @@ SLAM é uma técnica utilizada por robôs e veículos autônomos para construir 
 
 __Mapeamento__
 
-SLAM é geralmente referenciado pelo comunidade de robótica como um processo para criar mapas geometricamente consistentes. 
-
-SLAM é adaptado para as informações disponíveis no ambiente, focado menos na perfeição que  na conformidade operacional.
+SLAM é geralmente referenciado pelo comunidade de robótica como um processo para criar mapas geometricamente consistentes, é adaptado para as informações disponíveis no ambiente, focado-se menos na perfeição que  na conformidade operacional.
 
 __Percepção__
 
