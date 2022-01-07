@@ -25,7 +25,7 @@ Note-se que esta função poderia ser facilmente modificada para em lugar de faz
 
 ### Classe "Encoder"
 
-O __Encoder__ baseia-se na utilização de [rodas ranhuradas](./Roda%20ranhurada%20para%20odômetro.md) acopladas aos eixos dos motores que ao girarem ligam e desligam os [dispositivos de deteção de infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md), permitindo assim medir a rotação do motor.
+O __Encoder__ baseia-se na utilização de [rodas ranhuradas](./Roda%20ranhurada%20para%20odómetro.md) acopladas aos eixos dos motores que ao girarem ligam e desligam os [dispositivos de deteção de infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md), permitindo assim medir a rotação do motor.
 
 Os impulsos gerados ao nível dos detetores de infravermelhos são encaminhados através dos pinos __GPIO__ do Raspberry PI, contabilizados nesta classe e utilizados para controlar a posição e a velocidade do __"utad_car"__.
 
