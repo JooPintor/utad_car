@@ -17,7 +17,7 @@ Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abor
 - [Odómetro](./docs/Odómetro.md)
 - [Montagem do "utad_car"](./docs/Montagem%20do%20utad_car.md)
 - [Navegação básica do "utad_car"](./docs/Navegação%20básica%20do%20utad_car.md)
-- [Navegação Autonuma](./Navegação%20Autonuma.md)
+- [Navegação Autonuma](./docs/Navegação%20Autonuma.md)
   - Solução com SLAM
   - Solução com camara Intel Real sense II
 - Processamento de Imagem
