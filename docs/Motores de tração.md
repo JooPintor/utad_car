@@ -1,6 +1,6 @@
 ### Motores de tração
 
-![Motores de tração](../imgs/Motores%20de%20tração.jpg)
+![Motores de tração](../imgs/Motor%20DC.jpg)
 
 
 
