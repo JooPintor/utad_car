@@ -1,6 +1,6 @@
 ## Equipamentos Utilizados
 
-Para a realização deste trabalho de Mestrado foi utilizado o seguinte equipamento:
+Nos estudos realizados foi utilizado o seguinte equipamento:
 
 ### PC Portátil
 - [ASUS Laptop X512DA](./Portátil%20ASUS%20Laptop%20X512DA.313.md): __Windows 10: ROS-melodic__
