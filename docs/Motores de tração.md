@@ -2,6 +2,8 @@
 
 ![Motores de tração](../imgs/Motor%20DC.jpg)
 
+![Motores dimensões](../imgs/Motor%20DC%20dimensões.jpg)
+
 
 
 Tensão avaliado: 3 6 6v
