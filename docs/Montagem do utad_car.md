@@ -9,7 +9,7 @@ Para a montagem do carro robótico basico (o __utad_car__), foi utilizado kitt s
 ![Kitt de acessórios](../imgs/Kitt%20de%20acessórios.jpg)
 
 Este Kirr inclui:
-- [Chassis de acrilico para o carro](./Chassis%20de%20acrílico.md)
+- 1 [Chassis de acrilico para o carro](./Chassis%20de%20acrílico.md)
 - 2 [Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
 - 2 [Rodas de tração](./Rodas%20de%20tração.md)
 - 2 [Rodas ranhuradas para deteção da rotação dos motores](./Roda%20ranhurada%20para%20odómetro.md)
