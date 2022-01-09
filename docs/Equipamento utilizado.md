@@ -17,7 +17,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - [Motores DC](./Motores%20de%20tração.md) com controlo de velocidade e rotação nos dois sentidos
 
 ### Rodas
-- [Rodas]() acopladas aos eixos dos motores DC
+- [Rodas de tração](./Rodas%20de%20tração.md) acopladas aos eixos dos motores DC
 
 ### Odómetro
 - [Rodas Ranhuradas](./Roda%20ranhurada%20para%20odómetro.md) para odômetro acopladas aos eixos dos motores
