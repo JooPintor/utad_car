@@ -15,7 +15,7 @@ Este Kirr inclui:
 - 2 [Rodas ranhuradas para deteção da rotação dos motores](./Roda%20ranhurada%20para%20odómetro.md)
 - 1 [Rodizio giratório](./Rodizio%20giratório.md)
 - 1 interruptor (não utilizado)
-- Diversos acessários de fixação dos motores e da roda livre
+- Diversos acessários de fixação dos motores e do rodizio giratório.
 
 Para alem deste Kitt foram ainda utilizados os seguintes equipamentos:
 - 2 [Detetores de infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md)
