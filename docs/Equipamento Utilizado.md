@@ -34,5 +34,5 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - Referencia do equipamento LIDAR utilizado
 
 ### Cameras
-- [Camara Intel® RealSense™ D435](./Camara%20Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera que consegue calcular distancias
+- [Camara Intel® RealSense™ D435](./Camara%20Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera com capacidade de medida de profundidade.
 - [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
