@@ -173,7 +173,7 @@ Neste modulo são recebidos comandos com valores de velocidade linear e angular 
 
 As velocidades dos motores são calculadas como uma percentagem da velocidade máxima do motor e estão limitadas a 100%.
 
-Tendo em conta a não linearidade da relação entre a percentagem pedida e a percentagem obtida, em especial para percentagens baixas, foi introduzida uma correção ao valor a comandar baseada na medição da velocidade efetiva, recebida pelo tópico __'odom'__ com mensagens no formato __'Odometry'__.
+Tendo em conta a não linearidade da relação entre a percentagem pedida e a percentagem obtida, em especial para percentagens baixas, foi introduzida uma correção ao valor a comandar baseada na medição da velocidade efetiva, recebida pelo tópico __'odom'__ com mensagens no formato __'Odometry'__. Estas mensagens são publicadas pelo [__Odómetro__](./Odómetro.md)
 
 No caso da receção de uma mensagem de colisão pelo tópico __'collision'__ no formato __'String'__, a dizer _'obstacle_right'_ ou _'obstacle_left'_ os motores são parados.
 
