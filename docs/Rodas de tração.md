@@ -4,6 +4,7 @@
 
 
 Descrição:
+
                                            Cor: amarelo/preto
                                       Diâmetro: 66 mm
                               Diâmetro interno: 51.8 mm
