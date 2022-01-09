@@ -2,8 +2,21 @@
 
 ![laser-scanner](../imgs/laser-scanner.jpg)
 
-O RPLIDAR A1 é uma solução de scanner a laser 2D de 360ºgraus (LIDAR) de baixo custo. O sistema pode realizar uma varredura de 360ºgraus no intervalo de 12 metros. Os dados de nuvem de pontos 2D produzidos podem ser usados em mapeamento, localização e modelagem de objeto / ambiente.
+O RPLIDAR A1 é uma solução de scanner a laser 2D de 360ºgraus (LIDAR) de baixo custo. O sistema pode realizar uma varredura de 360ºgraus com um raio de 12 metros. Os dados de nuvem de pontos 2D produzidos podem ser usados em mapeamento, localização e modelagem de objeto / ambiente.
 
-A frequência de varredura do RPLIDAR A1 atingiu 5,5 Hz ao amostrar 1450 pontos a cada rodada. E pode ser configurado em até 10 Hz no máximo.
+O __RPLIDAR A1M8__ é basicamente um sistema de medição de triangulação a laser. Pode funcionar em todos os tipos de ambiente interno e externo desde que sem exposição direta à luz solar.
 
-RPLIDAR A1 é basicamente um sistema de medição de triangulação a laser. Pode funcionar excelente em todos os tipos de ambiente interno e externo sem exposição direta à luz solar.
+
+ Especificações
+
+    Dimensões: 98,5 x 70 x 60 mm
+    Peso: 170 g
+    Desempenho de Medição
+        Distância: 0,15 - 6 m, objetos brancos
+        Gama Angular: 0-360 Graus
+        Resolução de distância: <0,5 mm
+        Resolução Angular: =1 Grau
+        Duração da amostra: 0,5 ms
+        Frequência da amostra: 2000 ~ 2010 Hz
+        Taxa de Varredura: 1 ~ 10 Hz, típica de 5,5 Hz
+
