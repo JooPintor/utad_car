@@ -12,7 +12,7 @@ A classe __Odometer__ utiliza para a realização dos seus cálculos os seguinte
         #Parameters
         self.rate = rospy.Rate(rospy.get_param('~rate', 1.0))
         self.distanceWheels = rospy.get_param('~wheel_base', 0.13)                #The distance between the wheels 
-        self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.067)            #Wheel diameter in meters
+        self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.066)            #Wheel diameter in meters
         self.ticksPerRevolution = rospy.get_param('~ticks_per_revolution', 20.0)  #Ticks per revolution
 
 Esta classe publica no tópico __"odom"__ mensagens do tipo __"Odometry"__ baseadas na frame ID __"base_link"__.
