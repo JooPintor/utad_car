@@ -67,7 +67,7 @@ class Odometer:
         #Parameters
         self.rate = rospy.Rate(rospy.get_param('~rate', 1.0))
         self.distanceWheels = rospy.get_param('~wheel_base', 0.13)      #The distance between the wheels 
-        self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.067)  #Wheel diameter in meters
+        self.wheelDiameter = rospy.get_param('~wheel_diameter', 0.066)  #Wheel diameter in meters
         self.ticksPerRevolution = rospy.get_param('~ticks_per_revolution', 20.0)  #Ticks per revolution
 
         # Setup subscriber for reset message
