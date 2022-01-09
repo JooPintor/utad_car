@@ -2,7 +2,7 @@
 
 Esta página tem o objetivo de ser um repositório de conhecimento para o ensino de utilização do ROS e introdução à visão dos robots.
 
-Para a realização deste trabalho, foram utilizados os equipamentos [aqui](./docs/Equipamento%20Utilizado.md) descritos, com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
+Para a realização deste trabalho, foram utilizados os equipamentos [aqui](./docs/Equipamento%20utilizado.md) descritos, com os quais foram realizados diversos estudos, sendo registadas as principais dificuldades encontradas, bem como o modo de as ultrapassar, nos casos em que tal ocorreu.
 
 Os estudos foram acompanhados e suportados pela montagem de um robot a que chamei "utad_car".
 
