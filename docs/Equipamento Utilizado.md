@@ -25,7 +25,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 
 
 ### Base usada como chassis do "utad_car"
-- [chassis de acrilico](./Chassi%20de%20acr%C3%ADlico.md)
+- [Chassis de acrilico](./Chassis%20de%20acr%C3%ADlico.md)
 
 ### Baterias
 - Bateria de 5V
