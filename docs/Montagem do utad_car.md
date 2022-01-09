@@ -1,12 +1,17 @@
 ## Montagem do "utad_car"
-Para a montagem de um carro robótico basico (o __utad_car__), foi utilizado kitt seguinte:
+
+Depois de montado na sua configuração básica o __utad_car__ ficou com o seguinte aspeto:
+
+![Foto do utad_car]() 
+
+Para a montagem do carro robótico basico (o __utad_car__), foi utilizado kitt seguinte:
 
 ![Kitt de acessórios](../imgs/Kitt%20de%20acessórios.jpg)
 
 Este Kirr inclui:
 - ![Chassis para o carro](#Chassi%20de%20acr%C3%ADlico.md)
 - 2 ![Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
-- 2 ![Rodas para tração]
+- 2 ![Rodas para tração](./Rodas%20de%20tração.md)
 - 2 ![rodas ranhuradas para deteção de rotação](#Roda%20ranhurada%20para%20od%C3%B4metro.md)
 - 1 ![roda de deslocação livre]
 - 1 interruptor (não utilizado)
@@ -17,7 +22,5 @@ Para alem deste Kitt foram ainda utilizados os seguintes equipamentos:
 - 1 [Stepper Motor HAT](#Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md)
 - 1 [Raspberry PI 3](#Raspberry%20PI%203.md)
 - 1 Bateria
-
-Depois de montado o __utad_car__ ficou com o seguinte aspeto:
 
 
