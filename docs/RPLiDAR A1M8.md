@@ -1,4 +1,4 @@
-## RPLiDAR A1M8-R6 360-degree Laser Scanner Kit
+## RPLiDAR A1M8 360-degree Laser Scanner Kit
 
 ![laser-scanner](../imgs/laser-scanner.jpg)
 
