@@ -30,6 +30,6 @@ Para a execução de mapas foram abordados dois métodos:
 
 Tendo em conta que a [__Robotis__](http://en.robotis.com/) disponibiliza soluções de navegação para o seu [__TurtleBot3__](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#overview), que se trata de um carro robótico baseado num SBCs __Raspberry PI__ com SO __ubuntu__ e também com tração a duas rodas, adaptei o codigo do __TurtleBot3__ ao __utad_car__, tendo em conta as diferenças existentes no controlo a baixo nível.
 
-Dessa forma foram criados so modulos ROS para o 'utad_car' [aqui disponíveis](../ROS/catkin_ws/src/).
+Dessa forma foram criados grande parte dos modulos ROS para o contolo de alto nível do 'utad_car' [aqui disponíveis](../ROS/catkin_ws/src/).
 
 
