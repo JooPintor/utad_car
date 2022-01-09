@@ -13,7 +13,7 @@ Este Kirr inclui:
 - 2 [Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
 - 2 [Rodas de tração](./Rodas%20de%20tração.md)
 - 2 [Rodas ranhuradas para deteção da rotação dos motores](./Roda%20ranhurada%20para%20odómetro.md)
-- 1 [Rodizio giratório](./Rodizio%20giratório.md))
+- 1 [Rodizio giratório](./Rodizio%20giratório.md)
 - 1 interruptor (não utilizado)
 - Diversos acessários de fixação dos motores e da roda livre
 
