@@ -18,6 +18,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 
 ### Rodas
 - [Rodas de tração](./Rodas%20de%20tração.md) acopladas aos eixos dos motores DC
+- [Rodízio giratório](./Rodízio%20giratório.md)
 
 ### Odómetro
 - [Rodas Ranhuradas](./Roda%20ranhurada%20para%20odómetro.md) para odômetro acopladas aos eixos dos motores
