@@ -1,6 +1,6 @@
 ## RPLiDAR A1M8 360-degree Laser Scanner Kit
 
-![laser-scanner](../imgs/laser-scanner.jpg)
+![laser-scanner](../imgs/RPLIDAR%20A1M8.jpg)
 
 O RPLIDAR A1 é uma solução de scanner a laser 2D de 360ºgraus (LIDAR) de baixo custo. O sistema pode realizar uma varredura de 360ºgraus com um raio de 12 metros. Os dados de nuvem de pontos 2D produzidos podem ser usados em mapeamento, localização e modelagem de objeto / ambiente.
 
