@@ -10,10 +10,10 @@ Para a montagem do carro robótico basico (o __utad_car__), foi utilizado kitt s
 
 Este Kirr inclui:
 - [Chassis de acrilico para o carro](./Chassis%20de%20acrílico.md)
-- 2 ![Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
-- 2 ![Rodas para tração](./Rodas%20de%20tração.md)
-- 2 ![rodas ranhuradas para deteção de rotação](#Roda%20ranhurada%20para%20od%C3%B4metro.md)
-- 1 ![roda de deslocação livre]
+- 2 [Motores DC](#Motores%20de%20tra%C3%A7%C3%A3o.md)
+- 2 [Rodas para tração](./Rodas%20de%20tração.md)
+- 2 [rodas ranhuradas para deteção de rotação](#Roda%20ranhurada%20para%20od%C3%B4metro.md)
+- 1 [roda de deslocação livre]
 - 1 interruptor (não utilizado)
 - Diversos acessários de fixação dos moteres e da roda livre
 
