@@ -22,4 +22,6 @@ O __RPLIDAR A1M8__ é basicamente um sistema de medição de triangulação a la
 
 Para informações mais detalhadas, consultar a respetiva [ficha técnica](./LD108_SLAMTEC_rplidar_datasheet_A1M8_v2.4_en.pdf) e o [manual de utilização](./LM108_SLAMTEC_rplidarkit_usermaunal_A1M8_v1.0_en.pdf). 
 
-O modelo fornecido pela Universidade para estudo foi o __RPLiDAR A1M8-R5__, no entanto não me foi entregue o cabo de ligação entre o adaptador USB e o dispositivo, o que limitou a utilização do mesmo. No entanto,a falta desse cabo, não impediu a adaptação dos módulos ROS, já que a comunicação com a placa de interface por USB se revelou suficiente para a sua execução.
+O modelo fornecido pela Universidade para estudo foi o __RPLiDAR A1M8-R5__, no entanto não me foi entregue o cabo de ligação entre o adaptador USB e o dispositivo, o que limitou a utilização do mesmo.
+
+A falta do referido cabo, não impediu a adaptação dos módulos ROS, já que a comunicação com a placa de interface por USB se revelou suficiente para a sua execução.
