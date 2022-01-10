@@ -18,4 +18,6 @@ __Modelagem__
 
 Como parte do modelo, a cinemática do robô é incluída, consequentemente melhorando as estimativas da percepção sob condições inerentes a ruídos. O modelo dinâmico balanceia contribuições de diferentes sensores, resultando numa representação virtual do ambiente com uma núvem de probabilidade.
 
-No 'utad_car' foi testado um detetor do tipo LIDAR 
+No 'utad_car' foi testado o detetor do tipo LIDAR [__RPLiDAR A1M8__](./RPLiDAR%20A1M8.md).
+
+
