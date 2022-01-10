@@ -32,7 +32,7 @@ O ficheiro __'utad_car_navigation.launch'__ inclui as seguintes instruções:
 - utad_car_bringup -> [/utad_car_remote.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_remote.launch) 
     - utad_car_bringup -> [/includes/description.launch.xml](../ROS/catkin_ws/src/utad_car_bringup/launch/includes/description.launch.xml)
     - \<node pkg="robot_state_publisher" type="robot_state_publisher" name="car_state_publisher">
-- <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+- \<node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 - utad_car_navigation -> [/amcl.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/amcl.launch)
     - \<node pkg="amcl" type="amcl" name="amcl">
 - utad_car_navigation -> [/move_base.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/move_base.launch)
