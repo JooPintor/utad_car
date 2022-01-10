@@ -5,18 +5,18 @@ Para utilização dos modulos básicos de navegação, deve-se [arrancar o modul
 
 Este ficheiro, alem de conter instruções de arranque dos modulos __motion__ e __odometer__, passa-lhes os seguintes valores:
 
-  <node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
-      <param name="timeout" value="5" />
-      <param name="rate" value="1.0" />
-      <param name="max_speed" value="4095" />
-      <param name="wheel_base" value="0.13" />
-  </node>
-  
-  <node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
-      <param name="wheel_base" value="0.13" />
-      <param name="wheel_diameter" value="0.066" />
-      <param name="ticks_per_revolution" value="20.0" />
-  </node>
+    <node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
+        <param name="timeout" value="5" />
+        <param name="rate" value="1.0" />
+        <param name="max_speed" value="4095" />
+        <param name="wheel_base" value="0.13" />
+    </node>
+
+    <node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
+        <param name="wheel_base" value="0.13" />
+        <param name="wheel_diameter" value="0.066" />
+        <param name="ticks_per_revolution" value="20.0" />
+    </node>
 
 
 ### Arranque do modulo 'utad_car_core'
