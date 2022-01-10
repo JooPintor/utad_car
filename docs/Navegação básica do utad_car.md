@@ -3,7 +3,7 @@ O __utad_car__ com a [montagem básica](./Montagem%20do%20utad_car.md), tendo in
 
 Para utilização dos modulos básicos de navegação, deve-se [arrancar o modulo __'utad_car_core'__](#Arranque-do-modulo-utad_car_core), utilizando para isso o ficheiro [__'utad_car_core.launch'__](../ROS/catkin_ws/src/utad_car_core/launch/utad_car_core.launch).
 
-Este ficheiro, alem de conter instruções de arranque dos modulos __motion__ e __odometer__, passa-lhes os seguintes valores:
+Este ficheiro, alem de conter instruções de arranque dos modulos __motion__ e __odometer__, passa-lhes os seguintes parametros:
 
     <node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
         <param name="timeout" value="5" />
