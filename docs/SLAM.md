@@ -25,8 +25,8 @@ Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se 
 O ficheiro __'utad_car_navigation.launch'__ inclui as seguintes instruções:
 - utad_car -> [/utad_car.launch](../ROS/catkin_ws/src/utad_car/launch/utad_car.launch)
     - utad_car_core -> [/utad_car_core.launch](../ROS/catkin_ws/src/utad_car_core/launch/utad_car_core.launch)
-        - \<node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
-        - \<node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
+        - \<node pkg="utad_car_core" type="motion" name="[motion](../ROS/catkin_ws/src/utad_car_core/nodes/motion)" output="$(arg output)">
+        - \<node pkg="utad_car_core" type="odometer" name="[odometer](../ROS/catkin_ws/src/utad_car_core/nodes/odometer)" output="$(arg output)">
     - utad_car_bringup -> [/utad_car_lidar.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_lidar.launch)
         - \<node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="utad_car_lds" output="screen">
 - utad_car_bringup -> [/utad_car_remote.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_remote.launch) 
