@@ -20,4 +20,16 @@ Como parte do modelo, a cinemática do robô é incluída, consequentemente melh
 
 No 'utad_car' foi testado o detetor do tipo LIDAR [__RPLiDAR A1M8__](./RPLiDAR%20A1M8.md).
 
+Para utilização do __'utad_car'__ com ligação dispositivi LIDAR, deve-se [arrancar o modulo __'utad_car_navigation'__](#Arranque-do-modulo-utad_car_navigation), utilizando para isso o ficheiro [__'utad_car_navigation.launch'__](../ROS/catkin_ws/src/utad_car_navigation/launchutad_car_navigation.launch).
+
+
+### Arranque do modulo 'utad_car_navigation'
+
+Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os seguintes comandos:
+
+    source ~/catkin_ws/devel/setup.bash
+    cd ~/catkin_ws
+    roslaunch utad_car_navigation utad_car_navigation.launch
+
+estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
 
