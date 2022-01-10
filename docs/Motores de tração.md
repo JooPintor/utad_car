@@ -9,8 +9,8 @@ Especificação:
 
          Dimensões do corpo: 70x22x18mm
     Tensão de funcionamento: 3 V dc a 12 V dc (tensão de funcionamento recomendada entre 6 e 8 V)
-                     Torque: 0.15Nm ~ 0.60Nm
-              Torque máximo: 800 gfxcm min (alimentado a 3 V)
+                     Binário: 0.15Nm ~ 0.60Nm
+              Binário máximo: 800 gfxcm min (alimentado a 3 V)
       Relação da engrenagem: 1:48
                         Rpm: 200 (alimentado a 4.5 V)
           Corrente de carga: 170 mA (alimentado a 4.5 V)
