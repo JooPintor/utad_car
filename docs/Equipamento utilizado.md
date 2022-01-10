@@ -32,7 +32,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - Bateria de 5V
 
 ### LIDAR
-- Referencia do equipamento LIDAR utilizado
+- [RPLiDAR A1M8-R5](./RPLiDAR%20A1M8.md) 360-degree Laser Scanner Kit
 
 ### Cameras
 - [Camara Intel® RealSense™ D435](./Camara%20Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera com capacidade de medida de profundidade.
