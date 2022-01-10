@@ -28,16 +28,16 @@ O ficheiro __'utad_car_navigation.launch'__ inclui as seguintes instruções:
         - \<node pkg="utad_car_core" type="motion" name="motion" output="$(arg output)">
         - \<node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
     - utad_car_bringup -> [/utad_car_lidar.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_lidar.launch)
-        - <node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="utad_car_lds" output="screen">
+        - \<node pkg="hls_lfcd_lds_driver" type="hlds_laser_publisher" name="utad_car_lds" output="screen">
 - utad_car_bringup -> [/utad_car_remote.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_remote.launch) 
     - utad_car_bringup -> [/includes/description.launch.xml](../ROS/catkin_ws/src/utad_car_bringup/launch/includes/description.launch.xml)
-    - <node pkg="robot_state_publisher" type="robot_state_publisher" name="car_state_publisher">
+    - \<node pkg="robot_state_publisher" type="robot_state_publisher" name="car_state_publisher">
 - <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 - utad_car_navigation -> [/amcl.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/amcl.launch)
-    - <node pkg="amcl" type="amcl" name="amcl">
+    - \<node pkg="amcl" type="amcl" name="amcl">
 - utad_car_navigation -> [/move_base.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/move_base.launch)
-    - <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    - <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
+    - \<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    - \<node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
 
 
 ### Arranque do modulo 'utad_car_navigation'
