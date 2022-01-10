@@ -16,7 +16,7 @@
   
   <node pkg="utad_car_core" type="odometer" name="odometer" output="$(arg output)">
       <param name="wheel_base" value="0.13" />
-      <param name="wheel_diameter" value="0.067" />
+      <param name="wheel_diameter" value="0.066" />
       <param name="ticks_per_revolution" value="20.0" />
   </node>
 
