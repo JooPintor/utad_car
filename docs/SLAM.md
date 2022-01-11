@@ -30,10 +30,19 @@ No final do arranque do modulo __'utad_car_navigation'__ deverá abrir-se uma ja
 
 ![utad_car_navigation-RViz](../imgs/utad_car_lidar.jpg)
 
+Devido á falta do cabo de ligação do dispositivo á placa de interface por USB não foi possível testar o funcionamento do dispositivo nem dos modulos ROS de alto nível de _mapeamento_ e de _planeamento de rotas_.
+
 ### Modulo 'hlds_laser_publisher'
 O modulo ['hlds_laser_publisher'](../ROS/catkin_ws/src/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp) é o responsável pela comunicação com o dispositivo LIDAR.
 
-A comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pelo que se torna necesário configurar o sistema operativo para reconhecer esse dispositivo quando ele é ligado e qual o driver a utilizar.
+Se durante o arranque surgir a seguinte mensagem:
+
+        [ERROR] [1641892472.825334118]: An exception was thrown: open: No such file or directory
+        [utad_car_lds-4] process has died [pid 9577, exit code 255, cmd /home/username/catkin_ws/devel/lib/hls_lfcd_lds_driver/hlds_laser_publisher \__name:=utad_car_lds \__log:=/home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4.log].
+        log file: /home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4*.log
+
+
+A comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pelo que se torna necesário garantir que a porta fica disponível para o respetivo driver, não sendo "tomada" por exemplo pelo _ModemManager_ do ubuntu.
 
 
 
