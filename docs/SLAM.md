@@ -41,10 +41,20 @@ Se durante o arranque surgir a seguinte mensagem:
         [utad_car_lds-4] process has died [pid 9577, exit code 255, cmd /home/username/catkin_ws/devel/lib/hls_lfcd_lds_driver/hlds_laser_publisher __name:=utad_car_lds __log:=/home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4.log].
         log file: /home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4*.log
 
+Provavelmente ou o dispositivo não se encontra ligado, ou está ligado mas por alguma razão o sistema operativo não estableceu a ligação.
 
-A comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pelo que se torna necesário garantir que a porta fica disponível para o respetivo driver, não sendo "tomada" por exemplo pelo _ModemManager_ do ubuntu.
+Tendo em conta que a comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pode ser necesário garantir que a porta fica disponível para o respetivo driver, não sendo "tomada" por exemplo pelo _ModemManager_ do ubuntu. Para isso deverão ser criadas as seguintes regras __udev__:
 
+        ATTRS{idVendor}=="0483" ATTRS{idProduct}=="5740", ENV{ID_MM_DEVICE_IGNORE}="1", MODE:="0660"
+        ATTRS{idVendor}=="0483" ATTRS{idProduct}=="df11", MODE:="0660"
+        ATTRS{idVendor}=="fff1" ATTRS{idProduct}=="ff48", ENV{ID_MM_DEVICE_IGNORE}="1", MODE:="0660"
+        ATTRS{idVendor}=="10c4" ATTRS{idProduct}=="ea60", ENV{ID_MM_DEVICE_IGNORE}="1", MODE:="0660"
 
+A criação destas regras pode ser feita copiando o ficheiro [60-hlds-laser-udev.rules](../ROS/60-hlds-laser-udev.rules) para a pasta __'/etc/udev/rules.d/'__ utilizando os seguintes comandos:
+
+        sudo cp ~/60-hlds-laser-udev.rules /etc/udev/rules.d/
+        sudo udevadm control --reload-rules
+        sudo udevadm trigger
 
 ### Arranque do modulo 'utad_car_navigation'
 
