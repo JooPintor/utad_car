@@ -22,6 +22,27 @@ No 'utad_car' foi testado o detetor do tipo LIDAR [__RPLiDAR A1M8__](./RPLiDAR%2
 
 Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se [arrancar o modulo __'utad_car_navigation'__](#Arranque-do-modulo-utad_car_navigation), utilizando para isso o ficheiro [__'utad_car_navigation.launch'__](../ROS/catkin_ws/src/utad_car_navigation/launch/utad_car_navigation.launch).
 
+Este modulo, para além de arrancar os modulos de controlo do movimento do __'utad_car'__ também arranca o modulo [__'hlds_laser_publisher'__](#Modulo-hlds_laser_publisher) que é o responsável pela comunicação com o dispositivo LIDAR.
+
+
+
+### Modulo 'hlds_laser_publisher'
+O modulo ['hlds_laser_publisher'](../ROS/catkin_ws/src/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp) é o responsável pela comunicação com o dispositivo LIDAR.
+
+A comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pelo que se torna necesário configurar o sistema operativo para reconhecer esse dispositivo quando ele é ligado e qual o driver a utilizar.
+
+
+
+### Arranque do modulo 'utad_car_navigation'
+
+Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os seguintes comandos:
+
+    source ~/catkin_ws/devel/setup.bash
+    cd ~/catkin_ws
+    roslaunch utad_car_navigation utad_car_navigation.launch
+
+estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
+
 O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque dos modulos a seguir indicados, incluindo parametros e argumentos necessários ao seu funcionamento:
 - utad_car -> [/utad_car.launch](../ROS/catkin_ws/src/utad_car/launch/utad_car.launch)
     - utad_car_core -> [/utad_car_core.launch](../ROS/catkin_ws/src/utad_car_core/launch/utad_car_core.launch)
@@ -38,18 +59,6 @@ O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque do
 - utad_car_navigation -> [/move_base.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/move_base.launch)
     - \<node pkg="move_base" type="[move_base](#Modulos-utilizados-que-fazem-parte-do-ROS)" respawn="false" name="move_base" output="screen">
     - \<node pkg="rviz" type="[rviz](#Modulos-utilizados-que-fazem-parte-do-ROS)" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
-
-
-
-### Arranque do modulo 'utad_car_navigation'
-
-Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os seguintes comandos:
-
-    source ~/catkin_ws/devel/setup.bash
-    cd ~/catkin_ws
-    roslaunch utad_car_navigation utad_car_navigation.launch
-
-estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
 
 ### Modulos utilizados que fazem parte do ROS
 No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes modulos que estão incluidos na instalação do ROS:
