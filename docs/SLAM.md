@@ -26,7 +26,9 @@ Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se 
 
 Este modulo, para além de arrancar os modulos de controlo do movimento do __'utad_car'__ também arranca o modulo [__'hlds_laser_publisher'__](#Modulo-hlds_laser_publisher) que é o responsável pela comunicação com o dispositivo LIDAR.
 
+No final do arranque do modulo __'utad_car_navigation'__ deverá abrir-se uma janela __RViz__ que permite interagir gráficamente com os modulos ROS ativos e que deverá ter um aspeto semelhante ao seguinte:
 
+![utad_car_navigation-RViz](../imgs/utad_car_lidar.jpg)
 
 ### Modulo 'hlds_laser_publisher'
 O modulo ['hlds_laser_publisher'](../ROS/catkin_ws/src/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp) é o responsável pela comunicação com o dispositivo LIDAR.
