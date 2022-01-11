@@ -62,6 +62,34 @@ O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque do
     - \<node pkg="move_base" type="[move_base](#Modulos-utilizados-que-fazem-parte-do-ROS)" respawn="false" name="move_base" output="screen">
     - \<node pkg="rviz" type="[rviz](#Modulos-utilizados-que-fazem-parte-do-ROS)" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
 
+        NODES
+          /
+            amcl (amcl/amcl)
+            car_state_publisher (robot_state_publisher/robot_state_publisher)
+            map_server (map_server/map_server)
+            motion (utad_car_core/motion)
+            move_base (move_base/move_base)
+            odometer (utad_car_core/odometer)
+            rviz (rviz/rviz)
+            utad_car_lds (hls_lfcd_lds_driver/hlds_laser_publisher)
+
+        auto-starting new master
+        process[master]: started with pid [10486]
+        ROS_MASTER_URI=http://localhost:11311
+
+        setting /run_id to ff5a7e7c-72d1-11ec-b96c-b827ebba9e5d
+        process[rosout-1]: started with pid [10497]
+        started core service [/rosout]
+        process[motion-2]: started with pid [10500]
+        process[odometer-3]: started with pid [10501]
+        process[utad_car_lds-4]: started with pid [10506]
+        process[car_state_publisher-5]: started with pid [10507]
+        process[map_server-6]: started with pid [10513]
+        process[amcl-7]: started with pid [10514]
+        process[move_base-8]: started with pid [10515]
+        process[rviz-9]: started with pid [10517]
+
+
 ### Modulos utilizados que fazem parte do ROS
 No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes modulos que estão incluidos na instalação do ROS:
 - 'map_server'
