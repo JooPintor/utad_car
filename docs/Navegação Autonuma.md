@@ -32,5 +32,5 @@ Tendo em conta que a [__Robotis__](http://en.robotis.com/) disponibiliza soluç�
 
 Dessa forma foram criados grande parte dos modulos ROS para o contolo de alto nível do 'utad_car' [aqui disponíveis](../ROS/catkin_ws/src/).
 
-O estudo da navegação a este nivel centrou-se no [recurso a SLAM](./SLAM.md) e á [utilização da camara Intel Real Sense](), por terem sido os dispositivos disponibilizados pela Universidade para a realização dos estudos. 
+O estudo da navegação a este nivel centrou-se no [recurso a SLAM](./SLAM.md) e á [utilização da camara Intel Real Sense](./Utilização%20da%20camara%20Intel%20Real%20Sense.md), por terem sido os dispositivos disponibilizados pela Universidade para a realização dos estudos. 
 
