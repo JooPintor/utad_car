@@ -18,6 +18,8 @@ __Modelagem__
 
 Como parte do modelo, a cinemática do robô é incluída, consequentemente melhorando as estimativas da percepção sob condições inerentes a ruídos. O modelo dinâmico balanceia contribuições de diferentes sensores, resultando numa representação virtual do ambiente com uma núvem de probabilidade.
 
+### Utilização de SLAM no 'utad_car'
+
 No 'utad_car' foi testado o detetor do tipo LIDAR [__RPLiDAR A1M8__](./RPLiDAR%20A1M8.md).
 
 Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se [arrancar o modulo __'utad_car_navigation'__](#Arranque-do-modulo-utad_car_navigation), utilizando para isso o ficheiro [__'utad_car_navigation.launch'__](../ROS/catkin_ws/src/utad_car_navigation/launch/utad_car_navigation.launch).
