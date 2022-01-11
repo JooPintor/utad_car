@@ -32,12 +32,13 @@ O ficheiro __'utad_car_navigation.launch'__ inclui as seguintes instruções:
 - utad_car_bringup -> [/utad_car_remote.launch](../ROS/catkin_ws/src/utad_car_bringup/launch/utad_car_remote.launch) 
     - utad_car_bringup -> [/includes/description.launch.xml](../ROS/catkin_ws/src/utad_car_bringup/launch/includes/description.launch.xml)
     - \<node pkg="robot_state_publisher" type="[robot_state_publisher](../ROS/catkin_ws/src/robot_state_publisher/src/robot_state_publisher.cpp)" name="car_state_publisher">
-- \<node pkg="map_server" name="map_server" type="[map_server]()" args="$(arg map_file)"/>
+- \<node pkg="map_server" name="map_server" type="[map_server](#Modulos-utilizados-que-fazem-parte-do-ROS)" args="$(arg map_file)"/>
 - utad_car_navigation -> [/amcl.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/amcl.launch)
-    - \<node pkg="amcl" type="amcl" name="amcl">
+    - \<node pkg="amcl" type="[amcl](#Modulos-utilizados-que-fazem-parte-do-ROS)" name="amcl">
 - utad_car_navigation -> [/move_base.launch](../ROS/catkin_ws/src/utad_car_navigation/launch/move_base.launch)
-    - \<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    - \<node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
+    - \<node pkg="move_base" type="[move_base](#Modulos-utilizados-que-fazem-parte-do-ROS)" respawn="false" name="move_base" output="screen">
+    - \<node pkg="rviz" type="[rviz](#Modulos-utilizados-que-fazem-parte-do-ROS)" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
+
 
 
 ### Arranque do modulo 'utad_car_navigation'
@@ -49,4 +50,11 @@ Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os segu
     roslaunch utad_car_navigation utad_car_navigation.launch
 
 estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
+
+### Modulos utilizados que fazem parte do ROS
+No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes modulos que estão incluidos na instalação do ROS:
+- 'map_server'
+- 'amcl'
+- 'move_base'
+- 'rviz'
 
