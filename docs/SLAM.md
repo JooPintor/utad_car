@@ -62,6 +62,8 @@ O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque do
     - \<node pkg="move_base" type="[move_base](#Modulos-utilizados-que-fazem-parte-do-ROS)" respawn="false" name="move_base" output="screen">
     - \<node pkg="rviz" type="[rviz](#Modulos-utilizados-que-fazem-parte-do-ROS)" name="rviz" required="true" args="-d $(find utad_car_navigation)/rviz/utad_car_navigation.rviz"/>
 
+No final do arranque deverá ser possível verificar na consola onde foram executados os comandos a seguinte informação:
+
         NODES
           /
             amcl (amcl/amcl)
