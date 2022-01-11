@@ -35,5 +35,5 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - [RPLiDAR A1M8-R5](./RPLiDAR%20A1M8.md) 360-degree Laser Scanner Kit
 
 ### Cameras
-- [Camara Intel® RealSense™ D435](./Camara%20Intel%C2%AE%20RealSense%E2%84%A2%20D435.md) Camera com capacidade de medida de profundidade.
+- [Camara Intel® RealSense™ D435](./Camara%20Intel%20RealSense.md) Camera com capacidade de medida de profundidade.
 - [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
