@@ -6,17 +6,17 @@ __Mapeamento__
 
 SLAM é geralmente referenciado pelo comunidade de robótica como um processo para criar mapas geometricamente consistentes e é adaptado ás informações disponíveis no ambiente, focado-se menos na perfeição que  na conformidade operacional.
 
-__Percepção__
+__Perceção__
 
 SLAM pode utilizar diferentes tipos de sensores para obter informações estatisticamente independentes para minorar os erros. Independência estatística é um requisito para trabalhar com informações parciais e com métricas contendo ruídos.
 
 __Localização__
 
-Os resultados da percepção alimentam os algoritmos da localização. Uma abordagem utilizando visão computacional, por exemplo, pode extrair pontos de referência do ambiente que podem ser utilizados pelo algoritmo de localização para determinar a posição atual no ambiente considerando os estados anteriores do sistema.
+Os resultados da perceção alimentam os algoritmos da localização. Uma abordagem utilizando visão computacional, por exemplo, pode extrair pontos de referência do ambiente que podem ser utilizados pelo algoritmo de localização para determinar a posição atual no ambiente considerando os estados anteriores do sistema.
 
 __Modelagem__
 
-Como parte do modelo, a cinemática do robô é incluída, consequentemente melhorando as estimativas da percepção sob condições inerentes a ruídos. O modelo dinâmico balanceia contribuições de diferentes sensores, resultando numa representação virtual do ambiente com uma núvem de probabilidade.
+Como parte do modelo, a cinemática do robô é incluída, consequentemente melhorando as estimativas da perceção sob condições inerentes a ruídos. O modelo dinâmico balanceia contribuições de diferentes sensores, resultando numa representação virtual do ambiente com uma nuvem de probabilidade.
 
 ### Utilização de SLAM no 'utad_car'
 
@@ -30,7 +30,7 @@ No final do arranque do modulo __'utad_car_navigation'__ deverá abrir-se uma ja
 
 ![utad_car_navigation-RViz](../imgs/utad_car_lidar.jpg)
 
-Devido á falta do cabo de ligação do dispositivo á placa de interface por USB não foi possível testar o funcionamento do dispositivo nem dos modulos ROS de alto nível de _mapeamento_ e de _planeamento de rotas_.
+Devido á falta do cabo de ligação do dispositivo á placa de interface por USB não foi possível testar o funcionamento do dispositivo nem dos módulos ROS de alto nível de _mapeamento_ e de _planeamento de rotas_.
 
 ### Modulo 'hlds_laser_publisher'
 O modulo ['hlds_laser_publisher'](../ROS/catkin_ws/src/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp) é o responsável pela comunicação com o dispositivo LIDAR.
@@ -41,9 +41,9 @@ Se durante o arranque surgir a seguinte mensagem:
         [utad_car_lds-4] process has died [pid 9577, exit code 255, cmd /home/username/catkin_ws/devel/lib/hls_lfcd_lds_driver/hlds_laser_publisher __name:=utad_car_lds __log:=/home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4.log].
         log file: /home/username/.ros/log/dbb3b4d8-72be-11ec-b96c-b827ebba9e5d/utad_car_lds-4*.log
 
-Provavelmente ou o dispositivo não se encontra ligado, ou está ligado mas por alguma razão o sistema operativo não estableceu a ligação.
+Provavelmente ou o dispositivo não se encontra ligado, ou está ligado, mas por alguma razão o sistema operativo não estabeleceu a ligação.
 
-Tendo em conta que a comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pode ser necesário garantir que a porta fica disponível para o respetivo driver, não sendo "tomada" por exemplo pelo _ModemManager_ do ubuntu. Para isso deverão ser criadas as seguintes regras __udev__:
+Tendo em conta que a comunicação com o dispositivo LIDAR é feita utilizando uma porta __USB__ pode ser necessário garantir que a porta fica disponível para o respetivo driver, não sendo "tomada" por exemplo pelo _ModemManager_ do ubuntu. Para isso deverão ser criadas as seguintes regras __udev__:
 
         ATTRS{idVendor}=="0483" ATTRS{idProduct}=="5740", ENV{ID_MM_DEVICE_IGNORE}="1", MODE:="0660"
         ATTRS{idVendor}=="0483" ATTRS{idProduct}=="df11", MODE:="0660"
@@ -66,7 +66,7 @@ Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os segu
 
 Estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
 
-O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque dos modulos a seguir indicados, incluindo parametros e argumentos necessários ao seu funcionamento:
+O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque dos módulos a seguir indicados, incluindo parâmetros e argumentos necessários ao seu funcionamento:
 - utad_car -> [/utad_car.launch](../ROS/catkin_ws/src/utad_car/launch/utad_car.launch)
     - utad_car_core -> [/utad_car_core.launch](../ROS/catkin_ws/src/utad_car_core/launch/utad_car_core.launch)
         - \<node pkg="utad_car_core" type="[motion](../ROS/catkin_ws/src/utad_car_core/nodes/motion)" name="motion" output="$(arg output)">
@@ -113,10 +113,9 @@ No final do arranque deverá ser possível verificar na consola onde foram execu
         process[rviz-9]: started with pid [10517]
 
 
-### Modulos utilizados que fazem parte do ROS
-No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes modulos que estão incluidos na instalação do ROS:
+### Módulos utilizados que fazem parte do ROS
+No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes módulos que estão incluídos na instalação do ROS:
 - 'map_server'
 - 'amcl'
 - 'move_base'
 - 'rviz'
-
