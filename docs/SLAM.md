@@ -43,7 +43,7 @@ Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os segu
     cd ~/catkin_ws
     roslaunch utad_car_navigation utad_car_navigation.launch
 
-estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
+Estes comandos estão disponíveis no ficheiro [__'utad_car_lidar.sh'__](../ROS/utad_car_lidar.sh) que poderá ser executado diretamente a partir da linha de comando.
 
 O ficheiro __'utad_car_navigation.launch'__ inclui instruções para arranque dos modulos a seguir indicados, incluindo parametros e argumentos necessários ao seu funcionamento:
 - utad_car -> [/utad_car.launch](../ROS/catkin_ws/src/utad_car/launch/utad_car.launch)
