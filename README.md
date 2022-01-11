@@ -18,7 +18,7 @@ Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abor
 - [Montagem do "utad_car"](./docs/Montagem%20do%20utad_car.md)
 - [Navegação básica do "utad_car"](./docs/Navegação%20básica%20do%20utad_car.md)
 - [Navegação Autonuma](./docs/Navegação%20Autonuma.md)
-  - [Recurso a SLAM](./docs/SLAM.md) (Simultaneous Localization and Mapping)
+  - [Recurso a SLAM (Simultaneous Localization and Mapping)](./docs/SLAM.md)
   - [Utilização da camara Intel Real Sense](./docs/Utilização%20da%20camara%20Intel%20Real%20Sense.md)
 - Processamento de Imagem
 
