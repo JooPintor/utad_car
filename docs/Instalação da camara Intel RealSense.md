@@ -4,7 +4,7 @@ Para proceder á instalação desta camara no Raspberry PI 3 segui [estas instru
 A sequência de ações foi a seguinte:
 - Download e unzip da ultima versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
 - _Desconectar qualquer câmera Intel RealSense conectada_
-- A partir da pasta __'librealsense'__ executar os seguintes scripts:
+- A partir da pasta __'librealsense'__ executar os seguintes comandos/scripts:
 
             sudo apt-get update 
             sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
