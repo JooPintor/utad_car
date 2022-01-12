@@ -56,6 +56,13 @@ A criação destas regras pode ser feita copiando o ficheiro [60-hlds-laser-udev
         sudo udevadm control --reload-rules
         sudo udevadm trigger
 
+A verificação da comunicação poderá ser feita utilizando o seguinte comando, considerando __10c4:ea60__ os códigos do fabricante e do produto:
+
+        lsusb |grep 10c4:ea60
+        
+        Resultado:
+        Bus 001 Device 005: ID 10c4:ea60 Cygnal Integrated Products, Inc. CP210x UART Bridge / myAVR mySmartUSB light
+
 ### Arranque do modulo 'utad_car_navigation'
 
 Para arrancar o modulo __'utad_car_navigation'__ deverão ser utilizados os seguintes comandos:
