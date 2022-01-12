@@ -1,6 +1,4 @@
 ## Instalação da camara Intel RealSense
-Para se poder testar a utilização da camara Intel RealSense D435 Procesu-se á instalação de:
-- Do SDK realsense2
-- Aplicação RealSense Viewer
-- Modulos ROS paar a camara Intel RaalSense
-- Exemplos de aplicações
+Para proceder á instalação desta camara no Raspberry PI 3 seguiram-se [estas instruções](https://dev.intelrealsense.com/docs/using-depth-camera-with-raspberry-pi-3#section-installation-instructions), tendo o cuidado de fazer o __update__ do sistema operativo mas não o __upgrade__ já que me interessava manter a versão 18.04 LTS.
+
+
