@@ -117,14 +117,6 @@ Para verificar se todas as configurações estão corretas deverão ser executad
 
     crw-rw---- 1 root gpio 239, 0 ago 26 15:26 /dev/gpiomem
 
-    cat /etc/udev/rules.d/local.rules
-
-    ACTION=="add", KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
-    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
-    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
-    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
-    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
-
     ls -l /dev/i2c*
 
     crw-rw---- 1 root i2c 89, 1 ago 26 15:26 /dev/i2c-1
