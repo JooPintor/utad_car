@@ -24,7 +24,11 @@
 (cat /proc/meminfo)
 
               MemTotal: 3884324 kB
- 
+
+(dpkg --print-architecture)
+
+             arm64
+
 OS:
 
 (cat /etc/os-release)
