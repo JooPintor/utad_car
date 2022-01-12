@@ -26,7 +26,10 @@ SBC (Single Board Computer)
 
              MemTotal: 876176 kB
 
- 
+(dpkg --print-architecture)
+
+             armhf
+
 OS:
 (cat /etc/os-release)
 
