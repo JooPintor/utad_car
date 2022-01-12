@@ -1,6 +1,6 @@
 #http://linux-tips.org/t/prevent-modem-manager-to-capture-usb-serial-devices/284/2.
 
-#sudo cp 60-hlds-laser-udev.rules /etc/udev/rules.d/
+#sudo cp ./60-hlds-laser-udev.rules /etc/udev/rules.d/
 #sudo udevadm control --reload-rules
 #sudo udevadm trigger
 
