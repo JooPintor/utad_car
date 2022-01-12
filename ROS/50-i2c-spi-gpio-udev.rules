@@ -1,7 +1,7 @@
 # Configurações "udev" necessárias á comunicação com 12c, spi e gpio.
 # Este ficheiro deverá ser copiado para "/etc/udev/rules.d/local.rules"
 #
-# $ sudo cp ./utad_car_udev.rules /etc/udev/rules.d/local.rules
+# $ sudo cp ./50-i2c-spi-gpio-udev.rules /etc/udev/rules.d/50-i2c-spi-gpio-udev.rules
 #
 # Após a cópia do ficheiro deverão ser reinicializadas as regras com o comando:
 #
