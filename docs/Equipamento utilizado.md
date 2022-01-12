@@ -7,7 +7,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 
 ### SBC (Single Board Computers)
 - [Raspberry PI 3](./Raspberry%20PI%203.md): Ubuntu Rob3: __Linux ver 18.04: ROS-melodic__
-- [Rappberry PI 4](./Raspberry%20PI%204.md): __Linux ver 20.07: ROS-noetic__
+- [Raspberry PI 4](./Raspberry%20PI%204.md): __Linux ver 20.07: ROS-noetic__
 - [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano%202GB%20develepor%20kit.md) 2GB develepor kit: Ubuntu Rob3: __Linux ver. 18.04: ROS-melodic__
 
 ### Drivers (HATs)
