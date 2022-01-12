@@ -6,7 +6,7 @@ A sequência de ações foi a seguinte:
 - _Desconectar qualquer câmera Intel RealSense conectada_
 - A partir da pasta __'librealsense'__ executar os seguintes scripts:
 
-    sudo apt-get update 
-    sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
-    ./scripts/setup_udev_rules.sh
-    ./scripts/patch-realsense-ubuntu-lts.sh
+            sudo apt-get update 
+            sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
+            ./scripts/setup_udev_rules.sh
+            ./scripts/patch-realsense-ubuntu-lts.sh
