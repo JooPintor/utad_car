@@ -6,8 +6,8 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - [ASUS Laptop X512DA](./Portátil%20ASUS%20Laptop%20X512DA.313.md): __Windows 10: ROS-melodic__
 
 ### SBC (Single Board Computers)
-- [Rasperry PI 3](./Raspberry%20PI%203.md): Ubuntu Rob3: __Linux ver 18.04: ROS-melodic__
-- [Rapsperry PI 4](./Raspberry%20PI%204.md): __Linux ver 20.07: ROS-noetic__
+- [Raspberry PI 3](./Raspberry%20PI%203.md): Ubuntu Rob3: __Linux ver 18.04: ROS-melodic__
+- [Rappberry PI 4](./Raspberry%20PI%204.md): __Linux ver 20.07: ROS-noetic__
 - [Nvidia Jetson Nano](./Nvidia%20Jetson%20Nano%202GB%20develepor%20kit.md) 2GB develepor kit: Ubuntu Rob3: __Linux ver. 18.04: ROS-melodic__
 
 ### Drivers (HATs)
