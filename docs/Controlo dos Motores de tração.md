@@ -77,20 +77,11 @@ Para que o utilizador possa aceder às ligações é necessário dar permissões
     sudo chmod g+rw /dev/i2c-1
 
 #### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
-Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de entradas e saídas __GPIO__, é necessário criar o ficheiro "/etc/udev/rules.d/local.rules" com o comando:
+Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de entradas e saídas __GPIO__, é necessário copiar o ficheiro ['50-i2c-spi-gpio-udev.rules'](../ROS/50-i2c-spi-gpio-udev.rules) para a pasta __"/etc/udev/rules.d/"__ com o comando:
 
-    sudo nano /etc/udev/rules.d/local.rules
+    sudo cp ./50-i2c-spi-gpio-udev.rules /etc/udev/rules.d/
 
-com o seguinte conteúdo:
-
-    ACTION=="add", KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
-    ACTION=="add", KERNEL=="spidev0.*", GROUP="spi", MODE="0660"
-    SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
-    SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys/class/gpio/export /sys/class/gpio/unexport ; chmod 220 /sys/class/gpio/export /sys/class/gpio/unexport'"
-    SUBSYSTEM=="gpio", KERNEL=="gpio*", ACTION=="add", PROGRAM="/bin/sh -c 'chown root:gpio /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value ; chmod 660 /sys%p/active_low /sys%p/direction /sys%p/edge /sys%p/value'"
-
-
-Depois de ter criado o ficheiro é necessário aplicar as novas regras executando o seguinte comando:
+Depois de ter copiado o ficheiro é necessário aplicar as novas regras executando o seguinte comando:
 
     sudo udevadm control --reload-rules && udevadm trigger
 
