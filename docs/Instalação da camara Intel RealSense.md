@@ -10,3 +10,11 @@ A sequência de ações foi a seguinte:
         sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
         ./scripts/setup_udev_rules.sh
         ./scripts/patch-realsense-ubuntu-lts.sh
+        
+        mkdir build && cd build
+        cmake ../ -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=true
+        sudo make uninstall && make clean && make -j1 && sudo make install
+
+Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em SBC com pouca memória que tem que ser partilhada pelas varias _treads_ de compilação que poderiam surgir.
+
+
