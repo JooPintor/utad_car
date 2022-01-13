@@ -14,6 +14,8 @@ A sequência de ações foi a seguinte:
         mkdir build && cd build
         cmake ../ -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=true -DBUILD_PYTHON_BINDINGS:bool=true -DFORCE_RSUSB_BACKEND=ON -DPYTHON_EXECUTABLE=/usr/bin/pyt
         sudo make uninstall && make clean && make -j1 && sudo make install
+        
+        sudo apt-get install qt5-default
 
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
