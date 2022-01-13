@@ -9,7 +9,6 @@ A sequência de ações foi a seguinte:
         sudo apt-get update 
         sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev at
         ./scripts/setup_udev_rules.sh
-        ./scripts/patch-realsense-ubuntu-lts.sh
         
         mkdir build && cd build
         cmake ../ -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=true -DBUILD_PYTHON_BINDINGS:bool=true -DFORCE_RSUSB_BACKEND=ON -DPYTHON_EXECUTABLE=/usr/bin/pyt
