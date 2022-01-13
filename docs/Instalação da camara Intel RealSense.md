@@ -19,3 +19,20 @@ A sequência de ações foi a seguinte:
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
 Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar  uma [‘sawp file’](./Swap%20files.md) e  recompilar o SDK
+
+- Instalação dos modulos ROS para utilização da camara
+
+        cd ~/catkin_ws
+        sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
+        sudo apt-get install ros-$ROS_DISTRO-realsense2-description
+
+- Depois de instalados o smodulos ROS pode-se executar os seguintes comandos e obter o resultado apresentado a seguir:
+
+        export ROS_MASTER_URI=http://localhost:11311
+        source ~/catkin_ws/devel/setup.bash
+        cd ~/catkin_ws
+        roslaunch realsense2_camera rs_d435_camera_with_model.launch
+
+![rs_d435_camera_with_model](../imgs/rs_d435_camera_with_model.jpg)
+
+
