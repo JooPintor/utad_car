@@ -5,7 +5,7 @@ Dada a dificuldade em obter a catpação de imagem e respetivo tratamento ao mes
 Os sistemas testados foram os seguintes:
 - [Raspberry PI 3](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-3)
 - [Raspberry PI 4](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-4)
-- Carta Nvidia Jetson Nano 2GB
+- [Carta Nvidia Jetson Nano 2GB](#Instalação-da-camara-Intel-RealSense-na-carta-Nvidia-Jetson-Nano-2GB)
 - PC Portatil
 
 ### Instalação da camara Intel RealSense no Raspberry PI 3
@@ -54,3 +54,5 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 ### Instalação da camara Intel RealSense no Raspberry PI 4
 Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://answers.ros.org/question/363889/intel-realsens-on-ubuntu-2004-ros-noetic-installation-desription/). De notar qu eembora esta página já esteja ultrapassada para arquiteturas X86/AMD64, parecxeu-me a mais apropriada para a arquitetura ARM64.
 
+### Instalação da camara Intel RealSense na carta Nvidia Jetson Nano 2GB
+Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://answers.ros.org/question/363889/intel-realsens-on-ubuntu-2004-ros-noetic-installation-desription/). De notar qu eembora esta página já esteja ultrapassada para arquiteturas X86/AMD64, parecxeu-me a mais apropriada para a arquitetura ARM64.
