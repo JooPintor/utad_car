@@ -1,4 +1,14 @@
 ## Instalação da camara Intel RealSense
+
+Dada a dificuldade em obter a catpação de imagem e respetivo tratamento ao mesmo tempo que se processa a informação dos nos ROS, foi testada a instalação da camara e respetivos modulos ROS em diferentes sistemas, com o ojetivo de separar o processamento da imagem do contrlo do mocimento do 'utad_car'.
+
+os sistemas testados foram os seguintes:
+- [Raspberry PI 3](#Instalação-da-cmara-Intel-RealSense-no-Raspberry-PI-3)
+- Raspberry PI 4
+- Carta Nvidia Jetson Nano 2GB
+- PC Portatil
+
+###Instalação da cmara Intel RealSense no Raspberry PI 3
 Para proceder á instalação desta camara no Raspberry PI 3 segui [estas instruções](https://dev.intelrealsense.com/docs/using-depth-camera-with-raspberry-pi-3#section-installation-instructions) a partir do ponto 2, tendo o cuidado de fazer o __update__ do sistema operativo mas não o __upgrade__ já que me interessava manter a versão 18.04 LTS.
 
 A sequência de ações foi a seguinte:
@@ -19,6 +29,12 @@ A sequência de ações foi a seguinte:
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
 Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar  uma [‘sawp file’](./Swap%20files.md) e  recompilar o SDK
+
+Depois de instalados o software da camara deverá ser possível testra a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando e obtendo o resultado seguintes:
+
+        realsense-viewer
+
+![RealSense-Viewer](../imgs/RealSense-Viewer.jpg)
 
 - Instalação dos modulos ROS para utilização da camara
 
