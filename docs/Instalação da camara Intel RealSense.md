@@ -2,9 +2,9 @@
 
 Dada a dificuldade em obter a catpação de imagem e respetivo tratamento ao mesmo tempo que se processa a informação dos nos ROS, foi testada a instalação da camara e respetivos modulos ROS em diferentes sistemas, com o ojetivo de separar o processamento da imagem do contrlo do mocimento do 'utad_car'.
 
-os sistemas testados foram os seguintes:
+Os sistemas testados foram os seguintes:
 - [Raspberry PI 3](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-3)
-- Raspberry PI 4
+- [Raspberry PI 4](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-4)
 - Carta Nvidia Jetson Nano 2GB
 - PC Portatil
 
@@ -51,4 +51,5 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 
 ![rs_d435_camera_with_model](../imgs/rs_d435_camera_with_model.jpg)
 
+### Instalação da camara Intel RealSense no Raspberry PI 4
 
