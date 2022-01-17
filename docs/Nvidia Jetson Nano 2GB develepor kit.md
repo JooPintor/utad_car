@@ -20,6 +20,10 @@
 
            MemTotal: 2027380 kB
 
+
+(dpkg --print-architecture)
+
+             arm64
  
 OS:
 (cat /etc/os-release)
