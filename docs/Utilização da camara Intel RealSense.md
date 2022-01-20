@@ -10,7 +10,6 @@ No entanto, a captação e o processamento de imagens em simultâneo com as rest
 Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do 'Raspberry PI 3':
 - [Raspberry PI3](#Processamento-da-Imagem-no-Raspberry-PI-3)
 - [Raspberry PI 4](#Processamento-da-Imagem-no-Raspberry-PI-4)
-- [PC Portatil]()
-- [Carta Nvidia Jetson Nano]()
+- [PC Portatil]
+- [Carta Nvidia Jetson Nano]
 
-### Processamento da Imagem no Raspberry PI 3
