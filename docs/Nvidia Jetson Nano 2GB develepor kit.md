@@ -26,7 +26,8 @@
            arm64
  
 OS:
-( uname -a)
+
+(uname -a)
 
           Linux nvidia 4.9.201-tegra #1 SMP PREEMPT Fri Jul 9 08:56:29 PDT 2021 aarch64 aarch64 aarch64 GNU/Linux
 
