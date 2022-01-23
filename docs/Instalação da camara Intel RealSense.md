@@ -98,7 +98,7 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 
 
 ### Instalação da camara Intel RealSense na carta Nvidia Jetson Nano 2GB
-Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://answers.ros.org/question/363889/intel-realsens-on-ubuntu-2004-ros-noetic-installation-desription/). De notar qu embora esta página já esteja ultrapassada para arquiteturas X86/AMD64, parecxeu-me a mais apropriada para a arquitetura ARM64.
+Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). De notar qu embora esta página já esteja ultrapassada para arquiteturas X86/AMD64, parecxeu-me a mais apropriada para a arquitetura ARM64.
 
 Note-se que com o objetivo de tirar o maximo partido das capacidades desta carta para processamenro de vídeo, o SO adoptado foi o retirado da imagem  __'jetson-nano-2gb-jp451-sd-card-image.zip'__. Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 
