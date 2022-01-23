@@ -112,4 +112,9 @@ Note-se que com o objetivo de tirar o maximo partido das capacidades desta carta
 
         To restore this content, you can run the 'unminimize' command.
 
-Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS numa arquitetura ARM64.
+Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS num Kernell numa arquitetura ARM64.
+
+https://jinyaozhu.github.io/linux/2019/05/16/vnc.html
+
+
+
