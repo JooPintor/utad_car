@@ -115,7 +115,7 @@ Note-se que com o objetivo de tirar o maximo partido das capacidades desta carta
 Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS num Kernell GNU/Linux 4.9.201-tegra e uma arquitetura ARM64.
 
 Na sequência da instalação do servidor e do acesso por SSH, procedi ao comando __'unminimize'__ para permitir o acesso ao sistema com interface gráfico.
-A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo qu eacabei por instalar o desktop __xfce4__ seguindo as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html). 
+A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo que acabei por instalar o desktop __xfce4__ seguindo as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html). 
 
 
 
