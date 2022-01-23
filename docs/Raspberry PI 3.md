@@ -31,8 +31,12 @@ SBC (Single Board Computer)
              armhf
 
 OS:
-(cat /etc/os-release)
 
+(uname -a)
+
+            Linux utad 5.4.0-1048-raspi #53~18.04.1-Ubuntu SMP PREEMPT Thu Dec 9 09:06:05 UTC 2021 armv7l armv7l armv7l GNU/Linux
+
+(cat /etc/os-release)
  
                  NAME = "Ubuntu"
               VERSION = "18.04.6 LTS (Bionic Beaver)"
