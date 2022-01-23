@@ -27,9 +27,14 @@
 
 (dpkg --print-architecture)
 
-             arm64
+            arm64
 
 OS:
+
+(uname -a)
+
+           Linux rpi4 5.4.0-1047-raspi #52-Ubuntu SMP PREEMPT Wed Nov 24 08:16:38 UTC 2021 aarch64 aarch64 aarch64 GNU/Linux
+
 
 (cat /etc/os-release)
 
