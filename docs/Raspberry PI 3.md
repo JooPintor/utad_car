@@ -24,17 +24,17 @@ SBC (Single Board Computer)
  
 (cat /proc/meminfo)
 
-          MemTotal: 876176 kB
+        MemTotal: 876176 kB
 
 (dpkg --print-architecture)
 
-          armhf
+        armhf
 
 OS:
 
 (uname -a)
 
-         Linux utad 5.4.0-1048-raspi #53~18.04.1-Ubuntu SMP PREEMPT Thu Dec 9 09:06:05 UTC 2021 armv7l armv7l armv7l GNU/Linux
+       Linux utad 5.4.0-1048-raspi #53~18.04.1-Ubuntu SMP PREEMPT Thu Dec 9 09:06:05 UTC 2021 armv7l armv7l armv7l GNU/Linux
 
 (cat /etc/os-release)
  
