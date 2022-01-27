@@ -168,6 +168,7 @@ Os comando de configuração do serviço VNC foram os seguintes:
         
 Não esquecer de substituir !!!user_name!!! pelo nome du utilizador do SO.
 Apos o ultimo comando deverá surgir uma informação semelhante á seguinte:
+
 ![status do vncserver](../imgs/status do vncserver.jpg)
 
 
