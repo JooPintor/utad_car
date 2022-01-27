@@ -116,7 +116,60 @@ Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS com um nucleo GNU/Linux 4.9.201-tegra e uma arquitetura ARM64.
 
 Na sequência da instalação do servidor e do acesso por SSH, procedi ao comando __'unminimize'__ para permitir o acesso ao sistema com interface gráfico.
-A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo que acabei por instalar o desktop __xfce4__ seguindo as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html). 
+A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo que acabei por seguir as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html), sem no entanto instalar outro servidor vnc ou outro desktop.
+
+Os comando de configuração do serviço VNC foram os seguintes:
+
+        vncserver
+        vncserver -kill :1
+        
+        sudo vi ~/.vnc/xstartup
+        
+        #Alterar o conteudo do ficheiro 'xstartup' para:
+                #!/bin/bash
+                unset SESSION_MANAGER
+                unset DBUS_SESSION_BUS_ADDRESS
+                xrdb $HOME/.Xresources
+                startlxde &
+        
+        # Arrancar o servidor 
+        vncserver :1 -geometry 1360x768 -depth 24
+        
+        # Testar a ligação
+        
+        # Em caso de sucesso criar um serviço que arranque o servidor ao ligar
+        
+        sudo vim /etc/systemd/system/vncserver@.service
+        
+        #Alterar o conteudo do ficheiro para:        
+                [Unit]
+                Description=Start VNC server at startup
+                After=syslog.target network.target
+
+                [Service]
+                Type=forking
+                User=!!!user_name!!!
+                Group=!!!user_name!!!
+                WorkingDirectory=/home/!!!user_name!!!
+
+                PIDFile=/home/!!!user_name!!!/.vnc/%H:%i.pid
+                ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1
+                ExecStart=/usr/bin/vncserver -depth 24 -geometry 1360x768 :%i
+                ExecStop=/usr/bin/vncserver -kill :%i
+
+                [Install]
+                WantedBy=multi-user.target
+        
+        sudo systemctl daemon-reload
+        sudo systemctl enable vncserver@1.service
+        vncserver -kill :1
+        sudo systemctl start vncserver@1
+        sudo systemctl status vncserver@1
+        
+Não esquecer de substituir !!!user_name!!! pelo nome du utilizador do SO.
+Apos o ultimo comando deverá surgir uma informação semelhante á seguinte:
+![status do vncserver](../imgs/status do vncserver.jpg)
+
 
 Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). 
 
