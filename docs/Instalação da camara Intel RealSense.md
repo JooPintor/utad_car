@@ -99,7 +99,9 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 
 ### Instalação da camara Intel RealSense na carta Nvidia Jetson Nano 2GB
 
-Com o objetivo de tirar o maximo partido das capacidades desta carta para processamenro de vídeo, o SO adoptado foi o retirado da imagem  __'jetson-nano-2gb-jp451-sd-card-image.zip'__. Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
+Com o objetivo de tirar o maximo partido das capacidades desta carta para processamenro de vídeo, o SO adoptado foi o retirado da imagem  __'jetson-nano-2gb-jp451-sd-card-image.zip'__.
+
+Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 
         Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.9.201-tegra aarch64)
 
