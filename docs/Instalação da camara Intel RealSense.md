@@ -169,7 +169,7 @@ Os comando de configuração do serviço VNC foram os seguintes:
 Não esquecer de substituir !!!user_name!!! pelo nome du utilizador do SO.
 Apos o ultimo comando deverá surgir uma informação semelhante á seguinte:
 
-![status do vncserver](../imgs/status-do-vncserver.jpg)
+![status_do_vncserver](../imgs/status-do-vncserver.jpg)
 
 
 Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). 
