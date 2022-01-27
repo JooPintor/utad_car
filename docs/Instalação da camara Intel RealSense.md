@@ -115,6 +115,8 @@ Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 
 Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS com um nucleo GNU/Linux 4.9.201-tegra e uma arquitetura ARM64.
 
+#### Instalação do vncserver na carta Nvidia Jetson Nano
+
 Na sequência da instalação do servidor e do acesso por SSH, procedi ao comando __'unminimize'__ para permitir o acesso ao sistema com interface gráfico.
 A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo que acabei por seguir as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html), sem no entanto instalar outro servidor vnc ou outro desktop.
 
@@ -167,12 +169,37 @@ Os comando de configuração do serviço VNC foram os seguintes:
         sudo systemctl status vncserver@1
         
 Não esquecer de substituir !!!user_name!!! pelo nome du utilizador do SO.
-Apos o ultimo comando deverá surgir uma informação semelhante á seguinte:
+
+Após o último comando deverá surgir uma informação semelhante á seguinte:
 
 ![status do vncserver](../imgs/status%20do%20vncserver.jpg)
 
 
-Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). 
+#### Instalação do ROS na carta Nvidia Jetson Nano 
+
+Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS Melodic seguindo as instruções [desta página](http://wiki.ros.org/Installation/Ubuntu) e utilizando os seguintes comandos:
+
+        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        sudo apt install curl
+        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+        sudo apt update
+        sudo apt install ros-melodic-desktop-full
+        echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+        source ~/.bashrc
+        sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+        sudo apt install python-rosdep
+        sudo rosdep init
+        rosdep update
+        mkdir -p ~/catkin_ws/src
+        cd ~/catkin_ws/
+        catkin_make
+        source devel/setup.bash
+
+#### Instalação da camara Intel Realsense
+
+Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). Utilizando os seguintes comandos:
+
+
 
 
 
