@@ -36,4 +36,4 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 
 ### Cameras
 - [Camara Intel® RealSense™ D435](./Camara%20Intel%20RealSense.md) Camera com capacidade de medida de profundidade.
-- [Camera 5mp 0.575](./Camera%205mp%200.575.md) Uma camera normal que connecta ao Rasperry Pi
+- [Camera 5mp 0.575](./Camera%205mp%200.575.md) Camera interligada na porta especifica do Rasperry Pi
