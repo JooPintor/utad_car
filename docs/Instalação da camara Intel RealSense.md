@@ -14,14 +14,14 @@ Para proceder á instalação desta camara no Raspberry PI 3 segui [estas instru
 A sequência de ações foi a seguinte:
 - Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
 - _Desconectar qualquer câmera Intel RealSense conectada_
-- A partir da pasta __'librealsense'__ executar os seguintes comandos/scripts:
+- A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
 
         sudo apt-get update 
         sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev 
         ./scripts/setup_udev_rules.sh
         
         mkdir build && cd build
-        cmake ../ -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=true -DBUILD_PYTHON_BINDINGS:bool=true -DFORCE_RSUSB_BACKEND=ON -DPYTHON_EXECUTABLE=/usr/bin/pyt
+        cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=true -DBUILD_PYTHON_BINDINGS:bool=true -DFORCE_RSUSB_BACKEND=ON -DPYTHON_EXECUTABLE=/usr/bin/pyt
         sudo make uninstall && make clean && make -j1 && sudo make install
         
         sudo apt-get install qt5-default
@@ -58,14 +58,14 @@ Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instru
 A sequência de ações foi a seguinte:
 - Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
 - _Desconectar qualquer câmera Intel RealSense conectada_
-- A partir da pasta __'librealsense'__ executar os seguintes comandos/scripts:
+- A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
 
         sudo apt-get update
         sudo apt-get install guvcview git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
         sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev 
         sudo mkdir -p /opt/realsense
         
-        cmake ../ -DFORCE_RSUSB_BACKEND=true -DBUILD_PYTHON_BINDINGS=false -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true -DCMAKE_INSTALL_PREFIX=$REALSENSE_INSTALL_PREFIX
+        cmake -DFORCE_RSUSB_BACKEND=true -DBUILD_PYTHON_BINDINGS=false -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true -DCMAKE_INSTALL_PREFIX=$REALSENSE_INSTALL_PREFIX
         sudo make uninstall && make clean && make -j1 && sudo make install
         
         sudo bash -c "echo /opt/realsense/lib > /etc/ld.so.conf.d/realsense.conf"
@@ -197,7 +197,28 @@ Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS
 
 #### Instalação da camara Intel Realsense
 
-Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). Utilizando os seguintes comandos:
+Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). Utilizando sequência de ações foi a seguinte:
+
+- Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
+- _Desconectar qualquer câmera Intel RealSense conectada_
+- A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
+
+        sudo apt-get update
+        sudo apt-get install guvcview git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
+        sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev 
+        sudo mkdir -p /opt/realsense
+        
+        cmake -DFORCE_RSUSB_BACKEND=true -DBUILD_PYTHON_BINDINGS=false -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true -DCMAKE_INSTALL_PREFIX=$REALSENSE_INSTALL_PREFIX
+        sudo make uninstall && make clean && make -j1 && sudo make install
+        
+        sudo bash -c "echo /opt/realsense/lib > /etc/ld.so.conf.d/realsense.conf"
+        
+        sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/99-realsense-libusb.rules 
+        sudo udevadm control --reload-rules && udevadm trigger
+        
+        echo "export realsense2_DIR=/opt/realsense/lib/cmake/realsense2" >> ~/.bashrc
+
+Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
 
 
