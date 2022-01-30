@@ -28,8 +28,8 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 ### Base usada como chassis do "utad_car"
 - [Chassis de acrilico](./Chassis%20de%20acr%C3%ADlico.md)
 
-### Baterias
-- Bateria de 5V
+### Fontes de Alimentação
+- Fontes de alimentações utilizadas
 
 ### LIDAR
 - [RPLiDAR A1M8-R5](./RPLiDAR%20A1M8.md) 360-degree Laser Scanner Kit
