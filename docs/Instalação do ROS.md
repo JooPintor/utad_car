@@ -7,7 +7,7 @@ Tendo o Raspberry PI 3 de uma arquitetura __armhf__ e memória limitada, verific
 
 Para o Raspberry PI 4 a preferência recaiu sobre o sistema operativo __ubuntu 20.04 focal__ e o __ROS Noetic__
 
-Para o [PC Portátil](./Portátil%20ASUS%20Laptop%20X512DA.313.md), com o SO Windows 10, optou-se pela instalação __ROS Melodic__ por se tratar da distribuição mais estável para o seu sistema operativo. 
+Para o [PC Portátil](./Portátil%20ASUS%20Laptop%20X512DA.313.md), com o SO Windows 10, optou-se pela instalação __ROS Melodic__ por se tratar da distribuição mais estável para o este sistema operativo. 
 
 A instalação do ROS foi feita a partir das instruções disponíveis no site da Organização ROS, o ROS-Wiki. Para os SBCs com SO Linux seguiu-se  [esta](http://wiki.ros.org/Installation) página e para PC Portátil com SO Windows seguiu-se [esta](http://wiki.ros.org/Installation/Windows).
 
