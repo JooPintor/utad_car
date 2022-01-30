@@ -17,9 +17,12 @@ A compilação do código fonte do ROS, para além de demorar algum tempo exige 
 
 A verificação ou alteração da "swap file" pode ser feita seguindo [estas](./Swap%20files.md) instruções.
 
-Verifiquei no processo de instalação do ROS no Windows que para ter sucesso é necessário desativar completamente software antivírus e de firewall, já que os mesmos interferem com o processo de instalação. Como tanto os pacotes do ROS como do Chocolatey provêm de fontes não identificadas, o antivírus trata-os como vírus, impedindo-os executar. No caso de tal ocorrer, tora-se necessário desinstalar tudo o que já tenha sido instalado, desativar as proteções do computador e recomeçar a instalação.
+Verifiquei no processo de instalação do ROS no Windows que para ter sucesso é necessário desativar completamente software antivírus e de firewall, já que os mesmos interferem com o processo de instalação. Como tanto os pacotes do ROS como do Chocolatey provêm de fontes não identificadas, o antivírus trata-os como vírus, impedindo-os de poderem ser executados. No caso de tal ocorrer, tora-se necessário desinstalar tudo o que já tenha sido instalado, desativar as proteções do computador e recomeçar a instalação.
 
 Uma dificuldade na instalação do ROS no sistema Windows, resulta deste sistema operativo não possuir repositórios e ferramentas como o _"apt get"_ do ubuntu, que nos permita transferir e controlar as transferências dos pacotes necessários tal como se pode fazer nos sistemas Linux a partir da linha de comandos. 
 
-Foi-se feito pesquisa de varias alternativas para tertar arranjar outras maneiras de arranjar pacotes para o sistema Windows, até foi descoberto que o proprio windows desenvolveu o seu prorpria ferrementa para sacar pacotes, no entanto, tal ferrementa é limitado para o que se pode arranjar, sendo a sua lista extremament limitada para o que se quer, sendo um dos pacotes mais importantes para este trabalho o Realsense2 não ser uma das possiveis escolhas. O chocolatey possui o pacote desejado mas mesmo assim não consegue sacar e instalar os pacotes com o git.
-Passando um longo periodo de tempo neste caso e não encontrar uma solução viavel para este problema, concluio-se que seguir o trabalho por este caminho não é a forma para executar o que nos queremos fazer.
+Tentei várias alternativas para arranjar os pacotes para o sistema Windows, incluindo o _Windows Package Manager_ desenvolvido pela Microsoft, no entanto verifiquei que esta ferramenta está limitada a uma lista de softwares que não inclui os drives da RealSense.
+
+O _Chocolatey_ permitiu o download dos pacotes desejados, no entanto mesmo assim não consegui instalá-los de forma a serem reconhecidos pelo ROS.
+
+Tendo em conta as dificuldades encontradas, abandonei a hipótese de utilização do Windows como possível servidor ROS com processamento das informações dadas pela camara RealSense.
