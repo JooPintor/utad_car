@@ -29,7 +29,7 @@ Nos estudos realizados foi utilizado o seguinte equipamento:
 - [Chassis de acrilico](./Chassis%20de%20acr%C3%ADlico.md)
 
 ### Fontes de Alimentação
-- Fontes de alimentações utilizadas
+- [Fontes de alimentações utilizadas](Fontes%20de%20alimentação.md)
 
 ### LIDAR
 - [RPLiDAR A1M8-R5](./RPLiDAR%20A1M8.md) 360-degree Laser Scanner Kit
