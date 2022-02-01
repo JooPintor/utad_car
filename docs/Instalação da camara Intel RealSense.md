@@ -197,7 +197,7 @@ Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS
 
 #### Instalação da camara Intel Realsense
 
-Para proceder á instalação desta camara a carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md). Utilizando sequência de ações foi a seguinte:
+Para proceder á instalação desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md). Utilizando sequência de ações foi a seguinte:
 
 - Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
 - _Desconectar qualquer câmera Intel RealSense conectada_
