@@ -197,32 +197,30 @@ Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS
 
 #### Instalação da camara Intel Realsense
 
-Para proceder á instalação desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md). Utilizando sequência de ações foi a seguinte:
-
-- Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
-- _Desconectar qualquer câmera Intel RealSense conectada_
-- A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
+Para proceder á instalação desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), utilizando os comandos seguintes:
 
         sudo apt-get update
-        sudo apt-get install guvcview git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
-        sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev 
-        sudo mkdir -p /opt/realsense
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
+        sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u 
         
-        cmake -DFORCE_RSUSB_BACKEND=true -DBUILD_PYTHON_BINDINGS=false -DCMAKE_BUILD_TYPE=release -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=true -DCMAKE_INSTALL_PREFIX=$REALSENSE_INSTALL_PREFIX
-        sudo make uninstall && make clean && make -j1 && sudo make install
+        sudo apt-get install librealsense2-utils
+        sudo apt-get install librealsense2-dev
         
-        sudo bash -c "echo /opt/realsense/lib > /etc/ld.so.conf.d/realsense.conf"
-        
-        sudo cp config/99-realsense-libusb.rules /etc/udev/rules.d/99-realsense-libusb.rules 
-        sudo udevadm control --reload-rules && udevadm trigger
-        
-        echo "export realsense2_DIR=/opt/realsense/lib/cmake/realsense2" >> ~/.bashrc
+        realsense-viewer
 
-Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
+Na sequência do comando _'realsense-viewer'_ obtive o erro seguinte:
 
+        GLFW Driver Error: GLX: GLX version 1.3 is required
+        Could not initialize offscreen context!
 
+Admitindo que o erro pederia resultar de estar ligado por VNC liguei-me com um teclado e um monitor pela porta HDMI e voltei a tentar o mesmo comando, obtendo a segunte mensagem:
 
+        libGL error: MESA-LOADER: failed to open swrast (search paths /usr/lib/aarch64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri)
+        libGL error: failed to load driver: swrast
+        GLFW Driver Error: Requested OpenGL version 1.0, got version 0.0
+        Could not initialize offscreen context!
 
+Não tendo encontrado uma uma solução para este problema e tendo em conta o tempo já utilizado na instalação do VNC, acabei por abandonar esta opção de processamento da imagem da camera Intel RealSense.
 
 
 
