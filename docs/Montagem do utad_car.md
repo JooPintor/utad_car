@@ -2,7 +2,7 @@
 
 Depois de montado na sua configuração básica o __utad_car__ ficou com o seguinte aspeto:
 
-![Foto do utad_car]() 
+![Foto do utad_car](../imgs/utad_car.jpg) 
 
 Para a montagem do carro robótico basico (o __utad_car__), foi utilizado kitt seguinte:
 
