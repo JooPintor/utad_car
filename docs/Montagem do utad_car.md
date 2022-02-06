@@ -21,6 +21,6 @@ Para alem deste Kitt foram ainda utilizados os seguintes equipamentos:
 - 2 [Detetores de infravermelhos](./Detetor%20de%20velocidade%20por%20Infravermelhos.md)
 - 1 [Stepper Motor HAT](./Stepper%20Motor%20HAT%20for%20Raspberry%20Pi.md)
 - 1 [Raspberry PI 3](./Raspberry%20PI%203.md)
-- 1 Bateria
+- 2 Baterias
 
 
