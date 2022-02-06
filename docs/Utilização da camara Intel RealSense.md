@@ -13,3 +13,12 @@ Foram assim estudadas as seguintes hipóteses de locais de processamento, admiti
 - [PC Portatil](#Processamento-da-Imagem-no-PC-Portatil)
 - [Carta Nvidia Jetson Nano](#Processamento-da-Imagem-na-Carta-Nvidia-Jetson-Nano)
 
+### Processamento da Imagem no Raspberry PI 3
+
+### Processamento da Imagem no Raspberry PI 4
+
+### Processamento da Imagem no PC Portatil
+
+### Processamento da Imagem na Carta Nvidia Jetson Nano
+
+
