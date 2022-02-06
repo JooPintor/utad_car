@@ -21,4 +21,4 @@ Foram assim estudadas as seguintes hipóteses de locais de processamento, admiti
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
 
-Como explicado no [modulo de instalação](..docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-da-camara-intel-realsense-1) da camera na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipotese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
+Como explicado no [modulo de instalação](../docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-da-camara-intel-realsense-1) da camera na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipotese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
