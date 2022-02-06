@@ -197,7 +197,7 @@ Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS
 
 #### Instalação do SDK da camara 
 
-Para proceder á instalação desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), utilizando os comandos seguintes:
+Para proceder á instalação do SDK desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), utilizando os comandos seguintes:
 
         sudo apt-get update
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
