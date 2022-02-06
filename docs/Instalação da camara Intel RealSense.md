@@ -6,7 +6,7 @@ Os sistemas testados foram os seguintes:
 - [Raspberry PI 3](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-3)
 - [Raspberry PI 4](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-4)
 - [Carta Nvidia Jetson Nano 2GB](#Instalação-da-camara-Intel-RealSense-na-carta-Nvidia-Jetson-Nano-2GB)
-- PC Portatil
+- [PC Portatil](#Instalação-da-camara-Intel-RealSense-no-PC-Portatil)
 
 ### Instalação da camara Intel RealSense no Raspberry PI 3
 Para proceder á instalação desta camara no Raspberry PI 3 segui [estas instruções](https://dev.intelrealsense.com/docs/using-depth-camera-with-raspberry-pi-3#section-installation-instructions) a partir do ponto 2, tendo o cuidado de fazer o __update__ do sistema operativo mas não o __upgrade__ já que me interessava manter a versão 18.04 LTS.
@@ -222,5 +222,6 @@ Admitindo que o erro pederia resultar de estar ligado por VNC liguei-me com um t
 
 Não tendo encontrado uma uma solução para este problema e tendo em conta o tempo já utilizado na instalação do VNC, acabei por abandonar esta opção de processamento da imagem da camera Intel RealSense.
 
+### Instalação da camara Intel RealSense no PC Portatil
 
 
