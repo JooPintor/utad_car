@@ -224,4 +224,5 @@ Não tendo encontrado uma uma solução para este problema e tendo em conta o te
 
 ### Instalação da camara Intel RealSense no PC Portatil
 
+A instalação do SDK da camera Realsense revelou-se bastante simples, bastando proceder ao Download do mesmo a partir [desta página](https://www.intelrealsense.com/sdk-2/).
 
