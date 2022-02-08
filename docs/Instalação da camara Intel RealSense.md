@@ -232,7 +232,7 @@ Para o efeito selecionei os seguinets pacotes:
    - [Intel.RealSense.SDK-WIN10-2.50.0.3785.exe]
    - [Intel.RealSense.Viewer.exe]
 
-Tratando-se de modulos .exe ficam prontos a utilizar.
+Tratando-se de modulos .exe após o download estão prontos a utilizar.
 
         
 
