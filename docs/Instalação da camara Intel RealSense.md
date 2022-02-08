@@ -226,3 +226,13 @@ Não tendo encontrado uma uma solução para este problema e tendo em conta o te
 
 A instalação do SDK da camera Realsense revelou-se bastante simples, bastando proceder ao Download do mesmo a partir [desta página](https://www.intelrealsense.com/sdk-2/).
 
+Para o efeito selecionei os seguinets pacotes:
+
+         [Depth.Quality.Tool.exe](https://github.com/IntelRealSense/librealsense/releases/download/v2.50.0/Depth.Quality.Tool.exe)
+         [Intel.RealSense.SDK-WIN10-2.50.0.3785.exe](https://github.com/IntelRealSense/librealsense/releases/download/v2.50.0/Intel.RealSense.SDK-WIN10-2.50.0.3785.exe)
+         [Intel.RealSense.Viewer.exe](https://github.com/IntelRealSense/librealsense/releases/download/v2.50.0/Intel.RealSense.Viewer.exe)
+
+Tratando-se de modulos .exe ficam prontos a utilizar.
+
+        
+
