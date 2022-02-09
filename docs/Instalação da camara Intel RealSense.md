@@ -1,6 +1,6 @@
 ## Instalação da camara Intel RealSense
 
-Dada a dificuldade em obter a catpação de imagem e respetivo tratamento ao mesmo tempo que se processa a informação dos nos ROS, foi testada a instalação da camara e respetivos modulos ROS em diferentes sistemas, com o ojetivo de separar o processamento da imagem do contrlo do mocimento do 'utad_car'.
+Dada a dificuldade em obter a captação de imagem e respetivo tratamento ao mesmo tempo que se processa a informação dos nos ROS, foi testada a instalação da camara e respetivos módulos ROS em diferentes sistemas, com o objetivo de separar o processamento da imagem do controlo do movimento do 'utad_car'.
 
 Os sistemas testados foram os seguintes:
 - [Raspberry PI 3](#Instalação-da-camara-Intel-RealSense-no-Raspberry-PI-3)
@@ -13,7 +13,7 @@ Para proceder á instalação desta camara no Raspberry PI 3 segui [estas instru
 
 A sequência de ações foi a seguinte:
 - Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
-- _Desconectar qualquer câmera Intel RealSense conectada_
+- _Desconectar qualquer câmara Intel RealSense conectada_
 - A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
 
         sudo apt-get update 
@@ -28,21 +28,21 @@ A sequência de ações foi a seguinte:
 
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
-Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar  uma [‘sawp file’](./Swap%20files.md) e  recompilar o SDK
+Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
 
-Depois de instalados o software da camara deverá ser possível testra a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando e obtendo o resultado seguintes:
+Depois de instalados o software da camara deverá ser possível testar a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando e obtendo o resultado seguintes:
 
         realsense-viewer
 
 ![RealSense-Viewer](../imgs/RealSense-Viewer.jpg)
 
-- Instalação dos modulos ROS para utilização da camara
+- Instalação dos módulos ROS para utilização da camara
 
         cd ~/catkin_ws
         sudo apt-get install ros-$ROS_DISTRO-realsense2-camera
         sudo apt-get install ros-$ROS_DISTRO-realsense2-description
 
-- Depois de instalados o smodulos ROS pode-se executar os seguintes comandos e obter o resultado apresentado a seguir:
+- Depois de instalados os módulos ROS pode-se executar os seguintes comandos e obter o resultado apresentado a seguir:
 
         export ROS_MASTER_URI=http://localhost:11311
         source ~/catkin_ws/devel/setup.bash
@@ -52,12 +52,12 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 ![rs_d435_camera_with_model](../imgs/rs_d435_camera_with_model.jpg)
 
 ### Instalação da camara Intel RealSense no Raspberry PI 4
-Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://answers.ros.org/question/363889/intel-realsens-on-ubuntu-2004-ros-noetic-installation-desription/). De notar que embora esta página já esteja ultrapassada para arquiteturas X86/AMD64, parecxeu-me a mais apropriada para a arquitetura ARM64.
+Para proceder á instalação desta camara no Raspberry PI 4 segui [estas instruções](https://answers.ros.org/question/363889/intel-realsens-on-ubuntu-2004-ros-noetic-installation-desription/). De notar que embora esta página já esteja ultrapassada para arquiteturas X86/AMD64, pareceu-me a mais apropriada para a arquitetura ARM64.
 
 
 A sequência de ações foi a seguinte:
 - Download e unzip da última versão estável do ramo mestre: https://github.com/IntelRealSense/librealsense/archive/master.zip
-- _Desconectar qualquer câmera Intel RealSense conectada_
+- _Desconectar qualquer câmara Intel RealSense conectada_
 - A partir da pasta __'librealsense-master'__ executar os seguintes comandos/scripts:
 
         sudo apt-get update
@@ -77,19 +77,19 @@ A sequência de ações foi a seguinte:
 
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
-Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar  uma [‘sawp file’](./Swap%20files.md) e  recompilar o SDK
+Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
 
-Depois de instalados o software da camara deverá ser possível testra a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando seguinte:
+Depois de instalados o software da camara deverá ser possível testar a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando seguinte:
 
         /opt/realsense/bin/realsense-viewer
 
-- Instalação dos modulos ROS para utilização da camara
+- Instalação dos módulos ROS para utilização da camara
 
         cd ~/catkin_ws
         git clone https://github.com/IntelRealSense/realsense-ros.git ~/catkin_ws/src/realsense-ros
         catkin_make
 
-- Depois de instalados o smodulos ROS pode-se executar os seguintes comandos e obter o resultado apresentado a seguir:
+- Depois de instalados os módulos ROS pode-se executar os seguintes comandos e obter o resultado apresentado a seguir:
 
         export ROS_MASTER_URI=http://localhost:11311
         source ~/catkin_ws/devel/setup.bash
@@ -99,7 +99,7 @@ Depois de instalados o software da camara deverá ser possível testra a instala
 
 ### Instalação da camara Intel RealSense na carta Nvidia Jetson Nano 2GB
 
-Com o objetivo de tirar o maximo partido das capacidades desta carta para processamenro de vídeo, o SO adoptado foi o retirado da imagem  __'jetson-nano-2gb-jp451-sd-card-image.zip'__.
+Com o objetivo de tirar o máximo partido das capacidades desta carta para processamento de vídeo, o SO adotado foi o retirado da imagem  __'jetson-nano-2gb-jp451-sd-card-image.zip'__.
 
 Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 
@@ -113,12 +113,12 @@ Este SO apresenta a seguinte mensagem quando nos conectamos por SSH:
 
         To restore this content, you can run the 'unminimize' command.
 
-Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS com um nucleo GNU/Linux 4.9.201-tegra e uma arquitetura ARM64.
+Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS com um núcleo GNU/Linux 4.9.201-tegra e uma arquitetura ARM64.
 
 #### Instalação do vncserver na carta Nvidia Jetson Nano
 
 Na sequência da instalação do servidor e do acesso por SSH, procedi ao comando __'unminimize'__ para permitir o acesso ao sistema com interface gráfico.
-A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de dificil configuração, pelo que acabei por seguir as instruçãoes [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html), sem no entanto instalar outro servidor vnc ou outro desktop.
+A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de difícil configuração, pelo que acabei por seguir as instruções [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html), sem no entanto instalar outro servidor vnc ou outro desktop.
 
 Os comando de configuração do serviço VNC foram os seguintes:
 
@@ -143,7 +143,7 @@ Os comando de configuração do serviço VNC foram os seguintes:
         
         sudo vim /etc/systemd/system/vncserver@.service
         
-        #Alterar o conteudo do ficheiro para:        
+        #Alterar o conteúdo do ficheiro para:        
                 [Unit]
                 Description=Start VNC server at startup
                 After=syslog.target network.target
@@ -168,7 +168,7 @@ Os comando de configuração do serviço VNC foram os seguintes:
         sudo systemctl start vncserver@1
         sudo systemctl status vncserver@1
         
-Não esquecer de substituir !!!user_name!!! pelo nome du utilizador do SO.
+Não esquecer de substituir !!!user_name!!! pelo nome do utilizador do SO.
 
 Após o último comando deverá surgir uma informação semelhante á seguinte:
 
@@ -213,26 +213,23 @@ Na sequência do comando _'realsense-viewer'_ obtive o erro seguinte:
         GLFW Driver Error: GLX: GLX version 1.3 is required
         Could not initialize offscreen context!
 
-Admitindo que o erro pederia resultar de estar ligado por VNC liguei-me com um teclado e um monitor pela porta HDMI e voltei a tentar o mesmo comando, obtendo a segunte mensagem:
+Admitindo que o erro poderia resultar de estar ligado por VNC liguei-me com um teclado e um monitor pela porta HDMI e voltei a tentar o mesmo comando, obtendo a seguinte mensagem:
 
         libGL error: MESA-LOADER: failed to open swrast (search paths /usr/lib/aarch64-linux-gnu/dri:\$${ORIGIN}/dri:/usr/lib/dri)
         libGL error: failed to load driver: swrast
         GLFW Driver Error: Requested OpenGL version 1.0, got version 0.0
         Could not initialize offscreen context!
 
-Não tendo encontrado uma uma solução para este problema e tendo em conta o tempo já utilizado na instalação do VNC, acabei por abandonar esta opção de processamento da imagem da camera Intel RealSense.
+Não tendo encontrado uma solução para este problema e tendo em conta o tempo já utilizado na instalação do VNC, acabei por abandonar esta opção de processamento da imagem da camara Intel RealSense.
 
-### Instalação da camara Intel RealSense no PC Portatil
+### Instalação da camara Intel RealSense no PC Portátil
 
-A instalação do SDK da camera Realsense revelou-se bastante simples, bastando proceder ao Download do mesmo a partir [desta página](https://www.intelrealsense.com/sdk-2/).
+A instalação do SDK da camara Realsense revelou-se bastante simples, bastando proceder ao Download do mesmo a partir [desta página](https://www.intelrealsense.com/sdk-2/).
 
-Para o efeito selecionei os seguinets pacotes:
+Para o efeito selecionei os seguintes módulos:
 
    - [Depth.Quality.Tool.exe]
    - [Intel.RealSense.SDK-WIN10-2.50.0.3785.exe]
    - [Intel.RealSense.Viewer.exe]
 
-Tratando-se de modulos .exe após o download estão prontos a utilizar.
-
-        
-
+Tratando-se de módulos .exe após o download estão prontos a utilizar.
