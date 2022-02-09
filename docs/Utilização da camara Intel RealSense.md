@@ -5,6 +5,10 @@ Esta camaras para além da deteção da distância aos obstáculos permitem a id
 
 Para estudar o comportamento desta camara começou-se pela [sua instalação](./Instalação%20da%20camara%20Intel%20RealSense.md).
 
+A primeira instalação foi feita no Raspberry PI3, ond etentei obter os dados necessários para alimentar o modulo de mapeamento e de deteção de obstaculos.
+
+
+
 No entanto, a captação e o processamento de imagens em simultâneo com as restantes funções de controlo revelou-se um desafio difícil de superar utilizando apenas o Raspberry PI 3, pelo que foi explorada a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
 
 Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do 'Raspberry PI 3':
