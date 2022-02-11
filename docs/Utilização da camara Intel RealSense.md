@@ -5,7 +5,10 @@ Esta camaras para além da deteção da distância aos obstáculos permitem a id
 
 Para estudar o comportamento desta camara começou-se pela [sua instalação](./Instalação%20da%20camara%20Intel%20RealSense.md).
 
-A primeira instalação foi feita no Raspberry PI3, ond etentei obter os dados necessários para alimentar o modulo de mapeamento e de deteção de obstaculos.
+A primeira instalação foi feita no Raspberry PI3, onde tentei obter os dados necessários para alimentar o modulo de mapeamento e de deteção de obstaculos.
+
+A visualização de imagens com a aplicação __realsense-viewer__ funciona relativamente bem, sendo possivel visualizar tanto a _'Depth stream'_ como a _'Color stream'_, como mostra a imagem seguinte:
+![realsense-viewer-rpi3](../imgs/realsense-viewer-rpi3.jpg)
 
 
 
