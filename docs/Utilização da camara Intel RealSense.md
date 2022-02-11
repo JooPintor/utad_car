@@ -5,9 +5,9 @@ Esta camaras para além da deteção da distância aos obstáculos permitem a id
 
 Para estudar o comportamento desta camara começou-se pela [sua instalação](./Instalação%20da%20camara%20Intel%20RealSense.md).
 
-A primeira instalação foi feita no Raspberry PI3, onde tentei obter os dados necessários para alimentar o modulo de mapeamento e de deteção de obstaculos.
+A primeira instalação foi feita no Raspberry PI 3, onde tentei obter os dados necessários para alimentar o modulo de mapeamento e de deteção de obstáculos.
 
-A visualização de imagens com a aplicação __realsense-viewer__ funciona relativamente bem, sendo possivel visualizar tanto a _'Depth stream'_ como a _'Color stream'_, como mostra a imagem seguinte:
+A visualização de imagens com a aplicação __realsense-viewer__ funciona relativamente bem, sendo possível visualizar tanto a _'Depth stream'_ como a _'Color stream'_, como mostra a imagem seguinte:
 
 ![realsense-viewer-rpi3](../imgs/realsense-viewer-rpi3.jpg)
 
@@ -19,7 +19,7 @@ Ao mesmo tempo que se visualiza esta imagem, na janela onde foi executado o coma
 
 ![erros-RViz-camera-model](../imgs/erros-RViz-camera-model.jpg)
 
-Tendo em conta os resultados no _realsense-viewer_ e os resultados no _RViz_ admiti que uma das causas dos maus resultados e erros na utilização do _RViz_ poderia residir na falta de capacidade de processamento da imagem da câmera ao mesmo tempo que é gerido o _ROS_ no _Raspberry PI 3_. Por esse motivo explorei a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
+Tendo em conta os resultados no _realsense-viewer_ e os resultados no _RViz_ admiti que uma das causas dos maus resultados e erros na utilização do _RViz_ poderia residir na falta de capacidade de processamento da imagem da camara ao mesmo tempo que é gerido o _ROS_ no _Raspberry PI 3_. Por esse motivo explorei a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
 
 Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do 'Raspberry PI 3':
 - [Raspberry PI 4](#Processamento-da-Imagem-no-Raspberry-PI-4)
@@ -28,7 +28,7 @@ Foram assim estudadas as seguintes hipóteses de locais de processamento, admiti
 
 ### Processamento da Imagem no Raspberry PI 4
 
-Para avaliar a possibilidade de utilizar o _Raspberry PI 4_ para o processamento de alto nível foi necessário instalar o _ROS_ e os modulos de mapeamento e definição de trajetórias no _Raspberry PI 4_, executado-o como 'Master', sendo os modulos de baicho nível executados no _Raspberry PI 3_, indicado o endereço do  
+Para avaliar a possibilidade de utilizar o _Raspberry PI 4_ para o processamento de alto nível foi necessário instalar o _ROS_ e os módulos de mapeamento e definição de trajetórias no _Raspberry PI 4_, executando-o como 'Master', sendo os módulos de baixo nível executados no _Raspberry PI 3_, indicado o endereço do  
 _Raspberry PI 4_ com endereço do 'Master'.
 
 
@@ -36,4 +36,4 @@ _Raspberry PI 4_ com endereço do 'Master'.
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
 
-Como explicado no [modulo de instalação](../docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-do-sdk-da-camara) da camera na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipotese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
+Como explicado no [modulo de instalação](../docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-do-sdk-da-camara) da camara na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipótese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
