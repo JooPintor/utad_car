@@ -15,6 +15,10 @@ No entanto quando se tenta obter imagens no ambiente ROS, utilizando o comando _
 
 ![RViz-camera-model](../imgs/RViz-camera-model.jpg)
 
+Ao mesmo tempo que se visualiza esta imagem, na janela onde foi executado o comando são continuamente apresentados os erros seguintes:
+
+![erros-RViz-camera-model](../imgs/erros-RViz-camera-model.jpg)
+
 
 No entanto, a captação e o processamento de imagens em simultâneo com as restantes funções de controlo revelou-se um desafio difícil de superar utilizando apenas o Raspberry PI 3, pelo que foi explorada a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
 
