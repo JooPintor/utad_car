@@ -28,6 +28,10 @@ Foram assim estudadas as seguintes hipóteses de locais de processamento, admiti
 
 ### Processamento da Imagem no Raspberry PI 4
 
+Para avaliar a possibilidade de utilizar o _Raspberry PI 4_ para o processamento de alto nível foi necessário instalar o _ROS_ e os modulos de mapeamento e definição de trajetórias no _Raspberry PI 4_, executado-o como 'Master', sendo os modulos de baicho nível executados no _Raspberry PI 3_, indicado o endereço do  
+_Raspberry PI 4_ com endereço do 'Master'.
+
+
 ### Processamento da Imagem no PC Portatil
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
