@@ -11,6 +11,9 @@ A visualização de imagens com a aplicação __realsense-viewer__ funciona rela
 
 ![realsense-viewer-rpi3](../imgs/realsense-viewer-rpi3.jpg)
 
+No entanto quando se tenta obter imagens no ambiente ROS, utilizando o comando _roslaunch realsense2_camera rs_d435_camera_with_model.launch_ verifica-se que o mapeamento de pontos é muito deficiente apesar de estar com apenas 1 fps, como se pode observar na imagem seguinte:
+
+![RViz-camera-model](../imgs/RViz-camera-model.jpg)
 
 
 No entanto, a captação e o processamento de imagens em simultâneo com as restantes funções de controlo revelou-se um desafio difícil de superar utilizando apenas o Raspberry PI 3, pelo que foi explorada a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
