@@ -22,14 +22,13 @@ Ao mesmo tempo que se visualiza esta imagem, na janela onde foi executado o coma
 Tendo em conta os resultados no _realsense-viewer_ e os resultados no _RViz_ admiti que uma das causas dos maus resultados e erros na utilização do _RViz_ poderia residir na falta de capacidade de processamento da imagem da camara ao mesmo tempo que é gerido o _ROS_ no _Raspberry PI 3_. Por esse motivo explorei a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
 
 Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do 'Raspberry PI 3':
-- [Raspberry PI 4](#Processamento-da-Imagem-no-Raspberry-PI-4)
+- [Raspberry PI 4](#Processamento-no-Raspberry-PI-4)
 - [PC Portatil](#Processamento-da-Imagem-no-PC-Portatil)
 - [Carta Nvidia Jetson Nano](#Processamento-da-Imagem-na-Carta-Nvidia-Jetson-Nano)
 
-### Processamento da Imagem no Raspberry PI 4
+### Processamento no Raspberry PI 4
 
-Para avaliar a possibilidade de utilizar o _Raspberry PI 4_ para o processamento de alto nível foi necessário instalar o _ROS_ e os módulos de mapeamento e definição de trajetórias no _Raspberry PI 4_, executando-o como 'Master', sendo os módulos de baixo nível executados no _Raspberry PI 3_ , indicado o endereço do 
-_Raspberry PI 4_ como endereço do 'Master'.
+Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível é necessário ai arrancar com o _ROS_  como 'Master', sendo os módulos de baixo nível executados no _Raspberry PI 3_ fornecendo o endereço do _Raspberry PI 4_ como endereço do 'Master'.
 
 
 ### Processamento da Imagem no PC Portatil
