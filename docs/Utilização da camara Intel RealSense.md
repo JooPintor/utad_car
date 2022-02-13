@@ -21,14 +21,24 @@ Ao mesmo tempo que se visualiza esta imagem, na janela onde foi executado o coma
 
 Tendo em conta os resultados no _realsense-viewer_ e os resultados no _RViz_ admiti que uma das causas dos maus resultados e erros na utilização do _RViz_ poderia residir na falta de capacidade de processamento da imagem da camara ao mesmo tempo que é gerido o _ROS_ no _Raspberry PI 3_. Por esse motivo explorei a possibilidade de separar a captação da imagem e o controlo de baixo nível do controlo de alto nível, instalando o ROS em dois locais, com processamento independente e comunicação pela rede LAN.
 
-Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do 'Raspberry PI 3':
+Foram assim estudadas as seguintes hipóteses de locais de processamento, admitindo que a captação de imagens se faria sempre ao nível do _Raspberry PI 3_:
 - [Raspberry PI 4](#Processamento-no-Raspberry-PI-4)
 - [PC Portatil](#Processamento-da-Imagem-no-PC-Portatil)
 - [Carta Nvidia Jetson Nano](#Processamento-da-Imagem-na-Carta-Nvidia-Jetson-Nano)
 
+Para utilizar outro local de processamento de alto nível é necessário ai arrancar com o _ROS_  como 'Master', sendo os módulos de baixo nível executados no _Raspberry PI 3_ com a indicação do endereço do 'Master'.
+
 ### Processamento no Raspberry PI 4
 
-Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível é necessário ai arrancar com o _ROS_  como 'Master', sendo os módulos de baixo nível executados no _Raspberry PI 3_ fornecendo o endereço do _Raspberry PI 4_ como endereço do 'Master'.
+Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível comecei por testar o modulo _realsense2_camera_ utilizando para o efeito o script [rpi4_rs2_camera.sh](../ROS/rpi4_rs2_camera.sh), e utilizando em particular os seguintes comandos:
+
+      export ROS_MASTER_URI=http://rpi4.local:11311
+
+      source ~/catkin_ws/devel/setup.bash
+      cd ~/catkin_ws
+
+      roslaunch realsense2_camera rs_camera.launch enable_sync:=true
+
 
 
 ### Processamento da Imagem no PC Portatil
