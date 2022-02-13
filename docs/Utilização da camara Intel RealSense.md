@@ -30,14 +30,43 @@ Para utilizar outro local de processamento de alto nível é necessário ai arra
 
 ### Processamento no Raspberry PI 4
 
-Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível comecei por testar o modulo _realsense2_camera_ utilizando para o efeito o script [rpi4_rs2_camera.sh](../ROS/rpi4_rs2_camera.sh), e utilizando em particular os seguintes comandos:
+Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível comecei por testar o modulo _realsense2_camera_ utilizando para o efeito o script [rpi4_rs2_camera.sh](../ROS/rpi4_rs2_camera.sh) para inserir os seguintes comandos:
 
       export ROS_MASTER_URI=http://rpi4.local:11311
-
       source ~/catkin_ws/devel/setup.bash
       cd ~/catkin_ws
-
       roslaunch realsense2_camera rs_camera.launch enable_sync:=true
+
+Estes comando são inseridos no _Raspberry PI 3_ depois de se ter iniciado o ROS no _Raspberry PI 4_ 
+
+Durante a fase de arranque são apresentadas as seguintes mensagens de inicialização:
+
+      NODES
+        /camera/
+          realsense2_camera (nodelet/nodelet)
+          realsense2_camera_manager (nodelet/nodelet)
+
+      ROS_MASTER_URI=http://rpi4.local:11311
+
+      process[camera/realsense2_camera_manager-1]: started with pid [21564]
+      process[camera/realsense2_camera-2]: started with pid [21565]
+
+Estas mensagens mostram a ligação ao Raspberry PI 4 e o arranque dos modulos 'realsense2_camera_manager' e 'realsense2_camera'.
+
+No entanto surgem também outras mensagens das quais destaco as seguintes:
+
+      [ INFO] [1644745893.948562581]: Device USB type: 2.1
+      [ WARN] [1644745893.948712684]: Device 948122072491 is connected using a 2.1 port. Reduced performance is expected.
+
+       13/02 09:51:41,473 ERROR [2657088528] (uvc-streamer.cpp:106) uvc streamer watchdog triggered on endpoint: 130
+
+       13/02 09:51:41,733 WARNING [2781856784] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: Resource temporarily unavailable, number: 11
+      [ WARN] [1644745901.840760287]: Hardware Notification:Depth stream start failure,1.64475e+12,Error,Hardware Error
+
+      [camera/realsense2_camera-2] process has finished cleanly
+      log file: /home/al/.ros/log/404780c0-8cb2-11ec-8972-95230b6dd211/camera-realsense2_camera-2*.log
+
+Como se pode ver pelas mensagens selecionadas o arranque do modulo 'realsense2_camera' termina devido aos erros de comunicação.
 
 
 
