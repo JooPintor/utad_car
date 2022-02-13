@@ -64,11 +64,18 @@ No entanto surgem também outras mensagens das quais destaco as seguintes:
       [ WARN] [1644745901.840760287]: Hardware Notification:Depth stream start failure,1.64475e+12,Error,Hardware Error
 
       [camera/realsense2_camera-2] process has finished cleanly
-      log file: /home/al/.ros/log/404780c0-8cb2-11ec-8972-95230b6dd211/camera-realsense2_camera-2*.log
 
 Como se pode ver pelas mensagens selecionadas o arranque do modulo 'realsense2_camera' termina devido aos erros de comunicação.
 
+Tendo em conta que o _Raspberry PI 3_ não tem portas USB3 tentei a ligação em sentido inverso, ligando a camara no Raspberry PI 4, usando o Raspbery PI 3 como 'Master', tendo obtido os seguintes resultados:
 
+Verifiquei que embora com alguns avisos o processo _realsense2_camera_ não terminava e no _Raspberry PI 3_ é possivel verificar os nós ativos,obetendo-se a seguinte informação:
+
+      rosrun rqt_graph rqt_graph
+
+![rs2-camera-rqt-all-rpi3](../imgs/rs2-camera-rqt-all-rpi3.jpg)
+
+      rosrun rviz rviz
 
 ### Processamento da Imagem no PC Portatil
 
