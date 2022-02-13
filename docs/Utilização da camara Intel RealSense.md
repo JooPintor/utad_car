@@ -77,6 +77,9 @@ Verifiquei que embora com alguns avisos o processo _realsense2_camera_ não term
 
       rosrun rviz rviz
 
+![rs2-camera-rviz-rpi3](../imgs/rs2-camera-rviz-rpi3.jpg)
+
+
 ### Processamento da Imagem no PC Portatil
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
