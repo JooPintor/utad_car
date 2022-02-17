@@ -85,7 +85,7 @@ Note-se que enquanto que com o _Raspberry PI 3_ apenas tinhamos 1 fps, com esta 
 
 ### Processamento da Imagem no PC Portatil
 
-A utilização do PC Portátil com local de processamento da imagem captada pelo _Raspberry PI 3_ acabou também por ser abandonada por não se conseguir melhor desempenho na ligação _Raspberry PI 3 -> PC Portátil_ que na ligação _Raspberry PI 3 -> Raspberry PI 4_.
+A utilização do PC Portátil com local de processamento da imagem captada pelo _Raspberry PI 3_ acabou também por ser abandonada por não se conseguir melhor desempenho na ligação _'Raspberry PI 3' -> 'PC Portátil'_ que na ligação _'Raspberry PI 3' -> 'Raspberry PI 4'_.
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
 
