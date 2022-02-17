@@ -79,8 +79,13 @@ Verifiquei que embora com alguns avisos o processo _realsense2_camera_ não term
 
 ![rs2-camera-rviz-rpi3](../imgs/rs2-camera-rviz-rpi3.jpg)
 
+Apesar da ligação da camara ao _Raspberry PI 4_ não ser a esperada (manteve-se a mensagem de ligação USB2.1 apesar da ligação ser feita numa porta USB3) a diferença de comportamente é de tal modo diferente que conclui que o problema está na ligação ao _Raspberry PI 3_.
+
+Note-se que enquanto que com o _Raspberry PI 3_ apenas tinhamos 1 fps, com esta montagem chegamos a mais de 10 fps, mesmo tendo essas frames a psssar pela LAN.
 
 ### Processamento da Imagem no PC Portatil
+
+A utilização do PC Portátil com local de processamento da imagem captada pelo _Raspberry PI 3_ acabou também por ser abandonada por não se conseguir melhor desempenho na ligação _Raspberry PI 3 -> PC Portátil_ que na ligação _Raspberry PI 3 -> Raspberry PI 4_.
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
 
