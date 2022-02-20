@@ -16,7 +16,7 @@ No estudo das aplicações de processamento de imagem, utilizei a linguagem Pyth
 ### Conversão de ficheiros CSV em ficheiro de imagems
 A utilização da informação da profundidade de cada pixel (distancia do ponto na imagem captada á camara) que normalmentre é fornecida em ficheiros CSV, em simultaneo com a informação RGB da imagem captada, motivou a criação de uma função que permitisse fazer essa leitura e posterior tratamneto.
 
-Como ferramneta de verificação do conteudo de ficheiros CSV com esse tipo de informação criei a função le-image-CSV.py que permite visualizar numa imagem em tons de cinzento a profundidade de cada pixel.
+Como ferramneta de verificação do conteudo de ficheiros CSV com esse tipo de informação criei a função [le-image-CSV.py]() que permite visualizar numa imagem em tons de cinzento a profundidade de cada pixel.
 
 Exemplo de utilização:
 
