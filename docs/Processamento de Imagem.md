@@ -9,7 +9,7 @@ O processamento de imagem pode ainda ser utilizado na deteção de obstáculos q
 Neste trabalho foram abordados os seguintes temas:
 
 - [Conversão de ficheiros CSV em ficheiro de imagems](#conversão-de-ficheiros-csv-em-ficheiro-de-imagems)
-- [Separação de um objeto numa imagem]()
+- [Separação entre freground e background numa imagem]()
 
 No estudo das aplicações de processamento de imagem, utilizei a linguagem Python.
 
@@ -26,4 +26,4 @@ Resultado:
 
 ![dogDepth_1.csv.jpg](../imgs/dogDepth_1.csv.jpg)
 
-
+### Separação entre freground e background numa imagem
