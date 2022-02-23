@@ -126,3 +126,8 @@ No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes mó
 - 'amcl'
 - 'move_base'
 - 'rviz'
+
+### Estrutura dos módulos ROS
+Arrancando com o módulo [utad_car_navigation](../ROS/utad_car_navigation.sh)fica-se com a seguinte estrutura de módulos no ROS:
+![rosgraph-utad_car-navigation-nodes](../imgs/rosgraph-utad_car-navigation-nodes.jpg)
+
