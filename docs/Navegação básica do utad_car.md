@@ -41,3 +41,7 @@ Para utilizar este modulo deverão ser utilizados os seguintes comandos:
 Em alternativa podem ser utilizados __Scripts__ em Python para enviar mensagens para esse tópico, como é exemplificado nos seguintes scripts:
 - [testMotors.py](../utils/TestScripts/testMotors.py) que envia um comando para o carro avançar.
 - [testCarMoves.py](../utils/TestScripts/testCarMoves.py) que envia uma série de comandos que obrigam o carro a avançar, recuar, rodar sobre si mesmo, etc..
+
+### Estrutura dos modulos ROS
+Arrancando com os modulos __'utad_car_core'__ e __teleop_twist_keyboard__ fica-se com a seguinte estrutura de modulos no ROS:
+
