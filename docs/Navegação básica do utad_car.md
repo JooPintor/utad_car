@@ -42,9 +42,7 @@ Em alternativa podem ser utilizados __Scripts__ em Python para enviar mensagens 
 - [testMotors.py](../utils/TestScripts/testMotors.py) que envia um comando para o carro avançar.
 - [testCarMoves.py](../utils/TestScripts/testCarMoves.py) que envia uma série de comandos que obrigam o carro a avançar, recuar, rodar sobre si mesmo, etc..
 
-### Estrutura dos modulos ROS
-Arrancando com os modulos __'utad_car_core'__ e __'teleop_twist_keyboard'__ fica-se com a seguinte estrutura de modulos no ROS:
+### Estrutura dos módulos ROS
+Arrancando com os módulos __'utad_car_core'__ e __'teleop_twist_keyboard'__ fica-se com a seguinte estrutura de módulos no ROS:
 ![rosgraph-utad_car-core](../imgs/rosgraph-utad_car-core.jpg)
-
-
 
