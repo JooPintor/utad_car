@@ -128,6 +128,10 @@ No arranque do modulo __'utad_car_navigation'__ são utilizados os seguintes mó
 - 'rviz'
 
 ### Estrutura dos módulos ROS
-Arrancando com o módulo [utad_car_navigation](../ROS/utad_car_navigation.sh)fica-se com a seguinte estrutura de módulos no ROS:
+Arrancando com o módulo [utad_car_navigation](../ROS/utad_car_navigation.sh) fica-se com a seguinte estrutura de nós no ROS:
 ![rosgraph-utad_car-navigation-nodes](../imgs/rosgraph-utad_car-navigation-nodes.jpg)
+
+Os modulos e tópicos ativos são os seguintes:
+![rosgraph-utad_car-navigation-nodes-topics-active](../imgs/rosgraph-utad_car-navigation-nodes-topics-active.jpg)
+
 
