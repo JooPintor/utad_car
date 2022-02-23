@@ -27,3 +27,19 @@ Resultado:
 ![dogDepth_1.csv.jpg](../imgs/dogDepth_1.csv.jpg)
 
 ### Separação entre foreground e o background de uma imagem
+Para proceder á separação do foreground e do background numa imagem comecei por estudar a função __grabCut__ da biblioteca de funções de tratamento de imagem __OpenCV__.
+
+Utilizando ess função criei o programa [foreground-grabCut.py]() que no spermite obter os seguintes resultados:
+
+Imagem Original
+![grabCut-Original](../imgs/grabCut-Original.jpg)
+
+Imagem do Foreground
+![grabCut-Foreground](../imgs/grabCut-Foreground.jpg)
+
+Imagem do Backgroung
+![grabCut-Background](../imgs/grabCut-Background.jpg)
+
+
+
+
