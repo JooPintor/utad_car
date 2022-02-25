@@ -49,7 +49,7 @@ Criar o ficheiro __cmake__:
           -D OPENCV_GENERATE_PKGCONFIG=ON \
           -D BUILD_EXAMPLES=OFF ..
 
-Compilar (pode demorar varias horas):
+Compilar (demora varias horas):
 
     $ cd ~/opencv/build
     $ make -j1
