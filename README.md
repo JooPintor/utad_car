@@ -20,6 +20,7 @@ Os modulos ROS criados para controlar o "utad_car" são descritos nos temas abor
 - [Navegação Autonuma](./docs/Navegação%20Autonuma.md)
   - [Recurso a SLAM (Simultaneous Localization and Mapping)](./docs/SLAM.md)
   - [Utilização da camara Intel RealSense](./docs/Utilização%20da%20camara%20Intel%20RealSense.md)
+  - [Utilização da camara Raspberry PI](./docs/Utilização%20da%20camara%20Raspberry%20PI.md)
 - [Processamento de Imagem](./docs/Processamento%20de%20Imagem.md)
 
 
