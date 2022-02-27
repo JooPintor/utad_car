@@ -58,4 +58,8 @@ Compilar (demora varias horas):
     $ make clean
     $ sudo apt-get update
 
+Alterar a configuração de boot do sistema, incluindo start_x=1 antes de enable_uart=1 no ficheiro '/boot/firmware/config.txt'.
 
+       sudo nano /boot/firmware/config.txt
+
+    
