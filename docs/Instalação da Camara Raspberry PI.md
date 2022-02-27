@@ -60,6 +60,10 @@ Compilar (demora varias horas):
 
 Alterar a configuração de boot do sistema, incluindo start_x=1 antes de enable_uart=1 no ficheiro '/boot/firmware/config.txt'.
 
-       sudo nano /boot/firmware/config.txt
+    sudo nano /boot/firmware/config.txt
 
-    
+Instalar o interface com o ROS:
+
+    sudo apt install ros-melodic-cv-camera
+
+
