@@ -83,7 +83,7 @@ Depois de instalados o software da camara deverá ser possível testar a instala
 
         /opt/realsense/bin/realsense-viewer
 
-![rs2-camera-rqt-rpi4](../imgs/rs2-camera-rqt-rpi4.jpg)
+![realsense-viewer-rpi4](../imgs/realsense-viewer-rpi4.jpg)
 
 
 - Instalação dos módulos ROS para utilização da camara
