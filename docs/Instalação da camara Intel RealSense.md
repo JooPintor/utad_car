@@ -99,6 +99,7 @@ Depois de instalados o software da camara deverá ser possível testar a instala
         cd ~/catkin_ws
         roslaunch realsense2_camera rs_d435_camera_with_model.launch
 
+![rs_d435_camera_with_model-rpi4](../imgs/rs_d435_camera_with_model-rpi4.jpg)
 
 ### Instalação da camara Intel RealSense na carta Nvidia Jetson Nano 2GB
 
