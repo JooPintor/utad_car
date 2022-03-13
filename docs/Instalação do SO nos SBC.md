@@ -1,35 +1,35 @@
 ## Instalação do SO nos SBC
 Um computador de placa única (SBC - Single Board Computer) é um computador inteiro construído numa só placa de circuito impresso.
-Os SBCs vêm completos com memória, um microprocessador, entradas e saídas.
+Os SBCs vêm completos com memória, um microprocessador, entradas e saídas e é o componente ideal para utilizar como equipamento embarcado em robots.
 
 Embora o Raspberry Pi esteja entre os PCs de placa única mais populares e versáteis, está longe de ser a única opção.
 
-A maioria dos SBCs executa bem os sistemas operativos Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS.
+A maioria dos SBCs executa bem os sistemas operativos Linux. No entanto, alguns oferecem compatibilidade com Android e Chrome OS e até Windows.
 
 Normalmente são criadas comunidades de utilizadores que desenvolvem sistemas operativos e aplicações para os SBCs criando versões de SOs que tiram partido das características de cada SBC, mas também existem comunidades de utilizadores que desenvolvem SOs independentes dos SBCs em utilização.
 
 São exemplos a Raspberry que criou o SO Raspbian para os seus SBCs (rpi3 e rpi4) e a Canonical que desenvolve o SO Ubuntu que pode ser instalado tanto em PCs como SBCs de diferentes fabricantes.
 
-Tendo em conta que o ROS foi originalmente desenvolviso para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
+Tendo em conta que o ROS foi originalmente desenvolvido para o sistema Linux, a minha opção vai para a instalação deste SO e em particular as versões Ubuntu 18.04 LTS e Ubuntu 20.04 LTS por serem as que têm mais suporte da comunidade de utilizadores do ROS. Também cheguei a instalar o Raspbian, no entanto neste SO foi necessário compilar o ROS a partir do código fonte.
 
-Na seleção do SO a instalar no SBC para alem da escolha da opção Linux tem que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compatível com o numero de bits do processador e com a memória RAM disponível no SBC.
+Na seleção do SO a instalar no SBC para alem da escolha da opção Linux temos que se ter em conta a arquitetura do processador do SBC. No caso dos SBCs com arquitetura ARM (ARM - Advanced RISC Machines)(RISC - Reduced Instruction Set Computer) deve-se ter ainda o cuidado de garantir que a versão do SO é compatível com o numero de bits do processador e com a memória RAM disponível no SBC.
 
 As arquiteturas dos SBCs testados foram as seguintes:
-- O Raspberry Pi 3 - processador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flotuante por hardware)
+- O Raspberry Pi 3 - processador ARMv7 com arquitetura ARM de 32 bits ARMhf (com suporte de virgula flutuante por hardware)
 - O Raspberry Pi 4 - processador ARMv8 com arquitetura ARM de 64 bits ARM64.
 - Nvidia Jetson Nano - processador ARMv8 com arquitetura ARM de 64 bits ARM64
 
-No caso dos SBCs testados o sitema opertivo arranca a partir de um cartão uSD que funciona como "disco" do sistema tendo sido utilizados cartões com o minimo de 16 GB, apesar de ser possível instalar o sistema com cartões de apenas 8 GB.
+No caso dos SBCs testados o sistema operativo arranca a partir de um cartão uSD que funciona como "disco" do sistema tendo sido utilizados cartões com o mínimo de 16 GB, apesar de ser possível instalar o sistema com cartões de apenas 8 GB.
 
-Para a instalação dos sistemas nos SBCs deve-se começar por criar a imagem de um disco com capacidade de arranque (com informação de arranque nos primeiros sectores do disco) e que contenha a informação minima para a configuração do sistema.
+Para a instalação dos sistemas nos SBCs deve-se começar por criar a imagem de um disco com capacidade de arranque (com informação de arranque nos primeiros sectores do disco) e que contenha a informação mínima para a configuração do sistema.
 
 Em alternativa pode-se criar uma imagem de um sistema já instalado num SBC semelhante.
 
-Existem diversos softwares de criação decópia de imagens para cartões SD sendo os mais utilizados os seguintes:
+Existem diversos softwares de criação de cópia de imagens para cartões SD sendo os mais utilizados os seguintes:
 - [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 - [balenaEtcher](https://www.balena.io/etcher/)
 
-Para a realização do trabalho foi testada a instalação de diversa imagens de SOs, nomeadamente as seguintes:
+Para a realização do trabalho foi testada a instalação de diversas imagens de SOs, nomeadamente as seguintes:
 - [ubuntu-18.04.5-preinstalled-server-armhf+raspi3.img.xz](https://cdimage.ubuntu.com/releases/18.04/release/)
 - [ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz](https://cdimage.ubuntu.com/releases/20.04/release/)
 - [ubuntu-18.04.2-beta2-desktop-armhf+raspi-ext4.img.xz](https://releases.ubuntu-mate.org/archived/18.04/armhf/)
@@ -41,6 +41,8 @@ Para a realização do trabalho foi testada a instalação de diversa imagens de
 - [ros-melodic-arm-2021-02-01.img.tar.gz](https://husarion.com/downloads/)
 - [ros-noetic-arm-2021-02-01.img.tar.gz](https://husarion.com/downloads/)
 - [ ros4raspbian-melodic-armhf-1.0.0.zip](https://github.com/nomumu/ros4raspbian/releases)
+
+### Instalação de Imagens nos SBC
 
 Com o cartão SD com a imagem pretendida gravada deve proceder-se á preparação do cartão para o primeiro arranque do SBC com o mesmo.
 
@@ -138,12 +140,12 @@ Fazendo login com a conta "root" e a senha definida anteriormente alterar nome d
     passwd -l root
     exit
 
-Nota: Em SBCs que apenas estejam acessiveis por SSH (não estejam ligados com teclado e monitor) poderá ser necessário alterar a [configuração do servidor SSH para permitir o login do utilizador "root"](#configuração-do-servidor-ssh-para-permitir-o-login-do-root).  
+Nota: Em SBCs que apenas estejam acessíveis por SSH (não estejam ligados com teclado e monitor) poderá ser necessário alterar a [configuração do servidor SSH para permitir o login do utilizador "root"](#configuração-do-servidor-ssh-para-permitir-o-login-do-root).  
 .
 ### Alteração da “password” em sistemas Linux
-Algumas imagens obrigam á alteração da palavra passe durantre a primeira inicialização.
+Algumas imagens obrigam á alteração da palavra passe durante a primeira inicialização.
 
-No caso das imagens em que tal não ocorre ou por qualquer outra razão, a palavra passe de um sitema Linux pode a qualquer momento ser alterada utilizando o comando seguinte:
+No caso das imagens em que tal não ocorre ou por qualquer outra razão, a palavra passe de um utilizador de um sistema Linux pode a qualquer momento ser alterada utilizando o comando seguinte:
 
     passwd
 
@@ -158,9 +160,9 @@ De seguida, deve-se editar também o ficheiro "/etc/hosts" com o comando:
 
     sudo nano /etc/hosts
 
-Neste ficheiro deverá ser substituida qualquer ocorrência do antigo nome pelo novo nome.
+Neste ficheiro deverá ser substituída qualquer ocorrência do antigo nome pelo novo nome.
 
-As alterações terão efeito no proximo arranque do sistema:
+As alterações terão efeito no próximo arranque do sistema:
 
     sudo reboot
 
