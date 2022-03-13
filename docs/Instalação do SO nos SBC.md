@@ -187,5 +187,6 @@ Depois de feita a alteração acima, deve-se reiniciar o servidor SSH:
 	
 __Nota importante: Logo que não seja necessário o login do root por SSH o mesmo deve ser desabilitado por razões de segurança, repondo a configuração por defeito__
 
+### Criação de "swap files"
 
-
+A realização de tarefas que obrigam á utilização de memória RAM para além da disponível nos SBCs, como é o caso da compilação de programas mais extensos, implica a criação espaço de disco usado para a expansão da memória RAM. Uma das possibilidades de criação desse espaço é a criação de "swap files" como indicado [nesta página](.//Swap%20files.md).
