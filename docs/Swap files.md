@@ -41,7 +41,7 @@ Se o _fallocate_ não estiver instalado ou se surgir uma mensagem de erro a info
   
         sudo swapon /swapfile
   
-  Para tornar a alteração permanente deve-se editar o ficheiro "/etc/fstab" com o comando:
+  Para tornar a alteração permanente altera-se o ficheiro "/etc/fstab" com o comando:
     
         sudo nano /etc/fstab
   
@@ -52,13 +52,15 @@ Se o _fallocate_ não estiver instalado ou se surgir uma mensagem de erro a info
 - 5 - Verificar que a "swap file" está ativa utilizado os comandos _swapon_ e _free_ como exemplificado a seguir:
   
         sudo swapon --show
-
+        
+        Resultado:
         NAME      TYPE  SIZE   USED PRIO
         /swapfile file 1024M 507.4M   -1
 
     
         sudo free -h
-  
+        
+        Resultado:
                     total        used        free      shared  buff/cache   available
         Mem:           488M        158M         83M        2.3M        246M        217M
         Swap:          1.0G        506M        517M
