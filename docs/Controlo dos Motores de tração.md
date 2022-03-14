@@ -27,9 +27,8 @@ Nesse ficheiro deverão ser acrescentadas se ainda não existirem duas linhas se
 
 A presença destas linhas neste ficheiro faz com que o Raspberry arranque com estas ligações ativas.
 
-
 ### Configuração do sistema operativo para aceder às ligações I2C, SPI e GPIO 
-Para que o utilizador (e as aplicações por ele executadas) possa ter acesso ás ligações __I2C__, __SPI__ e aos pinos de entradas e saídas __GPIO__, será necessário [verificar a existência de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir no grupo o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligações, caso ainda não esteja incluído. A utilização das entradas/saídas GPIO requerem a utilização do grupo __kmem__.
+Para que o utilizador (e as aplicações por ele executadas) possa ter acesso às ligações __I2C__, __SPI__ e aos pinos de entradas e saídas __GPIO__, será necessário [verificar a existência de grupos](#verificar-a-existencia-de-grupos) de utilizadores para cada tipo de ligação, [criar os grupos](#criação-de-grupos) que não existam e [incluir nos grupos o utilizador](#acrescentar-um-utilizador-a-um-grupo) que se pretenda vir a utilizar estas ligações, caso ainda não esteja incluído. A utilização das entradas/saídas GPIO requerem a utilização do grupo __kmem__.
 
 Depois de verificada a inclusão do _utilizador_ nos grupos relevantes é necessária a [atribuição de permissões de acesso ás ligações](#atribuição-de-permisões-ás-ligações) aos grupos e [configurar o hardware das ligações](#Configuração-do-hardware-das-ligações-I2C-SPI-e-GPIO-no-sistema-operativo) para que este seja reconhecido pelo sistema operativo.
 
@@ -76,7 +75,7 @@ Para que o utilizador possa aceder às ligações é necessário dar permissões
     sudo chown :i2c /dev/i2c-1
     sudo chmod g+rw /dev/i2c-1
 
-#### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
+### Configuração do hardware das ligações I2C, SPI e GPIO no sistema operativo
 Para que o sistema operativo possa comunicar com as ligações __I2C__, __SPI__ e com o pinos de entradas e saídas __GPIO__, é necessário copiar o ficheiro ['50-i2c-spi-gpio-udev.rules'](../ROS/50-i2c-spi-gpio-udev.rules) para a pasta __"/etc/udev/rules.d/"__ com o comando:
 
     sudo cp ./50-i2c-spi-gpio-udev.rules /etc/udev/rules.d/
@@ -147,7 +146,7 @@ Os objetos __'Motor'__ são obtidos pelo método __'getMotor()'__ da classe __'M
 Os objetos da classe __'DCMotor'__ permitem, com o método __'move()'__, a definição da velocidade do motor, através do ajuste do PWM da saída do respetivo motor e ainda a ativação de uma saída em função do sentido de rotação do motor, utilizando o método __'setPin()'__.
 
 ## Modulo 'motion'
-O modulo ['motion'](../ROS/catkin_ws/src/utad_car_core/nodes/motion), alem de integrar as [classes de controlo dos motores](#Classes-em-Python-para-controlo-dos-motores) permite:  
+O modulo ['motion'](../ROS/catkin_ws/src/utad_car_core/nodes/motion), alem de integrar as [classes de controlo dos motores](#Classes-em-Python-para-controlo-dos-motores), permite:  
 
 - Subscrever as mensagens dos tópicos __'cmd_vel'__, __'collision'__ e __'odom'__ 
 - Publicar mensagens no tópico __'cmd_vel'__
