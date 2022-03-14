@@ -4,7 +4,7 @@ O [__"odometer"__ é um modulo ROS](../ROS/catkin_ws/src/utad_car_core/nodes/odo
 
 Este modo é composto por duas classes, a classe __"[Odometer](#Classe-Odometer)"__ e a classe __"[Encoder](#Classe-Encoder)"__.
 
-A classe __"Encoder"__ é responsável pelo incremento ou decremento de um contador de impulsos para cada roda, dependendo do sentido de rotação do motor, enquanto que a classe __"Odometer"__ com base nos impulsos de cada roda, o numero de impulsos por rotação, o diâmetro das rodas e a distância entre rodas, calcula a posição do centro do carro e a sua orientação, bem como a respetiva velocidade linear e angular.
+A classe __"Encoder"__ é responsável pelo incremento ou decremento de um contador de impulsos para cada roda, dependendo do sentido de rotação do motor, enquanto que a classe __"Odometer"__ com base nos impulsos de cada roda, o número de impulsos por rotação, o diâmetro das rodas e a distância entre rodas, calcula a posição do centro do carro e a sua orientação, bem como a respetiva velocidade linear e angular.
 
 ### Classe "Odometer"
 A classe __Odometer__ utiliza para a realização dos seus cálculos os seguintes parâmetros:
