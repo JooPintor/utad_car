@@ -1,7 +1,7 @@
 ## Criação de projetos no ROS
 O ROS utiliza o [catkin](#Visão-geral-do-catkin) como compilador, pelo que o este deverá ser [instalado](#Instalação-do-catkin) antes de se começar a criar um projeto.
 
-A utilização do __catkin__ presupõe que o mesmo esteja instalado e referenciado no ambiente de trabalho.No caso da sua instalação com o comando _"apt-get"_, deve ser utilizado um dos seguintes comandos em função das versões de ROS:
+A utilização do __catkin__ pressupõe que o mesmo esteja instalado e referenciado no ambiente de trabalho.No caso da sua instalação com o comando _"apt-get"_, deve ser utilizado um dos seguintes comandos em função das versões de ROS:
 
      Para ROS melodic:
      
@@ -11,23 +11,23 @@ A utilização do __catkin__ presupõe que o mesmo esteja instalado e referencia
      
      source /opt/ros/noetic/setup.bash
 
-Para a criação do espaço de trabalho poderão se utilizados o seguintes comandos:
+Para a criação do espaço de trabalho poderão se utilizados os seguintes comandos:
 
      mkdir -p ~/catkin_ws/src
      cd ~/catkin_ws/
      catkin_make
 
-Note-se que neste exemplo estamos a criar o espaço de trabalho na pasta "~/catkin_ws" mas poderia ser utilizada qualquer outra pasta que nos fossse conveniente.
+Note-se que neste exemplo estamos a criar o espaço de trabalho na pasta "~/catkin_ws" mas poderia ser utilizada qualquer outra pasta que nos fosse conveniente.
 
-O comando "catkin_make" é um comando util para trabalhar com espaços de trabalho catkin. Ao executa-lo pela primeira vez na área de trabalho, ele cria o ficheiro _"CMakeLists.txt"_ na pasta _'src'_, com os links necessários.
+O comando "catkin_make" é um comando útil para trabalhar com espaços de trabalho catkin. Ao executá-lo pela primeira vez na área de trabalho, ele cria o ficheiro _"CMakeLists.txt"_ na pasta _'src'_, com os links necessários a futuras compilações.
 
-Além disso, na pasta do ambiente de trabalho serão cridas duas novas pastas: _'build'_ e _'devel'_. Na pasta _'devel'_, são criados vários arquivos setup. * Sh, que permitem através do comando "source" sobrepor este espaço de trabalho ao ambiente de trabalho inical.
+Além disso, na pasta do ambiente de trabalho serão cridas duas novas pastas: _'build'_ e _'devel'_. Na pasta _'devel'_, são criados vários arquivos setup. * Sh, que permitem através do comando "source" sobrepor este espaço de trabalho ao ambiente de trabalho inicial.
 
 Para terminar deve-se fazer o 'source' da área de trabalho com o comando:
 
       source devel/setup.bash
 
-E verificada a configuração com o coamndo:
+E verificada a configuração com o comando:
 
      echo $ROS_PACKAGE_PATH
      
