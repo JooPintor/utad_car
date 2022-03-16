@@ -28,7 +28,7 @@ A sequência de ações foi a seguinte:
 
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
-Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
+Nota: A capacidade de RAM pode não ser suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
 
 Depois de instalados o software da camara deverá ser possível testar a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando e obtendo o resultado seguintes:
 
@@ -77,7 +77,7 @@ A sequência de ações foi a seguinte:
 
 Este processo é bastante demorado, em particular devido á opção __-j1__, no entanto esta opção é necessária em tendo em conta os recursos nomeadamente de memória disponíveis.
 
-Nota: Nalguns casos, a capacidade de RAM não é suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
+Nota: A capacidade de RAM pode não ser suficiente para compilar o SDK, portanto, se o processo de compilação abortar com um código de erro, uma solução poderá ser criar uma [‘sawp file’](./Swap%20files.md) e recompilar o SDK
 
 Depois de instalados o software da camara deverá ser possível testar a instalação recorrendo á aplicação __'realsense-viewer'__ executando o comando seguinte:
 
@@ -124,14 +124,14 @@ Como se pode ver trata-se do Sistema operativo ubuntu 18.04.05 LTS com um núcle
 Na sequência da instalação do servidor e do acesso por SSH, procedi ao comando __'unminimize'__ para permitir o acesso ao sistema com interface gráfico.
 A instalação do acesso á distância quer por __xrdp__ quer por __VNC__ revelou-se de difícil configuração, pelo que acabei por seguir as instruções [desta página](https://jinyaozhu.github.io/linux/2019/05/16/vnc.html), sem no entanto instalar outro servidor vnc ou outro desktop.
 
-Os comando de configuração do serviço VNC foram os seguintes:
+Os comandos de configuração do serviço VNC foram os seguintes:
 
         vncserver
         vncserver -kill :1
         
         sudo vi ~/.vnc/xstartup
         
-        #Alterar o conteudo do ficheiro 'xstartup' para:
+        #Alterar o conteúdo do ficheiro 'xstartup' para:
                 #!/bin/bash
                 unset SESSION_MANAGER
                 unset DBUS_SESSION_BUS_ADDRESS
@@ -201,7 +201,7 @@ Neta carta, tendo em conta o SO em presença selecionou-se a instalação do ROS
 
 #### Instalação do SDK da camara 
 
-Para proceder á instalação do SDK desta camara na carta __Nvidia Jetson Nano__ segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), utilizando os comandos seguintes:
+Para proceder á instalação do SDK desta camara na carta segui [estas instruções](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md), utilizando os comandos seguintes:
 
         sudo apt-get update
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE
@@ -237,3 +237,10 @@ Para o efeito selecionei os seguintes módulos:
    - [Intel.RealSense.Viewer.exe]
 
 Tratando-se de módulos .exe após o download estão prontos a utilizar.
+
+#### Instalação dos módulos ROS para utilização da camara
+Tentei várias alternativas para arranjar os pacotes da camara para o sistema Windows, incluindo o _“Windows Package Manager”_ desenvolvido pela Microsoft, no entanto verifiquei que esta ferramenta está limitada a uma lista de softwares que não inclui os drives da camara _“RealSense”_.
+
+O _“Chocolatey”_ permitiu o download dos pacotes desejados, no entanto mesmo assim não consegui instalá-los de forma a serem reconhecidos pelo ROS.
+Tendo em conta as dificuldades encontradas, abandonei a hipótese de utilização do Windows como possível servidor ROS com processamento das informações dadas pela camara RealSense.
+
