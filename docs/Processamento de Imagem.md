@@ -8,15 +8,15 @@ O processamento de imagem pode ainda ser utilizado na deteção de obstáculos q
 
 Neste trabalho foram abordados os seguintes temas:
 
-- [Conversão de ficheiros CSV em ficheiro de imagems](#conversão-de-ficheiros-csv-em-ficheiro-de-imagems)
+- [Conversão de ficheiros CSV em ficheiro de imagens](#conversão-de-ficheiros-csv-em-ficheiro-de-imagens)
 - [Separação entre foreground e o background de uma imagem](#separação-entre-foreground-e-o-background-de-uma-imagem)
 
 No estudo das aplicações de processamento de imagem, utilizei a linguagem Python.
 
-### Conversão de ficheiros CSV em ficheiro de imagems
-A utilização da informação da profundidade de cada pixel (distancia do ponto na imagem captada á camara) que normalmentre é fornecida em ficheiros CSV, em simultaneo com a informação RGB da imagem captada, motivou a criação de uma função que permitisse fazer essa leitura e posterior tratamneto.
+### Conversão de ficheiros CSV em ficheiro de imagens
+A utilização da informação da profundidade de cada pixel (distancia do ponto na imagem captada á camara) que normalmente é fornecida em ficheiros CSV, em simultâneo com a informação RGB da imagem captada, motivou a criação de uma função que permitisse fazer essa leitura e posterior tratamento.
 
-Como ferramneta de verificação do conteudo de ficheiros CSV com esse tipo de informação criei a função [le-image-CSV.py](../procImg/le-image-CSV.py) que permite visualizar numa imagem em tons de cinzento a profundidade de cada pixel.
+Como ferramenta de verificação do conteúdo de ficheiros CSV com esse tipo de informação criei a função [le-image-CSV.py](../procImg/le-image-CSV.py) que permite visualizar numa imagem em tons de cinzento a profundidade de cada pixel.
 
 Exemplo de utilização:
 
@@ -29,7 +29,7 @@ Resultado:
 ### Separação entre foreground e o background de uma imagem
 Para proceder á separação do foreground e do background numa imagem comecei por estudar a função __grabCut__ da biblioteca de funções de tratamento de imagem __OpenCV__.
 
-Utilizando ess função criei o programa [foreground-grabCut.py](../procImg/foreground-grabCut.py) que no spermite obter os seguintes resultados:
+Utilizando esta função criei o programa [foreground-grabCut.py](../procImg/foreground-grabCut.py) que nos permite obter os seguintes resultados:
 
 Imagem Original
 ![grabCut-Original](../imgs/grabCut-Original.jpg)
