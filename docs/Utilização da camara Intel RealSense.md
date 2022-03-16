@@ -30,14 +30,14 @@ Para utilizar outro local de processamento de alto nível é necessário ai arra
 
 ### Processamento no Raspberry PI 4
 
-Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível comecei por testar o modulo _realsense2_camera_ utilizando para o efeito o script [rpi4_rs2_camera.sh](../ROS/rpi4_rs2_camera.sh) para inserir os seguintes comandos:
+Para utilizar o _Raspberry PI 4_ como local de processamento de alto nível comecei por testar o modulo _realsense2_camera_ utilizando para o efeito o script [rpi4_rs2_camera.sh](../ROS/rpi4_rs2_camera.sh) para inserir os seguintes comandos no _Raspberry PI 3_:
 
       export ROS_MASTER_URI=http://rpi4.local:11311
       source ~/catkin_ws/devel/setup.bash
       cd ~/catkin_ws
       roslaunch realsense2_camera rs_camera.launch enable_sync:=true
 
-Estes comando são inseridos no _Raspberry PI 3_ depois de se ter iniciado o ROS no _Raspberry PI 4_ 
+Estes comandos são inseridos depois de se ter iniciado o ROS no _Raspberry PI 4_ 
 
 Durante a fase de arranque são apresentadas as seguintes mensagens de inicialização:
 
@@ -67,9 +67,7 @@ No entanto surgem também outras mensagens das quais destaco as seguintes:
 
 Como se pode ver pelas mensagens selecionadas o arranque do modulo 'realsense2_camera' termina devido aos erros de comunicação.
 
-Tendo em conta que o _Raspberry PI 3_ não tem portas USB3 tentei a ligação em sentido inverso, ligando a camara no Raspberry PI 4, usando o Raspbery PI 3 como 'Master', tendo obtido os seguintes resultados:
-
-Verifiquei que embora com alguns avisos o processo _realsense2_camera_ não terminava e no _Raspberry PI 3_ é possivel verificar os nós ativos,obetendo-se a seguinte informação:
+Tendo em conta que o _Raspberry PI 3_ não tem portas USB3 tentei a ligação em sentido inverso, ligando a camara no Raspberry PI 4, usando o Raspbery PI 3 como 'Master', tendo verificado que embora com alguns avisos o processo _realsense2_camera_ não terminava e no _Raspberry PI 3_ é possível verificar os nós ativos, obtendo-se a seguinte informação:
 
       rosrun rqt_graph rqt_graph
 
@@ -79,14 +77,14 @@ Verifiquei que embora com alguns avisos o processo _realsense2_camera_ não term
 
 ![rs2-camera-rviz-rpi3](../imgs/rs2-camera-rviz-rpi3.jpg)
 
-Apesar da ligação da camara ao _Raspberry PI 4_ não ser a esperada (manteve-se a mensagem de ligação USB2.1 apesar da ligação ser feita numa porta USB3) a diferença de comportamente é de tal modo diferente que conclui que o problema está na ligação ao _Raspberry PI 3_.
+Apesar da ligação da camara ao _Raspberry PI 4_ não ser a esperada (manteve-se a mensagem de ligação USB2.1 apesar da ligação ser feita numa porta USB3) a diferença de comportamento é de tal modo diferente que conclui que o problema está na capacidade do _Raspberry PI 3_.
 
-Note-se que enquanto que com o _Raspberry PI 3_ apenas tinhamos 1 fps, com esta montagem chegamos a mais de 10 fps, mesmo tendo essas frames a psssar pela LAN.
+Note-se que enquanto que com o _Raspberry PI 3_ apenas tínhamos 1 fps, com esta montagem chegamos a mais de 10 fps, mesmo tendo essas frames a passar pela LAN.
 
-### Processamento da Imagem no PC Portatil
+### Processamento da Imagem no PC Portátil
 
 A utilização do PC Portátil com local de processamento da imagem captada pelo _Raspberry PI 3_ acabou também por ser abandonada por não se conseguir melhor desempenho na ligação _'Raspberry PI 3' -> 'PC Portátil'_ que na ligação _'Raspberry PI 3' -> 'Raspberry PI 4'_.
 
 ### Processamento da Imagem na Carta Nvidia Jetson Nano
 
-Como explicado no [modulo de instalação](../docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-do-sdk-da-camara) da camara na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipótese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
+Como explicado no [módulo de instalação](../docs/Instalação%20da%20camara%20Intel%20RealSense.md#instalação-do-sdk-da-camara) da camara na __carta Nvidia Jetson Nano__ tendo em conta as dificuldades encontradas na instalação dos drivers da camara nessa placa acabei por abandonar a hipótese de utilização dessa carta para o processamento da imagem obtida no Raspberry PI 3.
