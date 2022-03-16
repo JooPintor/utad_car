@@ -4,7 +4,7 @@ SLAM é uma técnica utilizada por robôs e veículos autônomos para construir 
 
 __Mapeamento__
 
-SLAM é geralmente referenciado pelo comunidade de robótica como um processo para criar mapas geometricamente consistentes e é adaptado ás informações disponíveis no ambiente, focado-se menos na perfeição que  na conformidade operacional.
+SLAM é geralmente referenciado pela comunidade de robótica como um processo para criar mapas geometricamente consistentes e é adaptado às informações disponíveis no ambiente, focando-se menos na perfeição que  na conformidade operacional.
 
 __Perceção__
 
@@ -20,13 +20,14 @@ Como parte do modelo, a cinemática do robô é incluída, consequentemente melh
 
 ### Utilização de SLAM no 'utad_car'
 
+#### Dispositivo ‘RPLiDAR A1M8’
 No 'utad_car' foi testado o dispositivo [__RPLiDAR A1M8__](./RPLiDAR%20A1M8.md).
 
-Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se [arrancar o modulo __'utad_car_navigation'__](#Arranque-do-modulo-utad_car_navigation), utilizando para isso o ficheiro [__'utad_car_navigation.launch'__](../ROS/catkin_ws/src/utad_car_navigation/launch/utad_car_navigation.launch).
+Para utilização do __'utad_car'__ com ligação ao dispositivo LIDAR, deve-se [arrancar o módulo __'utad_car_navigation'__](#Arranque-do-modulo-utad_car_navigation), utilizando para isso o ficheiro [__'utad_car_navigation.launch'__](../ROS/catkin_ws/src/utad_car_navigation/launch/utad_car_navigation.launch).
 
-Este modulo, para além de arrancar os modulos de controlo do movimento do __'utad_car'__ também arranca o modulo [__'hlds_laser_publisher'__](#Modulo-hlds_laser_publisher) que é o responsável pela comunicação com o dispositivo LIDAR.
+Este módulo, para além de arrancar os módulos de controlo do movimento do __'utad_car'__ também arranca o módulo [__'hlds_laser_publisher'__](#Modulo-hlds_laser_publisher) que é o responsável pela comunicação com o dispositivo LIDAR.
 
-No final do arranque do modulo __'utad_car_navigation'__ deverá abrir-se uma janela __RViz__ que permite interagir gráficamente com os modulos ROS ativos e que deverá ter um aspeto semelhante ao seguinte:
+No final do arranque do modulo __'utad_car_navigation'__ deverá abrir-se uma janela __RViz__ que permite interagir graficamente com os módulos ROS ativos e que deverá ter um aspeto semelhante ao seguinte:
 
 ![utad_car_navigation-RViz](../imgs/utad_car_lidar.jpg)
 
