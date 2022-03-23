@@ -9,7 +9,9 @@ Para a utilização desta camara comecei por adaptar os 'turtlebot3_autorace Pac
  - utad_car_autorace_driving
  - utad_car_autorace_msgs
 
-Para a utilização desta camara segui as instruções [desta página](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), com as devidas adaptações.
+Estes módulos permitem a recepção das imagens recolhidas no 'Raspberry PI 3' através da camera 'Raspberry PI', deteando as diferentes situações previstas e dando as convenientes instuções de movimentação ao 'utad_car'.
+
+Para a instalação da camara 'Raspberry PI' no 'Raspberry PI 3' bem como os módulos ROS necessário, segui as instruções [desta página](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), com as devidas adaptações.
 
 Note-se que nesta página não existe código para o 'ROS Melodic' pelo que foram adaptados módulos do 'ROS Noetic' na instalação do 'Raspberry PI 3' e foi utilizado o 'Raspberry PI 4' como PC Remoto.
 
