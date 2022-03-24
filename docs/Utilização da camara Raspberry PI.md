@@ -2,7 +2,7 @@
 
 A utilização de camaras simples, como é o caso da [camara cedida pela UTAD](./Camera%205mp%200.575.md) permite através do tratamento adquado da imagem a movimentação de um robot, nomeadamente através do seguimento de marcas (veiculos filoguiados) e o seguimento de objetos móveis.
 
-Para a utilização desta camara optei por adaptar os 'turtlebot3_autorace Packages' ao 'utad_car', seguindo as instruções da pǵina da ['ROBOTIS'](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), com a opção 'Noeic' e as devidas adaptações.
+Para a utilização desta camara optei por adaptar os 'turtlebot3_autorace Packages' ao 'utad_car', seguindo as instruções da pǵina da ['ROBOTIS'](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), opção 'Noeic' e as devidas adaptações.
 
 Como sugerido na página da 'ROBOTIS' o processamento é dividido entre o 'SBC' e um PC, que neste caso é substituido pelo 'Raspberry PI 4'
 
