@@ -13,8 +13,8 @@ Estes módulos permitem a recepção das imagens recolhidas no 'Raspberry PI 3' 
 
 Depois de criados os modulos é necessário proceder á sua compilação e instalação dos modulos de tratamento de imagem, recorrendo aos seguintes comandos:
 
-  cd ~/catkin_ws && catkin_make
-  sudo apt install ros-noetic-image-transport ros-noetic-cv-bridge ros-noetic-vision-opencv python3-opencv libopencv-dev ros-noetic-image-proc
+    cd ~/catkin_ws && catkin_make
+    sudo apt install ros-noetic-image-transport ros-noetic-cv-bridge ros-noetic-vision-opencv python3-opencv libopencv-dev ros-noetic-image-proc
 
 Para a instalação da camara 'Raspberry PI' no 'Raspberry PI 3' bem como os módulos ROS necessário, segui as instruções [desta página](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), utilizando os modulos o com as devidas adaptações.
 
