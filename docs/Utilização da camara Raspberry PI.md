@@ -15,7 +15,7 @@ Para suportar o processamento no 'Raspberry PI 4' criei os seguinte smodulos bas
  - utad_car_autorace_driving
  - utad_car_autorace_msgs
 
-Estes módulos permitem a recepção das imagens recolhidas no 'Raspberry PI 3' através da camera 'Raspberry PI', deteando as diferentes situações previstas e dando as convenientes instuções de movimentação ao 'utad_car'.
+Estes módulos permitem a recepção das imagens recolhidas no 'Raspberry PI 3' através da camera 'Raspberry PI', detetando as diferentes situações previstas e dando as convenientes instuções de movimentação ao 'utad_car'.
 
 Depois de criados os modulos é necessário proceder á sua compilação e instalação dos modulos de tratamento de imagem, recorrendo aos seguintes comandos:
 
@@ -24,9 +24,15 @@ Depois de criados os modulos é necessário proceder á sua compilação e insta
 
 ### Instalação no 'Raspberry PI 3'
 
-Para a instalação da camara 'Raspberry PI' no 'Raspberry PI 3' bem como os módulos ROS necessário, segui as instruções [desta página](https://emanual.robotis.com/docs/en/platform/turtlebot3/autonomous_driving/#autonomous-driving), utilizando os modulos o com as devidas adaptações.
+Subdividi a instalação no 'Raspberry PI 3' em duas partes, a instalação da camera e a instalação dos modulos ROS que permitem a ligação da camera ao ROS.
 
-Note-se que nesta página não existe código para o 'ROS Melodic' pelo que foram adaptados módulos do 'ROS Noetic' na instalação do 'Raspberry PI 3' e foi utilizado o 'Raspberry PI 4' como PC Remoto. 
+#### Instalação da camera 'Raspberry PI' no SBC
 
-Para estudar o comportamento desta camara começou-se pela [sua instalação](./Instalação%20da%20Camara%20Raspberry%20PI.md), seguindo para isso as instruções 
+A instalação da camara 'Raspberry PI' no 'Raspberry PI 3' baseou-se nas instruções da página da 'ROBOTIS', a partir da qual preparei [estas instruções](./Instalação%20da%20Camara%20Raspberry%20PI.md).
+
+#### Instalação dos modulos 'ROS' no 'SBC'
+
+Para a instalação dos modulos'ROS' no 'Raspberry PI 3' foi necessário criar um conjunto de modulos semelhantes aos criados no 'Raspberry PI 4', neste caso baseados no no repositório [feature-raspicam](https://github.com/ROBOTIS-GIT/turtlebot3_autorace_2020/tree/feature-raspicam).
+
+Note-se que embora exista [código](https://github.com/ROBOTIS-GIT/turtlebot3_autorace/tree/melodic-devel) para o 'ROS Melodic' foram adaptados os módulos do 'ROS Noetic', já que a versão para o para o 'ROS Melodic' é antiga. 
 
