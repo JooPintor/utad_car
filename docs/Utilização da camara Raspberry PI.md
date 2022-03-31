@@ -44,14 +44,14 @@ Para a verificação da imagem da câmera devem-se executar os seguintes paços:
 
 - No 'Raspberry PI 4' executar o comando:
 
-   roscore
+    roscore
   
 - No 'Raspberry PI 3' executar o comando:
 
-   roslaunch utad_car_autorace_camera raspberry_pi_camera_publish.launch 
+    roslaunch utad_car_autorace_camera raspberry_pi_camera_publish.launch 
   
 - No 'Raspberry PI 4' executar o comando:
 
-   rqt_image_view
+    rqt_image_view
   
 Após a execução deste comando deverá ser possível visualizar no 'Raspberry PI 4' a imagem captada pela câmera ligada ao 'Raspberry PI 3'
