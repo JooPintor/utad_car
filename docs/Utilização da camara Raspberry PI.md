@@ -36,3 +36,22 @@ Para a instalação dos modulos'ROS' no 'Raspberry PI 3' foi necessário criar u
 
 Note-se que embora exista [código](https://github.com/ROBOTIS-GIT/turtlebot3_autorace/tree/melodic-devel) para o 'ROS Melodic' foram adaptados os módulos do 'ROS Noetic', já que a versão para o para o 'ROS Melodic' é antiga. 
 
+### Calibração da camera
+Calibrar a câmera é muito importante para a navegação autônoma. Os passos necessários à calibração da câmera de forma simples, são descritos a seguir.
+
+#### Verificação da imagem da câmera
+Para a verificação da imagem da câmera devem-se executar os seguintes paços:
+
+- No 'Raspberry PI 4' executar o comando:
+
+  roscore
+  
+- No 'Raspberry PI 3' executar o comando:
+
+  roslaunch utad_car_autorace_camera raspberry_pi_camera_publish.launch 
+  
+- No 'Raspberry PI 4' executar o comando:
+
+  rqt_image_view
+  
+Após a execução deste comando deverá ser possível visualizar no 'Raspberry PI 4' a imagem captada pela câmera ligada ao 'Raspberry PI 3'
