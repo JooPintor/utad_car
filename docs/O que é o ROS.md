@@ -134,3 +134,5 @@ A descrição da mensagem é armazenada em package_name/msg/myMessageType.msg. E
 Um tópico é um método de comunicação assíncrono usado para comunicação muitos para muitos. Um serviço atende a um tipo diferente de necessidade, a de comunicação síncrona entre dois nós. A ideia é semelhante à de uma chamada de um procedimento remoto.
 
 A descrição do serviço é armazenada em package_name/srv/myServiceType.srv. Este arquivo descreve as estruturas de dados para solicitações e respostas.
+
+![ROS-Topics.jpg](../imgs/ROS-Topics.jpg)
