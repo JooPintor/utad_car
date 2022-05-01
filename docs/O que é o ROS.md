@@ -77,9 +77,9 @@ O ROS é independente de idioma. Neste momento, três bibliotecas principais for
 ### O sistema de arquivos ROS
 
 Os recursos ROS são organizados numa estrutura hierárquica em disco. Destaco dois conceitos importantes:
-- __O pacote (Package)__:
+- O __pacote (Package)__:
 A unidade fundamental dentro da organização do software ROS. Um pacote é um diretório contendo nós (nós são explicados abaixo), bibliotecas externas, dados, arquivos de configuração e um arquivo de configuração xml chamado manifest.xml.
-- __A pilha (Stacks)__:
+- A __pilha (Stacks)__:
 Uma coleção de pacotes. Ela oferece um conjunto de funcionalidades como navegação, posicionamento, etc. Uma pilha é um diretório contendo diretórios de pacotes mais um arquivo de configuração chamado stack.xml.
 
 Além dessas duas noções muito importantes, também vale a pena notar a ideia de ‘uma distribuição’, que é, como no Linux, uma coleção de pilhas versionadas.
