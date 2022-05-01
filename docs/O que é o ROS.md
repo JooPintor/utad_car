@@ -53,3 +53,43 @@ Outro benefício dos sistemas operativos de robôs, como o ROS, é a combinaçã
 
 A robótica, portanto, requer conjuntos de habilidades muito diferentes, geralmente para lá do alcance de um único indivíduo.
 O ROS reduz o nível técnico necessário para trabalhar em projetos de robótica e tornar mais fácil a iniciação na robótica e o projeto de sistemas complexos.
+
+Existem muitos frameworks de robôs, produzidos por um motivo específico, para fins de prototipagem.
+
+O ROS foi planeado para ser de uso mais geral, embora os seus designers não acreditem que seja o sistema operativo definitivo capaz de fazer tudo.
+
+Antes de 2007, o ano do lançamento do ROS, os engenheiros de robótica não tinham uma arquitetura de software embarcada padrão. É por isso que o ROS é um grande salto à frente.
+
+O ROS é desenvolvido e mantido por uma empresa californiana, Willow Garage, formada em 2006 por Scott Hassan, um dos primeiros funcionários do Google que esteve envolvido no desenvolvimento da tecnologia de mecanismos de busca e que também esteve por trás do Yahoo! Grupos (eGroups, na verdade, que se tornaram Yahoo! Groups).
+ 
+Willow Garage é uma empresa privada que mantém ligações estreitas com a Universidade de Stanford, que não fica longe de Willow Garage (em Palo Alto, Califórnia).
+Willow Garage pode ser descrita como um laboratório de pesquisa e incubadora de tecnologia para robótica pessoal, focado em pesquisa mais do que em lucros (no início, pelo menos).
+
+A Willow Garage desenvolve software com ROS e hardware com seus robôs PR2 e TurtleBot. Tudo o que é produzido é de código aberto (licenças BSD). A ideia deles é que, se quisermos que os robôs cheguem às nossas casas, a pesquisa precisa ser acelerada, fornecendo bases sólidas de hardware e software de código aberto.
+
+### Organização geral e programação do ROS
+
+A filosofia ROS pode ser resumida nos cinco seguintes princípios principais:
+- Peer to Peer
+- Multi-idioma
+- Baseado em ferramentas (microkernel)
+- Leve
+- Gratuito e de código aberto
+
+Cobrindo cada ponto:
+#### Peer to Peer
+Um robô suficientemente complexo compreende vários computadores de bordo ou placas conectadas via Ethernet, além de, às vezes, computadores externos para tarefas de computação intensivas. Uma arquitetura peer-to-peer acoplada a um sistema de buffer e um sistema de pesquisa (um serviço de nomes chamado 'master' no ROS), permite que cada componente converse diretamente com qualquer outro, de forma síncrona ou assíncrona, conforme necessário.
+#### Multi-idioma
+o ROS é neutro em termos de idioma e pode ser programado em vários idiomas. A especificação ROS funciona na camada de mensagens. As conexões peer-to-peer são negociadas em XML-RPC, que existe num grande número de linguagens. Para suportar uma nova linguagem, as classes C++ são reempacotadas (o que foi feito para o cliente Octave, por exemplo) ou as classes são escritas permitindo a geração de mensagens. Essas mensagens são descritas em IDL (Interface Definition Language).
+#### Baseado em ferramentas
+Em vez de um ambiente de tempo de execução monolítico, o ROS adotou um design de microkernel, que usa um grande número de pequenas ferramentas para construir e executar os vários componentes do ROS. À medida que se abordam os tutoriais do ROS, aprende-se a usar vários comandos utilizados para manipular nós e mensagens. Cada comando é de fato um executável. A vantagem deste sistema é que um problema com um executável não afeta os demais, o que torna o sistema mais robusto e flexível do que um sistema baseado num ambiente de tempo de execução centralizado
+#### Leve
+Para combater o desenvolvimento de algoritmos que estão  em menor ou maior grau ligados ao sistema operativo robótico e, portanto, são difíceis de reutilizar posteriormente, os desenvolvedores de ROS pretendem que drivers e outros algoritmos sejam contidos em executáveis autónomos. Isso garante a máxima reutilização e, acima de tudo, mantém o seu tamanho reduzido. Este método torna o ROS fácil de usar, encontrando-se a maior complexidade nas bibliotecas. Esse arranjo também facilita o teste de unidade. Por fim, o ROS usa código (drivers e algoritmos) de outros projetos de código aberto, tais como:
+- Simuladores de projeto
+- Bibliotecas de processamento de imagem e visão artificial do OpenCV
+- Algoritmos de planeamento do OpenRave
+#### Gratuito e de código aberto
+Já explicamos os motivos dessa escolha. Observe, no entanto, que a arquitetura escolhida é consistente com essa escolha. O ROS passa dados entre módulos usando comunicações entre processos e, como resultado, os módulos não precisam ser vinculados num único processo, possibilitando o uso de diferentes licenças.
+
+O ecossistema ROS possui funcionalidades de partilha integradas. O ROS permite importar e exportar bibliotecas de software (pacotes ROS) que podem ser carregadas e enviadas para www.ros.org. Esses recursos criaram um ambiente aberto para colaboração e partilha de conhecimento na comunidade de robótica.
+
