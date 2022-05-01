@@ -136,3 +136,26 @@ Um tópico é um método de comunicação assíncrono usado para comunicação m
 A descrição do serviço é armazenada em package_name/srv/myServiceType.srv. Este arquivo descreve as estruturas de dados para solicitações e respostas.
 
 ![ROS-Topics.jpg](../imgs/ROS-Topics.jpg)
+
+#### Bolsas (Bags)
+Bags são formatos para armazenar e reproduzir dados de mensagens. Esse mecanismo possibilita, por exemplo, coletar dados medidos por sensores e, posteriormente, reproduzi-los quantas vezes desejarmos para simular dados reais. Também é um sistema muito útil para depurar o sistema após um evento.
+
+A ferramenta rxbag pode ser usada para exibir dados gravados em arquivos bag em forma gráfica.
+
+#### URDF
+O ROS fornece ainda outros conceitos que poderemos encontrar na Internet, é no entanto relevante, mencionar uma outra interessante contribuição para a robótica a partir do ROS que é o formato URDF (Unified Robot Description Format).
+
+Trata-se de um formato XML usado para descrever um robô inteiro na forma de um arquivo padronizado.
+
+Robôs descritos desta forma podem ser estáticos ou dinâmicos e as propriedades físicas e de colisão podem ser incluídas
+
+Além do padrão, o ROS oferece diversas ferramentas utilizadas para gerar, analisar ou verificar este formato
+
+O URDF é usado pelo simulador Gazebo, por exemplo, para representar o robô.
+
+#### ROS2
+O ROS foi desenvolvido numa primeira fase para o mundo académico (pesquisa, ensino superior). Este ecossistema não está, por isso, alinhado com os padrões de produção industriais.
+
+Uma nova versão, ROS2, foi lançada em 2017. Esta versão preenche as lacunas do ROS em termos de segurança e fiabilidade.
+
+O ROS2 traz qualidade de serviço, suporte para sistemas embarcados e cenários em tempo real.
