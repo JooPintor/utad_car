@@ -20,7 +20,7 @@ A maioria dos outros pacotes estão licenciados sob uma variedade de licenças d
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Como o nome completo sugere, o __Robot Operating System__ (ROS, sistema operativo de robôs) é um sistema operativo para robôs.
+Como o nome completo sugere, o __Robot Operating System__ é um sistema operativo para robôs.
 Da mesma forma que os sistemas operativos para PCs, servidores ou dispositivos autónomos, o ROS é um sistema operativo completo para os serviços da robótica.
 O ROS é de fato um meta-sistema operativo, algo entre um sistema operativo e um middleware. É um conjunto de bibliotecas de software livre de código aberto que ajudam os utilizadores a desenvolver aplicações de robótica.
 
@@ -37,13 +37,11 @@ O ROS também fornece funcionalidade de alto nível:
 
 ### Vantagens e história do ROS
 
-Antes da existência dos sistemas operativos de robôs, todo o projetista de robôs e investigador de robótica gastava uma quantidade considerável de tempo projetando o software embarcado dentro de cada robô, bem como o próprio hardware. Isso exigia habilidades em engenharia mecânica, eletrónica e programação embarcada. Normalmente, os programas projetados dessa maneira eram parecidos com a programação embarcada, mais semelhante à eletrónica, do que à robótica no sentido mais estrito, como podemos encontrar hoje em dia na robótica. Houve uma reutilização considerável de programas, pois eles estavam fortemente ligados ao hardware subjacente.
+Antes da existência dos sistemas operativos de robôs, os projetistas de robôs e investigador de robótica gastava uma quantidade considerável de tempo a projetar o software embarcado dentro de cada robô, bem como o próprio hardware. Isso exigia competências em engenharia mecânica, eletrónica e programação embarcada. Normalmente, os programas projetados dessa maneira eram parecidos com a programação embarcada, mais semelhante à eletrónica, do que à robótica no sentido mais estrito, como podemos encontrar hoje em dia na robótica.
 
-A ideia principal de um sistema operativo robótico é evitar reinventar a roda continuamente e oferecer funcionalidades padronizadas realizando a abstração do hardware, assim como um sistema operativo convencional para PCs, daí o nome análogo.
+A ideia principal de um sistema operativo robótico é evitar reinventar a roda continuamente e oferecer funcionalidades padronizadas realizando a abstração do hardware, tal como um sistema operativo convencional para PCs, daí o nome análogo.
 
-ROS é um facilitador de projetos de robótica. Investigadores ou engenheiros em divisões de I\&D que usam ROS já não gastam tempo a criar um novo ecossistema para cada novo projeto de robótica, o que também representa um ganho financeiro.
-
-O ROS tem um impacto positivo em I&D, reduzindo custos e o “time to market”. Para estruturas ou departamentos cujo objetivo é lançar um novo protótipo rapidamente, ou que precisam reduzir uma lacuna tecnológica, torna-se bastante atraente.
+ROS é um facilitador de projetos de robótica. Investigadores ou engenheiros em divisões de I&D que usam ROS já não gastam tempo a criar um novo ecossistema para cada novo projeto de robótica, o que também representa um ganho financeiro.
 
 Outro benefício dos sistemas operativos de robôs, como o ROS, é a combinação de conhecimentos de diferentes disciplinas. De fato, projetar e programar um robô significa:
 - Gestão do hardware e escrita dos drivers
@@ -51,19 +49,19 @@ Outro benefício dos sistemas operativos de robôs, como o ROS, é a combinaçã
 - Gestão de simultaneidade, paralelismo e fusão de dados
 - Fornecer algoritmos de raciocínio abstrato, utilizando inteligência artificial
 
-A robótica, portanto, requer conjuntos de habilidades muito diferentes, geralmente para lá do alcance de um único indivíduo.
+A robótica, portanto, requer conjuntos de competẽncias muito diferentes, geralmente para lá do alcance de um único indivíduo.
 O ROS reduz o nível técnico necessário para trabalhar em projetos de robótica e tornar mais fácil a iniciação na robótica e o projeto de sistemas complexos.
 
 Existem muitos frameworks de robôs, produzidos por um motivo específico, para fins de prototipagem.
 
 O ROS foi planeado para ser de uso mais geral, embora os seus designers não acreditem que seja o sistema operativo definitivo capaz de fazer tudo.
 
-Antes de 2007, o ano do lançamento do ROS, os engenheiros de robótica não tinham uma arquitetura de software embarcada padrão. É por isso que o ROS é um grande salto à frente.
+Antes de 2007, o ano do lançamento do ROS, os engenheiros de robótica não tinham uma arquitetura de software embarcada padrão. É por isso que o ROS é um grande salto em frente.
 
 O ROS é desenvolvido e mantido por uma empresa californiana, Willow Garage, formada em 2006 por Scott Hassan, um dos primeiros funcionários do Google que esteve envolvido no desenvolvimento da tecnologia de mecanismos de busca e que também esteve por trás do Yahoo! Grupos (eGroups, na verdade, que se tornaram Yahoo! Groups).
  
 Willow Garage é uma empresa privada que mantém ligações estreitas com a Universidade de Stanford, que não fica longe de Willow Garage (em Palo Alto, Califórnia).
-Willow Garage pode ser descrita como um laboratório de pesquisa e incubadora de tecnologia para robótica pessoal, focado em pesquisa mais do que em lucros (no início, pelo menos).
+Willow Garage pode ser descrita como um laboratório de pesquisa e incubadora de tecnologia para robótica pessoal, focado mais na pesquisa do que no nos lucros (no início, pelo menos).
 
 A Willow Garage desenvolve software com ROS e hardware com seus robôs PR2 e TurtleBot. Tudo o que é produzido é de código aberto (licenças BSD). A ideia deles é que, se quisermos que os robôs cheguem às nossas casas, a pesquisa precisa ser acelerada, fornecendo bases sólidas de hardware e software de código aberto.
 
@@ -96,12 +94,12 @@ O ecossistema ROS possui funcionalidades de partilha integradas. O ROS permite i
 #### Programação no ROS
 O ROS é independente de idioma. Neste momento, três bibliotecas principais foram definidas para ROS, tornando possível programar ROS em Python, Lisp ou C++. Além dessas três bibliotecas, duas bibliotecas experimentais são oferecidas, possibilitando a programação do ROS em Java ou Lua.
 
-\subsubsection{O sistema de arquivos ROS}
+#### O sistema de arquivos ROS
 
 Os recursos ROS são organizados numa estrutura hierárquica em disco. Destaco dois conceitos importantes:
-- #### O pacote (Package):
+- _O pacote (Package)_:
 A unidade fundamental dentro da organização do software ROS. Um pacote é um diretório contendo nós (nós são explicados abaixo), bibliotecas externas, dados, arquivos de configuração e um arquivo de configuração xml chamado manifest.xml.
-- #### A pilha (Stacks):
+- _A pilha (Stacks)_:
 Uma coleção de pacotes. Ela oferece um conjunto de funcionalidades como navegação, posicionamento, etc. Uma pilha é um diretório contendo diretórios de pacotes mais um arquivo de configuração chamado stack.xml.
 
 Além dessas duas noções muito importantes, também vale a pena notar a ideia de ‘uma distribuição’, que é, como no Linux, uma coleção de pilhas versionadas.
