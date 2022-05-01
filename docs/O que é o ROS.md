@@ -35,7 +35,7 @@ O ROS também fornece funcionalidade de alto nível:
 - Banco de dados centralizado
 - Sistema de configuração do robô
 
-###Vantagens e história do ROS
+### Vantagens e história do ROS
 
 Antes da existência dos sistemas operativos de robôs, todo o projetista de robôs e investigador de robótica gastava uma quantidade considerável de tempo projetando o software embarcado dentro de cada robô, bem como o próprio hardware. Isso exigia habilidades em engenharia mecânica, eletrónica e programação embarcada. Normalmente, os programas projetados dessa maneira eram parecidos com a programação embarcada, mais semelhante à eletrónica, do que à robótica no sentido mais estrito, como podemos encontrar hoje em dia na robótica. Houve uma reutilização considerável de programas, pois eles estavam fortemente ligados ao hardware subjacente.
 
