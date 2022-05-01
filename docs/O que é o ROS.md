@@ -43,7 +43,7 @@ A ideia principal de um sistema operativo robótico é evitar reinventar a roda 
 
 ROS é um facilitador de projetos de robótica. Investigadores ou engenheiros em divisões de I\&D que usam ROS já não gastam tempo a criar um novo ecossistema para cada novo projeto de robótica, o que também representa um ganho financeiro.
 
-O ROS tem um impacto positivo em I\&D, reduzindo custos e o “time to market”. Para estruturas ou departamentos cujo objetivo é lançar um novo protótipo rapidamente, ou que precisam reduzir uma lacuna tecnológica, torna-se bastante atraente.
+O ROS tem um impacto positivo em I&D, reduzindo custos e o “time to market”. Para estruturas ou departamentos cujo objetivo é lançar um novo protótipo rapidamente, ou que precisam reduzir uma lacuna tecnológica, torna-se bastante atraente.
 
 Outro benefício dos sistemas operativos de robôs, como o ROS, é a combinação de conhecimentos de diferentes disciplinas. De fato, projetar e programar um robô significa:
 - Gestão do hardware e escrita dos drivers
