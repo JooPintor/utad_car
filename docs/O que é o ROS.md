@@ -22,7 +22,7 @@ A maioria dos outros pacotes estão licenciados sob uma variedade de licenças d
 
 Como o nome completo do 'Robot Operating System' sugere, o ROS é um sistema operativo para robôs.
 Da mesma forma que os sistemas operativos para PCs, servidores ou dispositivos autónomos, o ROS é um sistema operativo completo para os serviços da robótica.
-O ROS é de fato um meta-sistema operativo, algo entre um sistema operativo e um middleware. É um conjunto de bibliotecas de software livre de código aberto que ajudam seus utilizadores a desenvolver aplicações de robótica.
+O ROS é de fato um meta-sistema operativo, algo entre um sistema operativo e um middleware. É um conjunto de bibliotecas de software livre de código aberto que ajudam os utilizadores a desenvolver aplicações de robótica.
 
 Ele fornece uma variedade de recursos padrão para um sistema operativo, tais como:
 - Abstração de hardware
