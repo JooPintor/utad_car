@@ -1,24 +1,4 @@
 ## O que é o ROS
-O __Robot Operating System__ (ROS, sistema operativo de robôs) é uma coleção de frameworks de software para desenvolvimento e programação de robôs, que fornece as funcionalidades dum sistema operativo num cluster de computadores heterogêneo.
-
-O ROS fornece serviços normalmente fornecidos pelos sistemas operativos, tais como abstração de hardware, controle de dispositivos de baixo nível, a implementação de funcionalidades comumente usadas, tais como passagem de mensagens entre processos e gestão de pacotes.
-
-O conjunto de processos do ROS em execução são representados numa arquitetura gráfica onde o processamento é realizado nos nós que podem receber e enviar mensagens, tais como valores de sensores, controle, estado, planeamento, atuadores e outras.
-
-Apesar da importância da reatividade e baixa latência no controle de robôs, o ROS em si, não é um sistema operativo de tempo real, embora seja possível integrar o ROS com código em tempo real.
-
-O Software do ecossistema ROS pode ser dividido em três grupos:
-- Ferramentas independentes da linguagem e plataforma usadas para a construção e distribuição de software baseado em ROS;
-- Implementações de bibliotecas clientes de ROS como roscpp, rospy e roslisp;
-- Pacotes com código relacionado com aplicações que usam uma ou mais bibliotecas cliente de ROS.
-
-Tanto as ferramentas independentes da língua como as principais bibliotecas clientes (C++, Python e Lisp) são lançadas sob os termos da licença BSD, e como tal são softwares de fonte aberta e livre para uso comercial e de investigação.
-
-A maioria dos outros pacotes estão licenciados sob uma variedade de licenças de código aberto. Estes outros pacotes implementam funcionalidades e aplicações, tais como drivers de hardware, modelos de robôs, tipos de dados, planeamento, perceção, mapeamento e localização simultâneos, ferramentas de simulação e outros algoritmos comumente usados.
-
- Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Como o nome completo sugere, o __Robot Operating System__ é um sistema operativo para robôs.
 Da mesma forma que os sistemas operativos para PCs, servidores ou dispositivos autónomos, o ROS é um sistema operativo completo para os serviços da robótica.
@@ -97,9 +77,9 @@ O ROS é independente de idioma. Neste momento, três bibliotecas principais for
 ### O sistema de arquivos ROS
 
 Os recursos ROS são organizados numa estrutura hierárquica em disco. Destaco dois conceitos importantes:
-- _O pacote (Package)_:
+- __O pacote (Package)__:
 A unidade fundamental dentro da organização do software ROS. Um pacote é um diretório contendo nós (nós são explicados abaixo), bibliotecas externas, dados, arquivos de configuração e um arquivo de configuração xml chamado manifest.xml.
-- _A pilha (Stacks)_:
+- __A pilha (Stacks)__:
 Uma coleção de pacotes. Ela oferece um conjunto de funcionalidades como navegação, posicionamento, etc. Uma pilha é um diretório contendo diretórios de pacotes mais um arquivo de configuração chamado stack.xml.
 
 Além dessas duas noções muito importantes, também vale a pena notar a ideia de ‘uma distribuição’, que é, como no Linux, uma coleção de pilhas versionadas.
