@@ -159,3 +159,5 @@ O ROS foi desenvolvido numa primeira fase para o mundo académico (pesquisa, ens
 Uma nova versão, ROS2, foi lançada em 2017. Esta versão preenche as lacunas do ROS em termos de segurança e fiabilidade.
 
 O ROS2 traz qualidade de serviço, suporte para sistemas embarcados e cenários em tempo real.
+
+ Para saber mais pode-se ir ao site do [ROS](http://wiki.ros.org/)
