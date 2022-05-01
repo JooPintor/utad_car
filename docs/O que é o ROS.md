@@ -91,10 +91,10 @@ Já explicamos os motivos dessa escolha. Observe, no entanto, que a arquitetura 
 
 O ecossistema ROS possui funcionalidades de partilha integradas. O ROS permite importar e exportar bibliotecas de software (pacotes ROS) que podem ser carregadas e enviadas para www.ros.org. Esses recursos criaram um ambiente aberto para colaboração e partilha de conhecimento na comunidade de robótica.
 
-#### Programação no ROS
+### Programação no ROS
 O ROS é independente de idioma. Neste momento, três bibliotecas principais foram definidas para ROS, tornando possível programar ROS em Python, Lisp ou C++. Além dessas três bibliotecas, duas bibliotecas experimentais são oferecidas, possibilitando a programação do ROS em Java ou Lua.
 
-#### O sistema de arquivos ROS
+### O sistema de arquivos ROS
 
 Os recursos ROS são organizados numa estrutura hierárquica em disco. Destaco dois conceitos importantes:
 - _O pacote (Package)_:
@@ -104,7 +104,7 @@ Uma coleção de pacotes. Ela oferece um conjunto de funcionalidades como navega
 
 Além dessas duas noções muito importantes, também vale a pena notar a ideia de ‘uma distribuição’, que é, como no Linux, uma coleção de pilhas versionadas.
 
-#### Noções básicas de ROS
+### Noções básicas de ROS
 O princípio básico de um sistema operativo de robô é executar um grande número de executáveis em paralelo que devem ser capazes de trocar dados de forma síncrona ou assíncrona. Por exemplo, um sistema operativo de robótica precisa de consultar os sensores do robô a uma frequência definida (sensor de distância de ultra-som ou infravermelho, sensor de pressão, sensor de temperatura, giroscópio, acelerômetro, câmeras, microfone, etc.), recuperar esses dados, processá-los (integrar a informação recebida na existente 'data merge'), passá-lo para algoritmos de processamento (processamento de fala, visão artificial, SLAM – localização e mapeamento simultâneos, etc.) e por último controlar os motores. Todo este processo é realizado de forma contínua e paralela. Além disso, o sistema operativo de robótica precisa gerir a contenção para garantir o acesso eficiente aos recursos do robô.
 
 Os conceitos reunidos no ROS sob o nome de “ROS Computation Graph”, permitindo que esses objetivos sejam alcançados, são descritos a seguir. Estes são conceitos usados pelo sistema em execução, enquanto o 'ROS File System' descrito na seção anterior é um conceito estático.
@@ -140,7 +140,7 @@ Bags são formatos para armazenar e reproduzir dados de mensagens. Esse mecanism
 
 A ferramenta rxbag pode ser usada para exibir dados gravados em arquivos bag em forma gráfica.
 
-#### URDF
+### URDF
 O ROS fornece ainda outros conceitos que poderemos encontrar na Internet, é no entanto relevante, mencionar uma outra interessante contribuição para a robótica a partir do ROS que é o formato URDF (Unified Robot Description Format).
 
 Trata-se de um formato XML usado para descrever um robô inteiro na forma de um arquivo padronizado.
@@ -151,7 +151,7 @@ Além do padrão, o ROS oferece diversas ferramentas utilizadas para gerar, anal
 
 O URDF é usado pelo simulador Gazebo, por exemplo, para representar o robô.
 
-#### ROS2
+### ROS2
 O ROS foi desenvolvido numa primeira fase para o mundo académico (pesquisa, ensino superior). Este ecossistema não está, por isso, alinhado com os padrões de produção industriais.
 
 Uma nova versão, ROS2, foi lançada em 2017. Esta versão preenche as lacunas do ROS em termos de segurança e fiabilidade.
